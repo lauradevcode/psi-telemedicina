@@ -4,92 +4,76 @@ document.getElementById("year").innerText = new Date().getFullYear();
 // Número de WhatsApp para contato
 const waNumber = "5561998548265";
 
-// Base de dados de psicólogos (com fotos mais adequadas ao perfil/nome)
+// Base de dados de psicólogos (com fotos profissionais melhoradas)
 const psychologists = [
     {
         name: "Rafael Camino",
-        photo: "https://images.unsplash.com/photo-1544723795-3fb6469e825a?w=200&h=200&fit=crop",
+        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=faces",
         crp: "CRP 07/29706",
         approach: "Terapia Cognitiva Comportamental",
         specialties: ["Ansiedade", "Luto", "Trauma"],
-        price: "A combinar no whatsapp",
         whatsapp: "5561998548265"
     },
     {
         name: "Cristiene Sousa Oliveira",
-        photo: "https://images.unsplash.com/photo-1582212975870-8736e44b584d?w=200&h=200&fit=crop",
+        photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=faces",
         crp: "CRP 04/79454",
         approach: "Terapia Cognitiva Comportamental",
         specialties: ["Ansiedade", "Depressão", "Autoconhecimento"],
-        price: "A combinar no whatsapp",
         whatsapp: "5561998548265"
     },
     {
         name: "Carolina Pastori",
-        photo: "https://images.unsplash.com/photo-1599842057984-b04000302b15?w=200&h=200&fit=crop",
+        photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&crop=faces",
         crp: "CRP 07/35788",
         approach: "TFC, TCC e Terapias Contextuais",
         specialties: ["Autocobrança", "Perfeccionismo", "Saúde Mental da Mulher"],
-        price: "A combinar no whatsapp",
         whatsapp: "5561998548265"
     },
     {
         name: "Jéssica Cardoso Abreu da Silva",
-        photo: "https://images.unsplash.com/photo-1595152772835-a7457d19c30f?w=200&h=200&fit=crop",
+        photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=faces",
         crp: "CRP 05/75274",
         approach: "Terapia Cognitiva Comportamental",
         specialties: ["Ansiedade", "Depressão", "Compulsão Alimentar"],
-        price: "A combinar no whatsapp",
         whatsapp: "5561998548265"
     },
     {
         name: "Rebeca Santos Bacelar Dessa",
-        photo: "https://images.unsplash.com/photo-1573496359142-b8d87734b584?w=200&h=200&fit=crop",
+        photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&crop=faces",
         crp: "CRP 03/31112",
         approach: "Terapia Cognitiva Comportamental",
         specialties: ["Adolescentes", "Adultos", "Atendimento Online"],
-        price: "A combinar no whatsapp",
         whatsapp: "5561998548265"
     },
     {
         name: "Mayara Borges",
-        photo: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=200&h=200&fit=crop",
+        photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=faces",
         crp: "CRP 06/203605",
         approach: "Terapia Cognitivo-Comportamental",
         specialties: ["Ansiedade", "Depressão", "Abordagem prática e baseada em evidências"],
-        price: "A combinar no whatsapp",
-        whatsapp: "5561998548265",
-        instagram: "@mayborges_psi"
+        whatsapp: "5561998548265"
     },
     {
         name: "Rafaela Armesto",
-        photo: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&fit=crop",
+        photo: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=300&h=300&fit=crop&crop=faces",
         crp: "CRP 06/101253",
         approach: "Terapia Cognitivo-Comportamental",
         specialties: ["Adultos", "Idosos", "Adolescentes"],
-        price: "A combinar no whatsapp",
         whatsapp: "5561998548265"
     },
     {
         name: "Alan Amoras",
-        photo: "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?w=200&h=200&fit=crop",
+        photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=faces",
         crp: "CRP 10/10509",
         approach: "Psicanalítica",
         specialties: ["Adolescentes", "Adultos", "Escuta Clínica Profunda"],
-        price: "A combinar no whatsapp",
         whatsapp: "5561998548265"
     }
 ];
 
-
-
 // Função para criar card de psicólogo
 function createPsyCard(psy) {
-    // Conteúdo do price ajustado para exibir o valor correto
-    const priceDisplay = psy.price.toLowerCase() === "a combinar no whatsapp" 
-        ? "<strong>A combinar</strong><br> no whatsapp"
-        : `<strong>R$ ${psy.price}</strong><br> por sessão`;
-
     return `
         <div class="psy-card" data-approach="${psy.approach}">
             <div class="psy-header">
@@ -107,14 +91,10 @@ function createPsyCard(psy) {
                 </div>
             </div>
             <div class="psy-footer">
-                <div class="psy-price">
-                    A partir de<br>
-                    ${priceDisplay}
-                </div>
-                <a href="https://wa.me/${psy.whatsapp}?text=${encodeURIComponent(`Olá, ${psy.name}! Gostaria de agendar uma consulta.`)}" 
+                <a href="https://wa.me/${psy.whatsapp}?text=${encodeURIComponent(`Olá, ${psy.name}! Gostaria de agendar uma consulta e saber mais sobre valores e disponibilidade.`)}" 
                    target="_blank" 
-                   class="psy-whatsapp-btn">
-                    💬 Contatar
+                   class="psy-whatsapp-btn-full">
+                    💬 Conversar no WhatsApp
                 </a>
             </div>
         </div>
@@ -122,100 +102,20 @@ function createPsyCard(psy) {
 }
 
 // Renderizar todos os psicólogos
-function renderPsychologists(filter = 'all', searchTerm = '') {
+function renderPsychologists() {
     const grid = document.getElementById('psychologistsGrid');
-    const noResults = document.getElementById('noPsychologists');
-    
-    let filtered = psychologists;
-    
-    // Filtrar por abordagem
-    if (filter !== 'all') {
-        filtered = filtered.filter(psy => psy.approach === filter);
-    }
-    
-    // Filtrar por busca
-    if (searchTerm) {
-        filtered = filtered.filter(psy => 
-            psy.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            psy.approach.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            psy.specialties.some(spec => spec.toLowerCase().includes(searchTerm.toLowerCase()))
-        );
-    }
-    
-    if (filtered.length === 0) {
-        grid.style.display = 'none';
-        noResults.style.display = 'block';
-    } else {
-        grid.style.display = 'grid';
-        noResults.style.display = 'none';
-        grid.innerHTML = filtered.map(psy => createPsyCard(psy)).join('');
-    }
+    grid.innerHTML = psychologists.map(psy => createPsyCard(psy)).join('');
 }
 
 // Inicializar catálogo
 renderPsychologists();
 
-// Filtros de chips
-document.querySelectorAll('.chip').forEach(chip => {
-    chip.addEventListener('click', () => {
-        document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-        chip.classList.add('active');
-        
-        const filter = chip.dataset.filter;
-        const searchTerm = document.getElementById('searchPsy').value;
-        renderPsychologists(filter, searchTerm);
-    });
-});
-
-// Busca
-document.getElementById('searchPsy').addEventListener('input', (e) => {
-    // Garantir que a busca mantenha o filtro de chip ativo
-    const activeChip = document.querySelector('.chip.active');
-    const filter = activeChip ? activeChip.dataset.filter : 'all';
-    renderPsychologists(filter, e.target.value);
-});
-
-// Sistema de abas - REMOVIDO pois a página foi unificada.
-/*
-const tabs = document.querySelectorAll(".nav-tab");
-const contents = document.querySelectorAll(".tab-content");
-
-tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-        // ... Lógica de abas
-    });
-});
-*/
-
 // WhatsApp com mensagens personalizadas
-
-// Para pacientes
 document.getElementById("startWhats").addEventListener("click", (e) => {
     e.preventDefault();
-    const msg = encodeURIComponent(
-        "Olá! Gostaria de encontrar um psicólogo para teleconsulta."
-    );
-    window.open(`https://wa.me/${waNumber}?text=${msg}`, "_blank");
+    // Scroll suave até a seção de psicólogos
+    document.getElementById('psicologos').scrollIntoView({ behavior: 'smooth' });
 });
-
-// Para psicólogos - Agora também usado na nova seção
-document.getElementById("startWhatsPsy").addEventListener("click", (e) => {
-    e.preventDefault();
-    const msg = encodeURIComponent(
-        "Olá! Sou psicólogo(a) e tenho interesse em me cadastrar na plataforma."
-    );
-    window.open(`https://wa.me/${waNumber}?text=${msg}`, "_blank");
-});
-
-// Adicionando evento de clique para o botão "Quero me cadastrar"
-document.getElementById("signUpBtn").addEventListener("click", (e) => {
-    e.preventDefault();
-    const msg = encodeURIComponent(
-        "Olá! Sou psicólogo(a) e tenho interesse em me cadastrar na plataforma."
-    );
-    window.open(`https://wa.me/${waNumber}?text=${msg}`, "_blank");
-});
-
 
 // Formulário de contato
 document.getElementById("sendForm").addEventListener("click", () => {
@@ -238,17 +138,12 @@ document.getElementById("sendForm").addEventListener("click", () => {
 });
 
 // Enter key nos inputs
-["name", "email", "searchPsy"].forEach((id) => { // Adicionado searchPsy
+["name", "email"].forEach((id) => {
     const element = document.getElementById(id);
     if (element) {
         element.addEventListener("keydown", (e) => {
             if (e.key === "Enter") {
-                if (id === "searchPsy") {
-                    // Simula clique no chip 'Todos' para re-renderizar
-                    document.querySelector('.chip.active').click(); 
-                } else {
-                    document.getElementById("sendForm").click();
-                }
+                document.getElementById("sendForm").click();
             }
         });
     }

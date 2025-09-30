@@ -31,7 +31,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0;
+  padding: 18px 24px;
   background: #fff;
   border-bottom: 1px solid #e2e8f0;
   margin-bottom: 0;
@@ -55,13 +55,12 @@ header {
   font-size: 18px;
 }
 
-/* Antiga navegação com abas - REMOVIDO E AJUSTADO PARA O HEADER */
-
 nav ul {
   display: flex;
   gap: 18px;
   list-style: none;
   font-weight: 600;
+  align-items: center;
 }
 /* Botão primário com gradiente verde */
 .btn {
@@ -72,6 +71,8 @@ nav ul {
   font-weight: 700;
   display: inline-block;
   transition: transform 0.2s ease;
+  border: none;
+  cursor: pointer;
 }
 .btn:hover {
   transform: translateY(-1px);
@@ -85,8 +86,6 @@ nav ul {
   background: #25A7A7;
   color: #fff;
 }
-
-/* Conteúdo das abas - REMOVIDO */
 
 /* Hero sections */
 .hero {
@@ -132,19 +131,9 @@ nav ul {
   color: #fff;
 }
 
-.stats {
-  display: flex;
-  gap: 18px;
-  margin-top: 18px;
-}
-.stat {
-  padding: 12px;
-  border-radius: 10px;
-  text-align: center;
-}
-.stat h3 {
-  font-size: 22px;
-  color: #25A7A7; 
+.small {
+  font-size: 14px;
+  color: #64748b;
 }
 
 /* How it works */
@@ -168,39 +157,6 @@ nav ul {
 .how .step h4 {
   color: #25A7A7;
   margin-bottom: 8px;
-}
-
-/* Filtros - REMOVIDO DO LAYOUT ATUAL POR FALTA DE ESTRUTURA DE BUSCA/FILTRO NO HTML (ficava só no catálogo) */
-.filters {
-  text-align: center;
-  margin-bottom: 32px;
-}
-.filter-chips {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 16px;
-}
-.chip {
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: 2px solid #e2e8f0;
-  background: #fff;
-  color: #64748b;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 14px;
-}
-.chip:hover {
-  border-color: #25A7A7;
-  color: #25A7A7;
-}
-.chip.active {
-  background: linear-gradient(135deg, #25A7A7 0%, #1a8a8a 100%);
-  color: #fff;
-  border-color: #25A7A7;
 }
 
 /* Grid de Psicólogos */
@@ -249,14 +205,14 @@ nav ul {
 }
 
 .psy-name {
-  font-size: 20px; /* Aumentado */
-  font-weight: 800; /* Aumentado */
+  font-size: 18px;
+  font-weight: 700;
   color: #1a1a2e;
   margin-bottom: 4px;
 }
 
 .psy-crp {
-  font-size: 14px; /* Aumentado */
+  font-size: 13px;
   color: #64748b;
   display: flex;
   align-items: center;
@@ -266,14 +222,14 @@ nav ul {
 .verified-badge {
   background: #25A7A7;
   color: #fff;
-  padding: 3px 10px; /* Ajustado */
+  padding: 3px 10px;
   border-radius: 12px;
-  font-size: 12px; /* Aumentado */
+  font-size: 11px;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  margin-top: 8px; /* Aumentado */
+  margin-top: 6px;
 }
 
 .psy-body {
@@ -281,16 +237,16 @@ nav ul {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Aumentado */
+  gap: 12px;
 }
 
 .psy-approach {
-  background: #e0f2f1; /* Cor mais clara */
-  padding: 12px 16px; /* Aumentado */
+  background: #e0f2f1;
+  padding: 10px 14px;
   border-radius: 8px;
-  font-size: 15px; /* Aumentado */
-  color: #1a8a8a; /* Cor mais escura */
-  font-weight: 700; /* Aumentado */
+  font-size: 14px;
+  color: #1a8a8a;
+  font-weight: 600;
   text-align: center;
   border-left: 4px solid #25A7A7;
 }
@@ -298,94 +254,56 @@ nav ul {
 .psy-specialties {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px; /* Aumentado */
+  gap: 6px;
 }
 
 .specialty-tag {
-  background: #f1f5f9; /* Cor mais clara */
+  background: #f1f5f9;
   color: #475569;
-  padding: 5px 12px; /* Aumentado */
-  border-radius: 16px; /* Mais arredondado */
-  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
   font-weight: 600;
   border: 1px solid #e2e8f0;
 }
 
 .psy-footer {
-  padding: 16px 20px;
+  padding: 20px;
   border-top: 1px solid #e2e8f0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 12px;
 }
 
-.psy-price {
-  font-size: 16px; /* Aumentado */
-  color: #64748b;
-  line-height: 1.4;
-}
-
-.psy-price strong {
-  font-size: 20px; /* Aumentado */
-  color: #25A7A7;
-  font-weight: 800; /* Aumentado */
-}
-
-.psy-whatsapp-btn {
+.psy-whatsapp-btn-full {
   background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
   color: #fff;
-  padding: 12px 20px; /* Aumentado */
-  border-radius: 8px;
+  padding: 14px 24px;
+  border-radius: 12px;
   font-weight: 700;
-  font-size: 15px; /* Aumentado */
+  font-size: 15px;
   display: inline-flex;
   align-items: center;
-  gap: 8px; /* Aumentado */
-  transition: transform 0.2s ease;
+  gap: 8px;
+  transition: all 0.3s ease;
   border: none;
   cursor: pointer;
   text-decoration: none;
+  width: 100%;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 }
 
-.psy-whatsapp-btn:hover {
+.psy-whatsapp-btn-full:hover {
   transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
 }
 
 .no-results {
   text-align: center;
   padding: 60px 20px;
   color: #64748b;
-  font-size: 18px; /* Aumentado */
-}
-
-/* Features area */
-.features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  padding: 28px 0;
-  background: #fff;
-  border-radius: 16px;
-  margin: 20px 0;
-}
-.feature {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  padding: 16px 0;
-}
-.feature .icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #25A7A7 0%, #1a8a8a 100%); 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  color: #fff;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 /* Seções específicas por tipo de usuário */
@@ -405,7 +323,7 @@ nav ul {
 .benefit-icon {
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, #25A7A7 0%, #1a8a8a 100%); 
+  background: linear-gradient(135deg, #25A7A7 0%, #1a8a8a 100%);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -415,7 +333,7 @@ nav ul {
   margin-bottom: 16px;
 }
 
-/* Formulário de contato - Melhoria */
+/* Formulário de contato */
 .form-input {
     width: 100%;
     padding: 12px;
@@ -425,6 +343,11 @@ nav ul {
     font-size: 16px;
     color: #475569;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .form-group .btn {
@@ -468,6 +391,13 @@ footer {
   background: #fff;
 }
 
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
 /* WhatsApp FAB */
 .whatsapp-fab {
   position: fixed;
@@ -490,21 +420,58 @@ footer {
   transform: scale(1.05);
 }
 
-/* Responsividade - Adicionado */
+/* Animações */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
 @media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
   .hero {
     grid-template-columns: 1fr;
     padding: 30px 0;
   }
+  
   .hero aside {
-    order: -1; /* Move o card de benefícios para cima */
-  }
-  .features {
-    grid-template-columns: 1fr;
+    order: -1;
   }
 }
+
 @media (max-width: 600px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+  
   .how {
+    grid-template-columns: 1fr;
+  }
+  
+  .psychologists-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .user-benefits {
     grid-template-columns: 1fr;
   }
 }
