@@ -8,7 +8,7 @@ const waNumber = "5561998548265";
 const psychologists = [
     {
         name: "Rafael Camino",
-        photo: "https://images.unsplash.com/photo-1544723795-3fb6469e825a?w=200&h=200&fit=crop", // Nova foto: Homem em ambiente de escritório/profissional
+        photo: "https://images.unsplash.com/photo-1544723795-3fb6469e825a?w=200&h=200&fit=crop",
         crp: "CRP 07/29706",
         approach: "Terapia Cognitiva Comportamental",
         specialties: ["Ansiedade", "Luto", "Trauma"],
@@ -17,7 +17,7 @@ const psychologists = [
     },
     {
         name: "Cristiene Sousa Oliveira",
-        photo: "https://images.unsplash.com/photo-1582212975870-8736e44b584d?w=200&h=200&fit=crop", // Nova foto: Mulher com sorriso profissional
+        photo: "https://images.unsplash.com/photo-1582212975870-8736e44b584d?w=200&h=200&fit=crop",
         crp: "CRP 04/79454",
         approach: "Terapia Cognitiva Comportamental",
         specialties: ["Ansiedade", "Depressão", "Autoconhecimento"],
@@ -26,7 +26,7 @@ const psychologists = [
     },
     {
         name: "Carolina Pastori",
-        photo: "https://images.unsplash.com/photo-1599842057984-b04000302b15?w=200&h=200&fit=crop", // Nova foto: Mulher em postura profissional, focada
+        photo: "https://images.unsplash.com/photo-1599842057984-b04000302b15?w=200&h=200&fit=crop",
         crp: "CRP 07/35788",
         approach: "TFC, TCC e Terapias Contextuais",
         specialties: ["Autocobrança", "Perfeccionismo", "Saúde Mental da Mulher"],
@@ -35,7 +35,7 @@ const psychologists = [
     },
     {
         name: "Jéssica Cardoso Abreu da Silva",
-        photo: "https://images.unsplash.com/photo-1595152772835-a7457d19c30f?w=200&h=200&fit=crop", // Nova foto: Mulher com foco no trabalho
+        photo: "https://images.unsplash.com/photo-1595152772835-a7457d19c30f?w=200&h=200&fit=crop",
         crp: "CRP 05/75274",
         approach: "Terapia Cognitiva Comportamental",
         specialties: ["Ansiedade", "Depressão", "Compulsão Alimentar"],
@@ -44,7 +44,7 @@ const psychologists = [
     },
     {
         name: "Rebeca Santos Bacelar Dessa",
-        photo: "https://images.unsplash.com/photo-1573496359142-b8d87734b584?w=200&h=200&fit=crop", // Nova foto: Mulher em ambiente de trabalho
+        photo: "https://images.unsplash.com/photo-1573496359142-b8d87734b584?w=200&h=200&fit=crop",
         crp: "CRP 03/31112",
         approach: "Terapia Cognitiva Comportamental",
         specialties: ["Adolescentes", "Adultos", "Atendimento Online"],
@@ -53,15 +53,34 @@ const psychologists = [
     },
     {
         name: "Mayara Borges",
-        photo: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=200&h=200&fit=crop", // Nova foto: Profissional sorrindo
+        photo: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=200&h=200&fit=crop",
         crp: "CRP 06/203605",
         approach: "Terapia Cognitivo-Comportamental",
         specialties: ["Ansiedade", "Depressão", "Abordagem prática e baseada em evidências"],
         price: "A combinar no whatsapp",
         whatsapp: "5561998548265",
-     
+        instagram: "@mayborges_psi"
+    },
+    {
+        name: "Rafaela Armesto",
+        photo: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&fit=crop",
+        crp: "CRP 06/101253",
+        approach: "Terapia Cognitivo-Comportamental",
+        specialties: ["Adultos", "Idosos", "Adolescentes"],
+        price: "A combinar no whatsapp",
+        whatsapp: "5561998548265"
+    },
+    {
+        name: "Alan Amoras",
+        photo: "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?w=200&h=200&fit=crop",
+        crp: "CRP 10/10509",
+        approach: "Psicanalítica",
+        specialties: ["Adolescentes", "Adultos", "Escuta Clínica Profunda"],
+        price: "A combinar no whatsapp",
+        whatsapp: "5561998548265"
     }
 ];
+
 
 
 // Função para criar card de psicólogo
