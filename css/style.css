@@ -450,7 +450,15 @@ footer {
   .hero {
     grid-template-columns: 1fr;
     padding: 30px 0;
+      margin: 10px;
   }
+  .hero .actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 10px;
+  
+}
   
   .hero aside {
     order: -1;
