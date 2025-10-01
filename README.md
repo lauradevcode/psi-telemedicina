@@ -19,3 +19,5 @@ A ideia é diminuir barreiras: o paciente encontra e já entra em contato via Wh
 - Filtros por especialidade (ou categorias)  
 - Busca por nome, especialidade ou termos na descrição  
 - Layout responsivo (desktop / mobile)
+
+Acesse: https://psitelemedicina.netlify.app/
