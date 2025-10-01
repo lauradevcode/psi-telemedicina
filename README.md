@@ -24,11 +24,11 @@ A ideia é diminuir barreiras: o paciente encontra e já entra em contato via Wh
 
 ## 📁 Estrutura de Arquivos
 
-psi-telemedicina/
+psi-telemedicina/ <br>
 │
-├── index.html # Página principal (frontend)
-├── js/ # Scripts JavaScript
-│ └── script.js # Lógica de filtro, busca, renderização
-├── css/ # Estilos
-│ └── styles.css # Regras de estilo (tipografia, cores, layout)
-└── img/ # Imagens & ícones usados no projeto
+├── index.html # Página principal (frontend) <br>
+├── js/ # Scripts JavaScript <br>
+│ └── script.js # Lógica de filtro, busca, renderização <br>
+├── css/ # Estilos <br>
+│ └── styles.css # Regras de estilo (tipografia, cores, layout) <br>
+└── img/ # Imagens & ícones usados no projeto 
