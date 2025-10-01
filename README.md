@@ -20,15 +20,4 @@ A ideia é diminuir barreiras: o paciente encontra e já entra em contato via Wh
 - Busca por nome, especialidade ou termos na descrição  
 - Layout responsivo (desktop / mobile)
 
----
-
-## 📁 Estrutura de Arquivos
-
-psi-telemedicina/
-│
-├── index.html # Página principal (frontend)
-├── js/ # Scripts JavaScript
-│ └── script.js # Lógica de filtro, busca, renderização
-├── css/ # Estilos
-│ └── styles.css # Regras de estilo (tipografia, cores, layout)
-└── img/ # Imagens & ícones usados no projeto
+Acesse: https://psitelemedicina.netlify.app/
