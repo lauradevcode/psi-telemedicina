@@ -6,20 +6,42 @@ const waNumber = "5561998548265";
 
 // Base de dados de psicólogos (com fotos profissionais melhoradas)
 const psychologists = [
+
+    {
+        name: "Lucas Ribeiro Costa",
+        photo: "../img/psicologos/lucas-ribeiro.jpg",
+        crp: "CRP 06/182628",
+        approach: "Terapia de Aceitação e Compromisso - ACT.",
+        specialties: ["Ansiedade", "Autoconhecimento"],
+        whatsapp: "5511984789568",
+        premium: true
+    },
+    {
+        name: "Noemia Noronha Domingos",
+        photo: "../img/psicologos/noemia-noronha.jpg",
+        crp: "CRP 04/77404",
+        approach: "Terapia Cognitivo-Comportamental (TCC)",
+        specialties: ["Ansiedade", "Depressão", "Autoconhecimento"],
+        whatsapp: "5561998548265",
+        premium: true
+    },
+
+    {
+        name: "Mayara Borges",
+        photo: "../img/psicologos/mayara.jpg",
+        crp: "CRP 06/203605",
+        approach: "Terapia Cognitivo-Comportamental (TCC)",
+        specialties: ["Abordagem prática e baseada em evidências", "Depressão", "Ansiedade"],
+        whatsapp: "5561998548265",
+
+    },
+
     {
         name: "Rafael Camino",
         photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=faces",
         crp: "CRP 07/29706",
         approach: "Terapia Cognitiva Comportamental",
         specialties: ["Ansiedade", "Luto", "Trauma"],
-        whatsapp: "5561998548265"
-    },
-    {
-        name: "Cristiene Sousa Oliveira",
-        photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=faces",
-        crp: "CRP 04/79454",
-        approach: "Terapia Cognitiva Comportamental",
-        specialties: ["Ansiedade", "Depressão", "Autoconhecimento"],
         whatsapp: "5561998548265"
     },
     {
@@ -74,31 +96,35 @@ const psychologists = [
 
 // Função para criar card de psicólogo
 function createPsyCard(psy) {
-    return `
-        <div class="psy-card" data-approach="${psy.approach}">
-            <div class="psy-header">
-                <img src="${psy.photo}" alt="${psy.name}" class="psy-photo" />
-                <div class="psy-info">
-                    <div class="psy-name">${psy.name}</div>
-                    <div class="psy-crp">${psy.crp}</div>
-                    <span class="verified-badge">✓ Verificado</span>
-                </div>
-            </div>
-            <div class="psy-body">
-                <div class="psy-approach">${psy.approach}</div>
-                <div class="psy-specialties">
-                    ${psy.specialties.map(spec => `<span class="specialty-tag">${spec}</span>`).join('')}
-                </div>
-            </div>
-            <div class="psy-footer">
-                <a href="https://wa.me/${psy.whatsapp}?text=${encodeURIComponent(`Olá, ${psy.name}! Gostaria de agendar uma consulta e saber mais sobre valores e disponibilidade.`)}" 
-                   target="_blank" 
-                   class="psy-whatsapp-btn-full">
-                    💬 Conversar no WhatsApp
-                </a>
-            </div>
-        </div>
-    `;
+    // Novo badge de destaque, usando um ícone ou texto mais neutro
+    // Opção 1: Usar apenas um ícone (Ex: 💎)
+    const highlightBadge = psy.premium ? '<span class="highlight-badge">💎 DESTAQUE</span>' : '';
+    // Opção 2: Usar a palavra "Destaque"
+    // const highlightBadge = psy.premium ? '<span class="highlight-badge">💎</span>' : ''; 
+
+    // A classe CSS para o card é mantida para que o estilo visual ainda seja aplicado
+    const cardClass = psy.premium ? 'psy-card highlight-card' : 'psy-card';
+
+    return `<div class="${cardClass}" data-approach="${psy.approach}">
+<div class="psy-header">
+<img src="${psy.photo}" alt="${psy.name}" class="psy-photo">
+<div class="psy-info">
+<div class="psy-name">${psy.name}</div>
+<div class="psy-crp">${psy.crp}</div>
+<span class="verified-badge">✓ Verificado</span>
+${highlightBadge}
+</div>
+</div>
+<div class="psy-body">
+<div class="psy-approach">${psy.approach}</div>
+<div class="psy-specialties">
+${psy.specialties.map(spec => `<span class="specialty-tag">${spec}</span>`).join('')}
+</div>
+</div>
+<div class="psy-footer">
+<a href="https://wa.me/${psy.whatsapp}?text=${encodeURIComponent(`Olá, ${psy.name}! Gostaria de agendar uma consulta e saber mais sobre valores e disponibilidade.`)}" target="_blank" class="psy-whatsapp-btn-full">💬 Conversar no WhatsApp</a>
+</div>
+</div>`;
 }
 
 // Renderizar todos os psicólogos
@@ -113,7 +139,6 @@ renderPsychologists();
 // WhatsApp com mensagens personalizadas
 document.getElementById("startWhats").addEventListener("click", (e) => {
     e.preventDefault();
-    // Scroll suave até a seção de psicólogos
     document.getElementById('psicologos').scrollIntoView({ behavior: 'smooth' });
 });
 
