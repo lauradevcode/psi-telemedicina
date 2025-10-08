@@ -22,7 +22,17 @@ const psychologists = [
         crp: "CRP 04/77404",
         approach: "Terapia Cognitivo-Comportamental (TCC)",
         specialties: ["Ansiedade", "Depressão", "Autoconhecimento"],
-        whatsapp: "5561998548265",
+        whatsapp: "53597010965",
+        premium: true
+    },
+
+    {
+        name: "Jaqueline Martins",
+        photo: "../img/psicologos/jaqueline-martins.jpg",
+        crp: "CRP 07/30847",
+        approach: "Psicanálise",
+        specialties: ["Autoconhecimento", "Relacionamentos", "Conflitos Internos"],
+        whatsapp: "555199947197",
         premium: true
     },
 
