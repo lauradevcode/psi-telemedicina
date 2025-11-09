@@ -17,7 +17,7 @@ define('DB_NAME', 'psicologia_db'); // Nome do banco de dados que você CRIOU
 // 2. Tentar Conectar
 // ===============================================
 // Cria uma nova conexão com o MySQL
-$conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME, 3307);
 
 // ===============================================
 // 3. Checar Conexão

@@ -224,6 +224,7 @@ function clearFilters() {
     document.getElementById('filterSpecialty').value = 'all';
     document.getElementById('filterApproach').value = 'all';
     renderPsychologists();
+    // REMOVIDO: renderPsychologistsCarousel(sortedPsychologists);
 }
 
 // Inicializar

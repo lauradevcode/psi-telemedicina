@@ -1,507 +1,468 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>
-      Terapia Online Acessível | Psicólogos pelo WhatsApp – Psi Telemedicina
-    </title>
-    <meta
-      name="description"
-      content="Inicie sua terapia online de forma rápida e acessível. Psicólogos qualificados, consultas seguras via WhatsApp e atendimento humanizado para ansiedade, depressão e bem-estar."
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2212%22 fill=%22%2325d366%22></rect><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2250%22 font-weight=%22bold%22 fill=%22white%22 font-family=%22serif%22>%CE%A8</text></svg>"
-      type="image/svg+xml"
-    />
-  </head>
 
-  <body>
-    <header class="container" role="banner">
-      <div class="logo">
-        <div class="logo-icon">Ψ</div>
-        <div class="logo-text">
-          <strong>Psi Telemedicina</strong>
-          <span class="small">Terapia Online Acessível</span>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>
+    Terapia Online Acessível | Psicólogos pelo WhatsApp – Psi Telemedicina
+  </title>
+  <meta name="description"
+    content="Inicie sua terapia online de forma rápida e acessível. Psicólogos qualificados, consultas seguras via WhatsApp e atendimento humanizado para ansiedade, depressão e bem-estar." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/carousel-styles.css" />
+
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2212%22 fill=%22%2325d366%22></rect><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2250%22 font-weight=%22bold%22 fill=%22white%22 font-family=%22serif%22>%CE%A8</text></svg>"
+    type="image/svg+xml" />
+</head>
+
+<body>
+  <header class="container" role="banner">
+    <div class="logo">
+      <div class="logo-icon">Ψ</div>
+      <div class="logo-text">
+        <strong>Psi Telemedicina</strong>
+        <span class="small">Terapia Online Acessível</span>
+      </div>
+    </div>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#psicologos">Psicólogos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="btn" href="dashboard.html">💼 Área do Psicólogo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container hero animate-fade-in" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">
+          Sua saúde mental merece atenção. Comece hoje, sem sair de casa.
+        </h1>
+        <p>
+          Mais de <strong>100 psicólogos verificados</strong> esperando para
+          ajudar você a superar ansiedade, depressão e conquistar o bem-estar
+          que você merece. Tudo pelo WhatsApp, de forma simples e segura.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-pulse" id="startWhats" href="#psicologos" role="button">🔍 Encontrar meu psicólogo</a>
+          <a class="btn-outline btn" href="#como-funciona">Como funciona</a>
+        </div>
+
+        <div class="stats-card-final">
+          <div class="stats-image-container">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=300&fit=crop"
+              alt="Equipe de psicólogos" class="stats-team-photo" />
+            <div class="stats-overlay">
+              <div class="stats-badge-on-image">NOSSA COMUNIDADE</div>
+            </div>
+          </div>
+          <div class="stats-content-final">
+            <div class="stats-number-final">100+</div>
+            <div class="stats-description-final">
+              Profissionais qualificados prontos para sua jornada de
+              transformação
+            </div>
+            <div class="stats-tags-final">
+              <span class="stats-tag-final">✓ CRP ativo</span>
+              <span class="stats-tag-final">✓ Avaliados</span>
+              <span class="stats-tag-final">✓ Disponíveis</span>
+            </div>
+          </div>
         </div>
       </div>
-      <nav aria-label="Principal">
-        <ul>
-          <li><a href="#como-funciona">Como funciona</a></li>
-          <li><a href="#psicologos">Psicólogos</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a class="btn" href="dashboard.html">💼 Área do Psicólogo</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <!-- HERO SECTION -->
-      <section
-        class="container hero animate-fade-in"
-        aria-labelledby="hero-title"
-      >
-        <div>
-          <h1 id="hero-title">
-            Sua saúde mental merece atenção. Comece hoje, sem sair de casa.
-          </h1>
-          <p>
-            Mais de <strong>100 psicólogos verificados</strong> esperando para
-            ajudar você a superar ansiedade, depressão e conquistar o bem-estar
-            que você merece. Tudo pelo WhatsApp, de forma simples e segura.
-          </p>
-
-          <div class="actions">
-            <a
-              class="btn btn-pulse"
-              id="startWhats"
-              href="#psicologos"
-              role="button"
-              >🔍 Encontrar meu psicólogo</a
-            >
-            <a class="btn-outline btn" href="#como-funciona">Como funciona</a>
+      <aside>
+        <div class="benefits-card-final">
+          <div class="benefits-header-final">
+            <div class="benefits-icon-circle">💚</div>
+            <h3>Por que milhares confiam na Psi?</h3>
           </div>
 
-          <!-- CARD DE ESTATÍSTICAS COM FOTO -->
-          <div class="stats-card-final">
-            <div class="stats-image-container">
-              <img
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=300&fit=crop"
-                alt="Equipe de psicólogos"
-                class="stats-team-photo"
-              />
-              <div class="stats-overlay">
-                <div class="stats-badge-on-image">NOSSA COMUNIDADE</div>
+          <div class="benefits-list-final">
+            <div class="benefit-item-final">
+              <div class="benefit-icon-box">📱</div>
+              <div>
+                <strong>100% pelo WhatsApp</strong>
+                <small>Sem apps complicados</small>
               </div>
             </div>
-            <div class="stats-content-final">
-              <div class="stats-number-final">100+</div>
-              <div class="stats-description-final">
-                Profissionais qualificados prontos para sua jornada de
-                transformação
+
+            <div class="benefit-item-final">
+              <div class="benefit-icon-box">⚡</div>
+              <div>
+                <strong>Agende em minutos</strong>
+                <small>Sem espera de semanas</small>
               </div>
-              <div class="stats-tags-final">
-                <span class="stats-tag-final">✓ CRP ativo</span>
-                <span class="stats-tag-final">✓ Avaliados</span>
-                <span class="stats-tag-final">✓ Disponíveis</span>
+            </div>
+
+            <div class="benefit-item-final">
+              <div class="benefit-icon-box">✓</div>
+              <div>
+                <strong>Profissionais verificados</strong>
+                <small>CRP ativo garantido</small>
+              </div>
+            </div>
+
+            <div class="benefit-item-final">
+              <div class="benefit-icon-box">💰</div>
+              <div>
+                <strong>Sem intermediários</strong>
+                <small>Negocie direto com o psicólogo</small>
+              </div>
+            </div>
+
+            <div class="benefit-item-final">
+              <div class="benefit-icon-box">🔒</div>
+              <div>
+                <strong>Sigilo absoluto</strong>
+                <small>Normas do CFP respeitadas</small>
               </div>
             </div>
           </div>
         </div>
+      </aside>
+    </section>
 
-        <!-- CARD DE BENEFÍCIOS -->
-        <aside>
-          <div class="benefits-card-final">
-            <div class="benefits-header-final">
-              <div class="benefits-icon-circle">💚</div>
-              <h3>Por que milhares confiam na Psi?</h3>
-            </div>
+    <section class="carousel-section">
+      <div class="container" style="position: relative;">
+        <h2 style="text-align: center; color: #1a1a2e; font-size: 32px; margin-bottom: 12px;">
+          Conheça nossos Psicólogos Destacados
+        </h2>
+        <p style="text-align: center; color: #64748b; font-size: 16px; max-width: 700px; margin: 0 auto 40px;">
+          Deslize para ver mais profissionais verificados e prontos para ajudar você.
+        </p>
 
-            <div class="benefits-list-final">
-              <div class="benefit-item-final">
-                <div class="benefit-icon-box">📱</div>
-                <div>
-                  <strong>100% pelo WhatsApp</strong>
-                  <small>Sem apps complicados</small>
-                </div>
-              </div>
+        <div class="carousel-container">
+          <div class="carousel-wrapper" id="carouselWrapper"></div>
 
-              <div class="benefit-item-final">
-                <div class="benefit-icon-box">⚡</div>
-                <div>
-                  <strong>Agende em minutos</strong>
-                  <small>Sem espera de semanas</small>
-                </div>
-              </div>
-
-              <div class="benefit-item-final">
-                <div class="benefit-icon-box">✓</div>
-                <div>
-                  <strong>Profissionais verificados</strong>
-                  <small>CRP ativo garantido</small>
-                </div>
-              </div>
-
-              <div class="benefit-item-final">
-                <div class="benefit-icon-box">💰</div>
-                <div>
-                  <strong>Sem intermediários</strong>
-                  <small>Negocie direto com o psicólogo</small>
-                </div>
-              </div>
-
-              <div class="benefit-item-final">
-                <div class="benefit-icon-box">🔒</div>
-                <div>
-                  <strong>Sigilo absoluto</strong>
-                  <small>Normas do CFP respeitadas</small>
-                </div>
-              </div>
-            </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn-nav" id="carouselLeftBtn">←</button>
+            <button class="carousel-btn-nav" id="carouselRightBtn">→</button>
           </div>
-        </aside>
-      </section>
+        </div>
 
-      <!-- COMO FUNCIONA -->
-      <section class="container">
-        <h2
-          style="
+        <div class="carousel-indicators" id="carouselIndicators"></div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 style="
             text-align: center;
             color: #1a1a2e;
             font-size: 32px;
             margin-bottom: 12px;
             line-height: 1.2;
-          "
-        >
-          Da dor à cura em 3 passos simples
-        </h2>
-        <p
-          style="
+          ">
+        Da dor à cura em 3 passos simples
+      </h2>
+      <p style="
             text-align: center;
             color: #64748b;
             font-size: 18px;
             max-width: 800px;
             margin: 0 auto 40px;
-          "
-        >
-          Você não precisa continuar sofrendo sozinho. Começar sua terapia é
-          mais fácil do que você imagina.
-        </p>
+          ">
+        Você não precisa continuar sofrendo sozinho. Começar sua terapia é
+        mais fácil do que você imagina.
+      </p>
 
-        <div class="how" id="como-funciona">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h4>Escolha seu psicólogo</h4>
-            <p class="small">
-              Veja perfis completos com especialidades, abordagens e avaliações.
-              Encontre quem realmente combina com você.
-            </p>
-          </div>
-          <div class="step">
-            <div class="step-number">2</div>
-            <h4>Converse pelo WhatsApp</h4>
-            <p class="small">
-              Tire dúvidas, conheça o profissional e agende sua primeira sessão.
-              Sem burocracias ou formulários complicados.
-            </p>
-          </div>
-          <div class="step">
-            <div class="step-number">3</div>
-            <h4>Comece sua transformação</h4>
-            <p class="small">
-              Sessões online por vídeo, no conforto da sua casa, no horário que
-              funciona para sua rotina.
-            </p>
-          </div>
+      <div class="how" id="como-funciona">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Escolha seu psicólogo</h4>
+          <p class="small">
+            Veja perfis completos com especialidades, abordagens e avaliações.
+            Encontre quem realmente combina com você.
+          </p>
         </div>
-
-        <div style="text-align: center; margin-top: 40px">
-          <a href="#psicologos" class="btn btn-large">Quero começar agora →</a>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Converse pelo WhatsApp</h4>
+          <p class="small">
+            Tire dúvidas, conheça o profissional e agende sua primeira sessão.
+            Sem burocracias ou formulários complicados.
+          </p>
         </div>
-      </section>
-
-      <!-- CTA INTERMEDIÁRIO - PACIENTES -->
-      <section class="container cta-section">
-        <div class="cta-box cta-patient">
-          <div class="cta-content">
-            <h3>🌟 Você merece se sentir bem</h3>
-            <p>
-              Ansiedade, depressão, crises... Não precisa enfrentar sozinho.
-              Mais de 10.000 pessoas já deram o primeiro passo com a Psi.
-            </p>
-            <a href="#psicologos" class="btn btn-white"
-              >Ver psicólogos disponíveis →</a
-            >
-          </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Comece sua transformação</h4>
+          <p class="small">
+            Sessões online por vídeo, no conforto da sua casa, no horário que
+            funciona para sua rotina.
+          </p>
         </div>
-      </section>
+      </div>
 
-      <!-- PSICÓLOGOS -->
-      <section class="container" id="psicologos">
-        <h3
-          style="
+      <div style="text-align: center; margin-top: 40px">
+        <a href="#psicologos" class="btn btn-large">Quero começar agora →</a>
+      </div>
+    </section>
+
+    <section class="container cta-section">
+      <div class="cta-box cta-patient">
+        <div class="cta-content">
+          <h3>🌟 Você merece se sentir bem</h3>
+          <p>
+            Ansiedade, depressão, crises... Não precisa enfrentar sozinho.
+            Mais de 10.000 pessoas já deram o primeiro passo com a Psi.
+          </p>
+          <a href="#psicologos" class="btn btn-white">Ver psicólogos disponíveis →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="psicologos">
+      <h3 style="
             text-align: center;
             color: #1a1a2e;
             font-size: 32px;
             margin-bottom: 12px;
-          "
-        >
-          Encontre o psicólogo ideal para você
-        </h3>
-        <p
-          style="
+          ">
+        Encontre o psicólogo ideal para você
+      </h3>
+      <p style="
             text-align: center;
             color: #64748b;
             font-size: 16px;
             max-width: 700px;
             margin: 0 auto 20px;
-          "
-        >
-          Profissionais especializados em ansiedade, depressão, relacionamentos,
-          autoestima e muito mais.
+          ">
+        Profissionais especializados em ansiedade, depressão, relacionamentos,
+        autoestima e muito mais.
+      </p>
+
+      <div class="psychologists-grid" id="psychologistsGrid"></div>
+      <div id="noPsychologists" class="no-results" style="display: none">
+        <p>Nenhum profissional encontrado com esses critérios.</p>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px">
+        <p style="color: #64748b; margin-bottom: 16px">
+          Não encontrou o profissional ideal? Temos muito mais opções!
         </p>
+        <a href="#contato" class="btn-outline btn">Falar com nossa equipe</a>
+      </div>
+    </section>
 
-        <div class="psychologists-grid" id="psychologistsGrid"></div>
-        <div id="noPsychologists" class="no-results" style="display: none">
-          <p>Nenhum profissional encontrado com esses critérios.</p>
-        </div>
-
-        <div style="text-align: center; margin-top: 40px">
-          <p style="color: #64748b; margin-bottom: 16px">
-            Não encontrou o profissional ideal? Temos muito mais opções!
+    <section class="container cta-section">
+      <div class="cta-box cta-psychologist">
+        <div class="cta-icon">💼</div>
+        <div class="cta-content">
+          <h3>Você é psicólogo? Amplie sua prática!</h3>
+          <p>
+            <strong>Receba pacientes qualificados</strong> direto no seu
+            WhatsApp. Sem mensalidades, sem comissões abusivas. Você define
+            seus valores e horários.
           </p>
-          <a href="#contato" class="btn-outline btn">Falar com nossa equipe</a>
+          <ul class="cta-benefits">
+            <li>
+              ✓ <strong>Visibilidade</strong>: Apareça para milhares de
+              pacientes ativos
+            </li>
+            <li>
+              ✓ <strong>Verificação profissional</strong>: Destaque-se com o
+              selo de verificado
+            </li>
+            <li>
+              ✓ <strong>Sem intermediários</strong>: Atenda direto pelo seu
+              WhatsApp
+            </li>
+            <li>
+              ✓ <strong>Planos acessíveis</strong>: A partir de R$ 59,90/mês
+            </li>
+          </ul>
+          <a href="https://api.whatsapp.com/send?phone=5561998548265" class="btn btn-white btn-large">Quero cadastrar
+            meu perfil →</a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- CTA PARA PSICÓLOGOS -->
-      <section class="container cta-section">
-        <div class="cta-box cta-psychologist">
-          <div class="cta-icon">💼</div>
-          <div class="cta-content">
-            <h3>Você é psicólogo? Amplie sua prática!</h3>
-            <p>
-              <strong>Receba pacientes qualificados</strong> direto no seu
-              WhatsApp. Sem mensalidades, sem comissões abusivas. Você define
-              seus valores e horários.
-            </p>
-            <ul class="cta-benefits">
-              <li>
-                ✓ <strong>Visibilidade</strong>: Apareça para milhares de
-                pacientes ativos
-              </li>
-              <li>
-                ✓ <strong>Verificação profissional</strong>: Destaque-se com o
-                selo de verificado
-              </li>
-              <li>
-                ✓ <strong>Sem intermediários</strong>: Atenda direto pelo seu
-                WhatsApp
-              </li>
-              <li>
-                ✓ <strong>Planos acessíveis</strong>: A partir de R$ 59,90/mês
-              </li>
-            </ul>
-            <a
-              href="https://api.whatsapp.com/send?phone=5561998548265"
-              class="btn btn-white btn-large"
-              >Quero cadastrar meu perfil →</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- BENEFÍCIOS GERAIS -->
-      <section class="container">
-        <h3
-          style="
+    <section class="container">
+      <h3 style="
             text-align: center;
             margin-bottom: 16px;
             color: #1a1a2e;
             font-size: 32px;
-          "
-        >
-          Por que a Psi é diferente?
-        </h3>
-        <p
-          style="
+          ">
+        Por que a Psi é diferente?
+      </h3>
+      <p style="
             text-align: center;
             color: #64748b;
             font-size: 16px;
             max-width: 700px;
             margin: 0 auto 40px;
-          "
-        >
-          Terapia não precisa ser complicada ou cara. Conectamos você com quem
-          pode realmente ajudar.
-        </p>
+          ">
+        Terapia não precisa ser complicada ou cara. Conectamos você com quem
+        pode realmente ajudar.
+      </p>
 
-        <div class="user-benefits">
-          <div class="benefit-card">
-            <div class="benefit-icon">🔒</div>
-            <h4>Segurança e sigilo garantidos</h4>
-            <p class="small">
-              Todos os atendimentos seguem rigorosamente as normas do Conselho
-              Federal de Psicologia. Seu sigilo é nossa prioridade.
-            </p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">⚡</div>
-            <h4>Atendimento imediato</h4>
-            <p class="small">
-              Esqueça listas de espera. Conecte-se com psicólogos disponíveis
-              agora e agende sua consulta em minutos, não em semanas.
-            </p>
-          </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">💰</div>
-            <h4>Preços justos e transparentes</h4>
-            <p class="small">
-              Sem taxas escondidas. Você negocia valores diretamente com o
-              profissional e paga apenas pelas sessões realizadas.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section class="container faq" id="faq">
-        <h3 style="text-align: center; margin-bottom: 32px; font-size: 32px">
-          Dúvidas? A gente te ajuda
-        </h3>
-
-        <details>
-          <summary>Como funciona a teleconsulta por WhatsApp?</summary>
-          <div style="margin-top: 12px" class="small">
-            Você escolhe o psicólogo ideal, inicia uma conversa pelo WhatsApp
-            dele, agenda sua primeira sessão e realiza o atendimento por
-            videochamada. É simples, seguro e totalmente profissional.
-          </div>
-        </details>
-
-        <details>
-          <summary>Os psicólogos são realmente verificados?</summary>
-          <div style="margin-top: 12px" class="small">
-            Sim! Todos passam por verificação rigorosa do CRP ativo, análise de
-            documentos profissionais e avaliação contínua baseada no feedback
-            dos pacientes. Seu cuidado é levado a sério.
-          </div>
-        </details>
-
-        <details>
-          <summary>Como funciona o pagamento?</summary>
-          <div style="margin-top: 12px" class="small">
-            Você negocia valores e formas de pagamento diretamente com o
-            psicólogo pelo WhatsApp. Cada profissional define suas opções (PIX,
-            transferência, cartão). Sem intermediários, sem taxas extras.
-          </div>
-        </details>
-
-        <details>
-          <summary>Posso trocar de psicólogo se não me identificar?</summary>
-          <div style="margin-top: 12px" class="small">
-            Claro! A conexão com o terapeuta é fundamental. Você pode escolher
-            outro profissional a qualquer momento, sem compromisso ou
-            burocracia.
-          </div>
-        </details>
-
-        <details>
-          <summary>Como faço para cadastrar meu perfil como psicólogo?</summary>
-          <div style="margin-top: 12px" class="small">
-            Entre em contato pelo formulário abaixo, envie seus documentos (CRP
-            ativo, diploma) e informações profissionais. Verificamos em até 48h
-            e você já pode começar a receber pacientes. Simples assim!
-          </div>
-        </details>
-      </section>
-
-      <!-- CTA FINAL -->
-      <section class="container cta-section">
-        <div class="cta-box cta-final">
-          <h3>💚 Dê o primeiro passo para uma vida mais leve</h3>
-          <p>
-            Sua saúde mental não pode esperar. Milhares de pessoas já
-            transformaram suas vidas com ajuda profissional. Você também pode!
+      <div class="user-benefits">
+        <div class="benefit-card">
+          <div class="benefit-icon">🔒</div>
+          <h4>Segurança e sigilo garantidos</h4>
+          <p class="small">
+            Todos os atendimentos seguem rigorosamente as normas do Conselho
+            Federal de Psicologia. Seu sigilo é nossa prioridade.
           </p>
-          <div
-            style="
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h4>Atendimento imediato</h4>
+          <p class="small">
+            Esqueça listas de espera. Conecte-se com psicólogos disponíveis
+            agora e agende sua consulta em minutos, não em semanas.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h4>Preços justos e transparentes</h4>
+          <p class="small">
+            Sem taxas escondidas. Você negocia valores diretamente com o
+            profissional e paga apenas pelas sessões realizadas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container faq" id="faq">
+      <h3 style="text-align: center; margin-bottom: 32px; font-size: 32px">
+        Dúvidas? A gente te ajuda
+      </h3>
+
+      <details>
+        <summary>Como funciona a teleconsulta por WhatsApp?</summary>
+        <div style="margin-top: 12px" class="small">
+          Você escolhe o psicólogo ideal, inicia uma conversa pelo WhatsApp
+          dele, agenda sua primeira sessão e realiza o atendimento por
+          videochamada. É simples, seguro e totalmente profissional.
+        </div>
+      </details>
+
+      <details>
+        <summary>Os psicólogos são realmente verificados?</summary>
+        <div style="margin-top: 12px" class="small">
+          Sim! Todos passam por verificação rigorosa do CRP ativo, análise de
+          documentos profissionais e avaliação contínua baseada no feedback
+          dos pacientes. Seu cuidado é levado a sério.
+        </div>
+      </details>
+
+      <details>
+        <summary>Como funciona o pagamento?</summary>
+        <div style="margin-top: 12px" class="small">
+          Você negocia valores e formas de pagamento diretamente com o
+          psicólogo pelo WhatsApp. Cada profissional define suas opções (PIX,
+          transferência, cartão). Sem intermediários, sem taxas extras.
+        </div>
+      </details>
+
+      <details>
+        <summary>Posso trocar de psicólogo se não me identificar?</summary>
+        <div style="margin-top: 12px" class="small">
+          Claro! A conexão com o terapeuta é fundamental. Você pode escolher
+          outro profissional a qualquer momento, sem compromisso ou
+          burocracia.
+        </div>
+      </details>
+
+      <details>
+        <summary>Como faço para cadastrar meu perfil como psicólogo?</summary>
+        <div style="margin-top: 12px" class="small">
+          Entre em contato pelo formulário abaixo, envie seus documentos (CRP
+          ativo, diploma) e informações profissionais. Verificamos em até 48h
+          e você já pode começar a receber pacientes. Simples assim!
+        </div>
+      </details>
+    </section>
+
+    <section class="container cta-section">
+      <div class="cta-box cta-final">
+        <h3>💚 Dê o primeiro passo para uma vida mais leve</h3>
+        <p>
+          Sua saúde mental não pode esperar. Milhares de pessoas já
+          transformaram suas vidas com ajuda profissional. Você também pode!
+        </p>
+        <div style="
               display: flex;
               gap: 16px;
               justify-content: center;
               flex-wrap: wrap;
               margin-top: 24px;
-            "
-          >
-            <a href="#psicologos" class="btn btn-large"
-              >Encontrar meu psicólogo</a
-            >
-            <a
-              href="https://api.whatsapp.com/send?phone=5561998548265"
-              class="btn-outline btn"
-              >Sou psicólogo</a
-            >
+            ">
+          <a href="#psicologos" class="btn btn-large">Encontrar meu psicólogo</a>
+          <a href="https://api.whatsapp.com/send?phone=5561998548265" class="btn-outline btn">Sou psicólogo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="contato" style="padding-bottom: 60px">
+      <div class="card" style="text-align: center; padding: 40px">
+        <h3 style="font-size: 28px; margin-bottom: 12px">
+          Ainda tem dúvidas? Fale com a gente!
+        </h3>
+        <p class="small" style="margin: 0 0 32px; font-size: 16px">
+          Nossa equipe está pronta para ajudar você a encontrar o profissional
+          ideal ou cadastrar seu perfil.
+        </p>
+
+        <div class="form-group">
+          <input id="name" placeholder="Seu nome completo" class="form-input" />
+          <input id="email" placeholder="Seu melhor e-mail" class="form-input" />
+          <select id="userType" class="form-input">
+            <option value="">Eu sou...</option>
+            <option value="paciente">💙 Paciente buscando terapia</option>
+            <option value="psicologo">
+              💼 Psicólogo interessado em cadastro
+            </option>
+          </select>
+          <button class="btn" id="sendForm" style="font-size: 16px">
+            Enviar mensagem →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container" role="contentinfo">
+      <div>
+        <div class="logo" style="margin-bottom: 12px">
+          <div class="logo-icon" style="width: 48px; height: 48px; font-size: 18px">
+            Ψ
           </div>
         </div>
-      </section>
-
-      <!-- CONTATO -->
-      <section class="container" id="contato" style="padding-bottom: 60px">
-        <div class="card" style="text-align: center; padding: 40px">
-          <h3 style="font-size: 28px; margin-bottom: 12px">
-            Ainda tem dúvidas? Fale com a gente!
-          </h3>
-          <p class="small" style="margin: 0 0 32px; font-size: 16px">
-            Nossa equipe está pronta para ajudar você a encontrar o profissional
-            ideal ou cadastrar seu perfil.
-          </p>
-
-          <div class="form-group">
-            <input
-              id="name"
-              placeholder="Seu nome completo"
-              class="form-input"
-            />
-            <input
-              id="email"
-              placeholder="Seu melhor e-mail"
-              class="form-input"
-            />
-            <select id="userType" class="form-input">
-              <option value="">Eu sou...</option>
-              <option value="paciente">💙 Paciente buscando terapia</option>
-              <option value="psicologo">
-                💼 Psicólogo interessado em cadastro
-              </option>
-            </select>
-            <button class="btn" id="sendForm" style="font-size: 16px">
-              Enviar mensagem →
-            </button>
-          </div>
+        <div class="small" style="margin-bottom: 8px">
+          © <span id="year"></span> Psi Telemedicina
         </div>
-      </section>
-
-      <!-- FOOTER -->
-      <footer class="container" role="contentinfo">
-        <div>
-          <div class="logo" style="margin-bottom: 12px">
-            <div
-              class="logo-icon"
-              style="width: 48px; height: 48px; font-size: 18px"
-            >
-              Ψ
-            </div>
-          </div>
-          <div class="small" style="margin-bottom: 8px">
-            © <span id="year"></span> Psi Telemedicina
-          </div>
-          <div class="small" style="color: #25a7a7; font-weight: 600">
-            Conectando mentes, transformando vidas
-          </div>
+        <div class="small" style="color: #25a7a7; font-weight: 600">
+          Conectando mentes, transformando vidas
         </div>
-        <div class="contact-card">
-          <div class="small" style="margin-bottom: 12px; font-weight: 600">
-            Atendimento rápido
-          </div>
-          <a
-            class="btn"
-            href="https://www.instagram.com/psitelemedicina/"
-            target="_blank"
-            style="margin-bottom: 8px"
-            >📱 WhatsApp</a
-          >
-          <a
-            class="btn-outline btn"
-            href="https://www.instagram.com/psitelemedicina/"
-            target="_blank"
-            >Instagram</a
-          >
+      </div>
+      <div class="contact-card">
+        <div class="small" style="margin-bottom: 12px; font-weight: 600">
+          Atendimento rápido
         </div>
-      </footer>
-    </main>
+        <a class="btn" href="https://www.instagram.com/psitelemedicina/" target="_blank" style="margin-bottom: 8px">📱
+          WhatsApp</a>
+        <a class="btn-outline btn" href="https://www.instagram.com/psitelemedicina/" target="_blank">Instagram</a>
+      </div>
+    </footer>
+  </main>
 
-    <script src="js/script.js"></script>
-  </body>
+  <div id="psyModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="modalBodyContent">
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/carousel-script.js"></script>
+  </script>
+</body>
+
 </html>

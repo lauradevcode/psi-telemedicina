@@ -1,0 +1,277 @@
+/* ============================================
+   CARROSSEL DE PSICÓLOGOS (ESTILO STRINO)
+   ============================================ */
+
+.carousel-section {
+  overflow: hidden;
+  background: #fff;
+  padding: 60px 0;
+  margin: 40px 0;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 24px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-card {
+  flex: 0 0 320px;
+  background: #fff;
+  border-radius: 16px;
+  border: 2px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: grab;
+  position: relative; /* Mantido aqui para o hover e transform do card */
+}
+
+.carousel-card:active {
+  cursor: grabbing;
+}
+
+.carousel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(37, 167, 167, 0.2);
+  border-color: #25A7A7;
+}
+
+/* Premium Card */
+.carousel-card.premium {
+  border: 2px solid #FFD700;
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.25);
+  background: linear-gradient(135deg, #fffef7 0%, #ffffff 100%);
+}
+
+.carousel-card.premium:hover {
+  box-shadow: 0 12px 28px rgba(255, 215, 0, 0.35);
+  border-color: #FFA500;
+}
+
+/* CORREÇÃO: Balão de destaque agora anexado ao header para garantir posicionamento */
+.carousel-card.premium .carousel-card-header::before {
+  content: '⭐ DESTAQUE';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #1a1a2e;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+  z-index: 2; 
+}
+
+.carousel-card-header {
+  position: relative; /* CORREÇÃO FUNDAMENTAL: Torna este o contêiner de posicionamento dos badges */
+  height: 180px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.carousel-card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.carousel-verified-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(37, 167, 167, 0.95);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Garante que fique acima da foto */
+}
+
+.carousel-card-body {
+/* ... (Restante do código sem alteração) ... */
+/* ... (Resto do código sem alteração) ... */
+
+
+/* ============================================
+   ESTILOS DO MODAL (NOVO)
+   ============================================ */
+
+/* Fundo do Modal */
+.modal {
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  z-index: 1000; /* Alto para ficar acima de todo o conteúdo */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  backdrop-filter: blur(5px);
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%; 
+  max-width: 600px; /* Largura máxima controlada */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botão de Fechar */
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #1a1a2e;
+}
+
+/* Estilos de Conteúdo do Perfil */
+.modal-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.modal-profile-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #25A7A7;
+}
+
+.modal-profile-info h2 {
+  font-size: 24px;
+  color: #1a1a2e;
+  margin: 0 0 4px 0;
+}
+
+.modal-crp {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.modal-verified-badge {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.modal-profile-body h3 {
+  font-size: 18px;
+  color: #1a1a2e;
+  margin: 15px 0 8px 0;
+  border-left: 4px solid #25A7A7;
+  padding-left: 8px;
+}
+
+.modal-approach {
+  background: #f0f9ff;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #0c4a6e;
+}
+
+.modal-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.modal-specialty-tag {
+  background: #e2e8f0;
+  color: #475569;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.modal-description {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.modal-profile-footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.modal-whatsapp-btn {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+}
+
+.modal-whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.6);
+}
+}
