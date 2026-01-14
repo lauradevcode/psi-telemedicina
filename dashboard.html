@@ -61,33 +61,14 @@
                 <button class="tab-btn" data-tab="progresso">📈 Progresso</button>
             </div>
 
-
             <div id="tab-perfil" class="tab-content active">
                 <div class="card">
                     <h3>Editar Dados do Perfil</h3>
-                    <form id="profile-form" class="form-group" style="max-width: none;">
-
-                        <label for="profile-name">Nome Completo</label>
-                        <input type="text" id="profile-name" placeholder="Seu Nome Completo" class="form-input" />
-
-                        <label for="profile-email">Email (não pode ser alterado)</label>
-                        <input type="email" id="profile-email" placeholder="seu@email.com" class="form-input" disabled />
-
-                        <label for="profile-crp">CRP</label>
-                        <input type="text" id="profile-crp" placeholder="Ex: 01/12345" class="form-input" />
-                        
-                        <label for="profile-whatsapp">WhatsApp (com código do país)</label>
-                        <input type="text" id="profile-whatsapp" placeholder="Ex: 5511912345678" class="form-input" />
-
-                        <label for="profile-abordagem">Sua Abordagem</label>
-                        <input type="text" id="profile-abordagem" placeholder="Ex: Terapia Cognitivo-Comportamental (TCC)" class="form-input" />
-
-                        <label for="profile-sobre">Sobre você (Mini-biografia)</label>
-                        <textarea id="profile-sobre" placeholder="Escreva um breve resumo sobre você para os pacientes..." class="form-input" rows="4"></textarea>
-
-                        <button type="submit" class="btn">Salvar Alterações do Perfil</button>
-
-                        <span id="profile-message" style="display: block; margin-top: 15px;"></span>
+                    <form class="form-group" style="max-width: none;">
+                        <input type="text" placeholder="Nome Completo" value="Dr. João da Silva" class="form-input" />
+                        <input type="text" placeholder="CRP" value="CRP 06/123456" class="form-input" />
+                        <textarea placeholder="Mini-biografia e Abordagem" class="form-input" rows="4">Psicólogo clínico com abordagem Cognitivo-Comportamental (TCC). Especialista em ansiedade e transtornos de humor.</textarea>
+                        <button class="btn">Salvar Alterações do Perfil</button>
                     </form>
                 </div>
             </div>
@@ -96,40 +77,13 @@
                 <div class="card">
                     <h3>Cadastrar Novo Paciente</h3>
                     <form id="register-patient-form" class="form-group" style="max-width: none; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 20px;">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                            <div>
-                                <label for="patient-name">Nome do Paciente</label>
-                                <input type="text" id="patient-name" placeholder="Nome completo do paciente" class="form-input" required />
-                            </div>
-                            <div>
-                                <label for="patient-email">E-mail (opcional)</label>
-                                <input type="email" id="patient-email" placeholder="email@paciente.com" class="form-input" />
-                            </div>
-                        </div>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 15px;">
-                            <div>
-                                <label for="patient-telefone">Telefone</label>
-                                <input type="tel" id="patient-telefone" placeholder="(XX) XXXXX-XXXX" class="form-input" />
-                            </div>
-                            <div>
-                                <label for="patient-nascimento">Data de Nascimento</label>
-                                <input type="date" id="patient-nascimento" class="form-input" />
-                            </div>
-                            <div>
-                                <label for="patient-start-date">Data de Início da Terapia</label>
-                                <input type="date" id="patient-start-date" class="form-input" />
-                            </div>
-                        </div>
-                        <div style="margin-top: 15px;">
-                            <label for="patient-queixa">Queixa Principal (resumo inicial)</label>
-                            <textarea id="patient-queixa" class="form-input" rows="2" placeholder="Ex: Crises de ansiedade, dificuldades no relacionamento..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn" style="margin-top: 20px;">Cadastrar Paciente</button>
+                        <input type="text" id="patient-name" placeholder="Nome do Paciente" class="form-input" required />
+                        <input type="email" id="patient-email" placeholder="E-mail (opcional)" class="form-input" />
+                        <input type="date" id="patient-start-date" class="form-input" value="2024-10-15" />
+                        <button type="submit" class="btn">Cadastrar Paciente</button>
                     </form>
 
                     <h3>Meus Pacientes Ativos (4)</h3>
-                    <input type="text" id="search-patient-input" class="form-input" placeholder="🔍 Buscar paciente por nome..." style="margin-bottom: 20px;">
                     <div id="patients-list" class="patients-grid">
                         <div class="patient-card card">
                             <div class="patient-header">
@@ -169,91 +123,33 @@
 
             <div id="tab-progresso" class="tab-content hidden">
                 <div class="card">
-                    <h3>Acompanhamento de Sessões do Paciente</h3>
-
-                    <div class="form-group" style="max-width: none; margin-bottom: 30px;">
-                        <label for="patient-select">Selecione um paciente para ver ou adicionar registros de sessão:</label>
-                        <select id="patient-select" class="form-input">
-                            <option value="">-- Carregando pacientes... --</option>
-                        </select>
-                    </div>
-
-                    <div id="session-content" class="hidden">
-                        
-                        <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
-                            <h4 style="margin-bottom: 15px;">Adicionar Novo Registro de Sessão</h4>
-                            <form id="new-session-form" class="form-group" style="max-width: none;">
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                                    <div>
-                                        <label for="session-date">Data da Sessão</label>
-                                        <input type="date" id="session-date" class="form-input" required>
-                                    </div>
-                                    <div>
-                                        <label for="session-feeling">Sentimento Geral (para o gráfico)</label>
-                                        <select id="session-feeling" class="form-input">
-                                            <option value="">(Opcional)</option>
-                                            <option value="Positivo">Positivo</option>
-                                            <option value="Neutro">Neutro</option>
-                                            <option value="Negativo">Negativo</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div style="margin-top: 15px;">
-                                    <label for="session-notes">Anotações da Sessão (confidencial e criptografado)</label>
-                                    <textarea id="session-notes" class="form-input" rows="5" placeholder="Digite suas anotações aqui..."></textarea>
-                                </div>
-                                <button type="submit" class="btn" style="margin-top: 15px;">Salvar Registro da Sessão</button>
-                            </form>
+                    <h3>Acompanhamento de Progresso Geral</h3>
+                    <div class="progress-chart">
+                        <p class="small" style="text-align: center; color: #64748b;">(Simulação de gráfico - Utilize bibliotecas como Chart.js em produção)</p>
+                        <div class="chart-area" style="height: 250px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 14px; color: #94a3b8;">Área para Gráfico de Evolução dos Pacientes</span>
                         </div>
-
-                        <h4 style="margin-top: 30px; border-top: 1px solid #e2e8f0; padding-top: 20px;">Histórico de Sessões</h4>
-                        <div id="session-history-list">
-                            <p>Selecione um paciente para ver o histórico.</p>
+                    </div>
+                    
+                    <h4 style="margin-top: 30px;">Métricas Rápidas</h4>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-number color-teal">24</div>
+                            <div class="stat-label">Sessões Realizadas no Mês</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number color-teal">8</div>
+                            <div class="stat-label">Pacientes Ativos</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number color-teal">3</div>
+                            <div class="stat-label">Novos Cadastros (30 dias)</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <div id="edit-patient-modal" class="modal-overlay hidden">
-        <div class="modal-content card">
-            <h3>Editar Dados do Paciente</h3>
-            <form id="edit-patient-form" class="form-group" style="max-width: none;">
-                <input type="hidden" id="edit-patient-id">
-
-                <label for="edit-patient-name">Nome Completo</label>
-                <input type="text" id="edit-patient-name" class="form-input" required>
-
-                <label for="edit-patient-email">E-mail</label>
-                <input type="email" id="edit-patient-email" class="form-input">
-
-                <label for="edit-patient-telefone">Telefone</label>
-                <input type="tel" id="edit-patient-telefone" class="form-input">
-
-                <label for="edit-patient-nascimento">Data de Nascimento</label>
-                <input type="date" id="edit-patient-nascimento" class="form-input">
-                
-                <label for="edit-patient-inicio">Data de Início da Terapia</label>
-                <input type="date" id="edit-patient-inicio" class="form-input">
-
-                <label for="edit-patient-status">Status</label>
-                <select id="edit-patient-status" class="form-input">
-                    <option value="Ativo">Ativo</option>
-                    <option value="Inativo">Inativo</option>
-                    <option value="Alta">Alta</option>
-                </select>
-
-                <label for="edit-patient-queixa">Queixa Principal</label>
-                <textarea id="edit-patient-queixa" class="form-input" rows="3"></textarea>
-                
-                <div class="modal-actions">
-                    <button type="submit" class="btn">Salvar Alterações</button>
-                    <button type="button" id="cancel-edit-btn" class="btn-outline">Cancelar</button>
-                </div>
-            </form>
-        </div>
-    </div>
 
      <script src="js/dashboard.js"></script> 
     </body>

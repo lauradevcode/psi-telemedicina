@@ -12,114 +12,59 @@ const psychologists = [
         photo: "../img/psicologos/lucas-ribeiro.jpg",
         crp: "CRP 06/182628",
         approach: "Terapia de Aceitação e Compromisso - ACT",
-        specialties: ["Ansiedade", "Autoconhecimento"],
+        specialties: ["Ansiedade", "Autoconhecimento", "Depressão"],
         whatsapp: "5511984789568",
-        premium: true // R$ 29,90/mês
+        premium: true 
     },
     {
         name: "Noemia Noronha Domingos",
         photo: "../img/psicologos/noemia-noronha.jpg",
         crp: "CRP 04/77404",
-        approach: "Terapia Cognitivo-Comportamental (TCC)",
-        specialties: ["Ansiedade", "Depressão", "Autoconhecimento"],
+        approach: "Terapia Cognitiva-Comportamental (TCC)",
+        specialties: ["Ansiedade", "Depressão", "Autoconhecimento", "Estresse"],
         whatsapp: "553597010965",
-        premium: true // R$ 29,90/mês
+        premium: true 
     },
     {
         name: "Jaqueline Martins",
         photo: "../img/psicologos/jaqueline-martins.jpg",
         crp: "CRP 07/30847",
         approach: "Psicanálise",
-        specialties: ["Adultos", "Adolescentes", "Escuta Psicanalítica"],
+        specialties: ["Adultos", "Adolescentes", "Escuta Psicanalítica", "Relacionamentos"],
         whatsapp: "555199947197",
-        premium: true // R$ 29,90/mês
+        premium: true 
     },
-    // Psicólogos regulares
+        {
+        name: "Laryssa Nunes Rodrigues",
+        photo: "../img/psicologos/laryssa-nune.jpg",
+        crp: "CRP 03/15478",
+        approach: "Terapia Cognitiva-Comportamental",
+        specialties: ["Ansiedade", "Autossabotagem", "Medo"],
+        whatsapp: "85986470826",
+        premium: true 
+    },
+    // Psicólogos regulares - Nota: Usando o waNumber principal para demonstração
     {
         name: "Mayara Borges",
         photo: "../img/psicologos/mayara.jpg",
         crp: "CRP 06/203605",
-        approach: "Terapia Cognitivo-Comportamental (TCC)",
-        specialties: ["Abordagem prática e baseada em evidências", "Depressão", "Ansiedade"],
-        whatsapp: "5561998548265"
+        approach: "Terapia Cognitiva-Comportamental (TCC)",
+        specialties: ["Ansiedade Depressão, Conflitos Pessoais, Conflitos Familiares, Relacionamento, Autocuidado, Autoestima, questões sobre a adolescência, e mulheres em situação de violência."],
+        whatsapp: "11949425267",
     },
-    {
-        name: "Rafael Camino",
-        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=faces",
-        crp: "CRP 07/29706",
-        approach: "Terapia Cognitiva Comportamental",
-        specialties: ["Ansiedade", "Luto", "Trauma"],
-        whatsapp: "5561998548265"
-    },
-    {
-        name: "Carolina Pastori",
-        photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&crop=faces",
-        crp: "CRP 07/35788",
-        approach: "TFC, TCC e Terapias Contextuais",
-        specialties: ["Autocobrança", "Perfeccionismo", "Saúde Mental da Mulher"],
-        whatsapp: "555496835158"
-    },
-    {
-        name: "Jéssica Cardoso Abreu da Silva",
-        photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=faces",
-        crp: "CRP 05/75274",
-        approach: "Terapia Cognitiva Comportamental",
-        specialties: ["Ansiedade", "Depressão", "Compulsão Alimentar"],
-        whatsapp: "5561998548265"
-    },
-    {
-        name: "Rebeca Santos Bacelar Dessa",
-        photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&crop=faces",
-        crp: "CRP 03/31112",
-        approach: "Terapia Cognitiva Comportamental",
-        specialties: ["Adolescentes", "Adultos", "Atendimento Online"],
-        whatsapp: "5561998548265"
-    },
-    {
-        name: "Rafaela Armesto",
-        photo: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=300&h=300&fit=crop&crop=faces",
-        crp: "CRP 06/101253",
-        approach: "Terapia Cognitivo-Comportamental",
-        specialties: ["Adultos", "Idosos", "Adolescentes"],
-        whatsapp: "5561998548265"
-    },
-    {
-        name: "Alan Amoras",
-        photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=faces",
-        crp: "CRP 10/10509",
-        approach: "Psicanalítica",
-        specialties: ["Adolescentes", "Adultos", "Escuta Clínica Profunda"],
-        whatsapp: "5561998548265"
-    },
-    {
-        name: "Bruna Macedo da Costa",
-        photo: "../img/psicologos/bruna-macedo.jpg",
-        crp: "CRP 06/223753",
-        approach: "Terapia Cognitivo-Comportamental (TCC)",
-        specialties: ["Ansiedade", "Autoconhecimento", "Depressão"],
-        whatsapp: "5511970285561",
-        premium: false
+        {
+        name: "Ana Carolina Santos",
+        photo: "../img/psicologos/ana-carolina.jpeg",
+        crp: "CRP 01/29141",
+        approach: "Análise do Comportamento",
+        specialties: ["Depressão", "Ansiedade", "Terapia de Casal"],
+        whatsapp: "11949425267",
     }
-    // {
-    //     name: "Palmiana Lovati",
-    //     photo: "../img/psicologos/palmiana-lovati.jpg",
-    //     crp: "CRP 16/4835",
-    //     approach: "Terapia Cognitivo-Comportamental (TCC)",
-    //     specialties: ["Ansiedade", "Relacionamentos", "Autoestima"],
-    //     whatsapp: "5528999785955",
-    //     premium: false
-    // },
 
 ];
 
-// Ordenar psicólogos: PREMIUM primeiro
-const sortedPsychologists = [...psychologists].sort((a, b) => {
-    if (a.premium && !b.premium) return -1;
-    if (!a.premium && b.premium) return 1;
-    return 0;
-});
-
 // Extrair especialidades e abordagens únicas para filtros
+// Nota: Os nomes das especialidades na base de dados (e nos selects) agora não têm acentos ou maiúsculas para facilitar a correspondência, mas o texto exibido no tag é o original.
 const allSpecialties = [...new Set(psychologists.flatMap(p => p.specialties))].sort();
 const allApproaches = [...new Set(psychologists.map(p => p.approach))].sort();
 
@@ -128,127 +73,133 @@ function createPsyCard(psy) {
     const premiumBadge = psy.premium ? '<span class="premium-badge">⭐ PREMIUM</span>' : '';
     const cardClass = psy.premium ? 'psy-card premium-card' : 'psy-card';
 
-    return `<div class="${cardClass}" data-approach="${psy.approach}" data-specialties="${psy.specialties.join(',')}">
-<div class="psy-header">
-<img src="${psy.photo}" alt="${psy.name}" class="psy-photo">
-<div class="psy-info">
-<div class="psy-name">${psy.name}</div>
-<div class="psy-crp">${psy.crp}</div>
-<span class="verified-badge">✓ Verificado</span>
-${premiumBadge}
-</div>
-</div>
-<div class="psy-body">
-<div class="psy-approach">${psy.approach}</div>
-<div class="psy-specialties">
-${psy.specialties.map(spec => `<span class="specialty-tag">${spec}</span>`).join('')}
-</div>
-</div>
-<div class="psy-footer">
-<a href="https://wa.me/${psy.whatsapp}?text=${encodeURIComponent(`Olá, ${psy.name}! Gostaria de agendar uma consulta e saber mais sobre valores e disponibilidade.`)}" target="_blank" class="psy-whatsapp-btn-full">💬 Conversar no WhatsApp</a>
-</div>
-</div>`;
-}
+    // Cria a mensagem para o WhatsApp com o nome do profissional
+    const encodedMessage = encodeURIComponent(`Olá, ${psy.name}! Gostaria de agendar uma sessão de terapia.`);
 
-// Renderizar psicólogos com filtros
-function renderPsychologists(filters = {}) {
-    const grid = document.getElementById('psychologistsGrid');
-    const noResults = document.getElementById('noPsychologists');
-
-    let filtered = [...sortedPsychologists];
-
-    // Aplicar filtros
-    if (filters.specialty && filters.specialty !== 'all') {
-        filtered = filtered.filter(psy => psy.specialties.includes(filters.specialty));
-    }
-
-    if (filters.approach && filters.approach !== 'all') {
-        filtered = filtered.filter(psy => psy.approach === filters.approach);
-    }
-
-    // Mostrar resultados
-    if (filtered.length === 0) {
-        grid.style.display = 'none';
-        noResults.style.display = 'block';
-    } else {
-        grid.style.display = 'grid';
-        noResults.style.display = 'none';
-        grid.innerHTML = filtered.map(psy => createPsyCard(psy)).join('');
-    }
-}
-
-// Criar filtros dinamicamente
-function createFilters() {
-    const filtersHTML = `
-        <div class="filters-container">
-            <div class="filters-title">🔍 Encontre o psicólogo ideal para você</div>
-            <div class="filters-grid">
-                <select id="filterSpecialty" class="filter-select">
-                    <option value="all">Todas as especialidades</option>
-                    ${allSpecialties.map(s => `<option value="${s}">${s}</option>`).join('')}
-                </select>
-                
-                <select id="filterApproach" class="filter-select">
-                    <option value="all">Todas as abordagens</option>
-                    ${allApproaches.map(a => `<option value="${a}">${a}</option>`).join('')}
-                </select>
-                
-                <button class="clear-filters-btn" id="clearFilters">Limpar filtros</button>
+    return `<div class="${cardClass}" data-approach="${psy.approach}" data-specialties="${psy.specialties.join(', ')}">
+        <div class="psy-header">
+            <img src="${psy.photo}" alt="${psy.name}" class="psy-photo">
+            <div class="psy-info">
+                <div class="psy-name">${psy.name}</div>
+                <div class="psy-crp">${psy.crp}</div>
+                <div class="badges">
+                    <span class="verified-badge">✓ Verificado</span>
+                    ${premiumBadge}
+                </div>
             </div>
         </div>
-    `;
-
-    const section = document.getElementById('psicologos');
-    const title = section.querySelector('h3');
-    title.insertAdjacentHTML('afterend', filtersHTML);
-
-    // Event listeners para filtros
-    document.getElementById('filterSpecialty').addEventListener('change', applyFilters);
-    document.getElementById('filterApproach').addEventListener('change', applyFilters);
-    document.getElementById('clearFilters').addEventListener('click', clearFilters);
+        <div class="psy-body">
+            <div class="psy-approach">Abordagem: ${psy.approach}</div>
+            <div class="psy-specialties">
+                ${psy.specialties.slice(0, 3).map(spec => `<span class="specialty-tag">${spec}</span>`).join('')}
+                ${psy.specialties.length > 3 ? `<span class="specialty-tag">+${psy.specialties.length - 3}</span>` : ''}
+            </div>
+        </div>
+        <div class="psy-footer">
+            <a href="https://wa.me/${psy.whatsapp}?text=${encodedMessage}" target="_blank" class="psy-whatsapp-btn-full">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 18px; height: 18px; filter: brightness(0) invert(1); display: inline;">
+                Chamar no WhatsApp
+            </a>
+        </div>
+    </div>`;
 }
 
-// Aplicar filtros
-function applyFilters() {
-    const specialty = document.getElementById('filterSpecialty').value;
-    const approach = document.getElementById('filterApproach').value;
+// Função para renderizar os psicólogos
+function renderPsychologists(filterSpecialty = "", filterApproach = "") {
+    const grid = document.getElementById("psychologistsGrid");
+    const noResultsMessage = document.getElementById("noResultsMessage");
+    grid.innerHTML = "";
 
-    renderPsychologists({
-        specialty: specialty,
-        approach: approach
+    // Filtra psicólogos. Se o filtro for "", ele é ignorado.
+    const filtered = psychologists.filter(psy => {
+        // Normaliza a especialidade para a comparação, mas só se tiver sido selecionado um filtro
+        const matchesSpecialty = !filterSpecialty || psy.specialties.some(spec => spec === filterSpecialty);
+        const matchesApproach = !filterApproach || psy.approach === filterApproach;
+        return matchesSpecialty && matchesApproach;
     });
+
+    // Ordena: Premium primeiro, depois por nome
+    filtered.sort((a, b) => {
+        if (a.premium && !b.premium) return -1;
+        if (!a.premium && b.premium) return 1;
+        return a.name.localeCompare(b.name);
+    });
+
+    if (filtered.length === 0) {
+        // Mostra a mensagem de "sem resultados" 
+        if (noResultsMessage) {
+            noResultsMessage.classList.remove("hidden");
+        }
+    } else {
+        // Esconde a mensagem e renderiza os cards
+        if (noResultsMessage) {
+            noResultsMessage.classList.add("hidden");
+        }
+        filtered.forEach(psy => {
+            grid.innerHTML += createPsyCard(psy);
+        });
+    }
 }
 
-// Limpar filtros
-function clearFilters() {
-    document.getElementById('filterSpecialty').value = 'all';
-    document.getElementById('filterApproach').value = 'all';
-    renderPsychologists();
-    // REMOVIDO: renderPsychologistsCarousel(sortedPsychologists);
+// Preencher os filtros (Selects)
+function populateFilters() {
+    const specialtyFilter = document.getElementById("specialtyFilter");
+    allSpecialties.forEach(spec => {
+        // Usa a especialidade completa como valor e texto
+        specialtyFilter.innerHTML += `<option value="${spec}">${spec}</option>`;
+    });
+
+    const approachFilter = document.getElementById("approachFilter");
+    allApproaches.forEach(app => {
+        approachFilter.innerHTML += `<option value="${app}">${app}</option>`;
+    });
+
+    // Atualiza os placeholders de acordo com a nova cópia
+    specialtyFilter.querySelector('option[value=""]').textContent = "Escolha a especialidade";
+    approachFilter.querySelector('option[value=""]').textContent = "Escolha a abordagem terapêutica";
 }
 
-// Inicializar
-createFilters();
-renderPsychologists();
-
-// WhatsApp com mensagens personalizadas
-document.getElementById("startWhats").addEventListener("click", (e) => {
-    e.preventDefault();
-    document.getElementById('psicologos').scrollIntoView({ behavior: 'smooth' });
+// Inicialização: CHAMA A FUNÇÃO SEM FILTROS para exibir tudo ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+    populateFilters();
+    renderPsychologists(); 
 });
 
-// Formulário de contato
+
+// Lógica de Filtragem
+const specialtyFilter = document.getElementById("specialtyFilter");
+const approachFilter = document.getElementById("approachFilter");
+const clearFiltersBtn = document.getElementById("clearFiltersBtn");
+
+function applyFilters() {
+    const selectedSpecialty = specialtyFilter.value;
+    const selectedApproach = approachFilter.value;
+    // O filtro só é aplicado quando esta função é chamada (ao interagir com os selects)
+    renderPsychologists(selectedSpecialty, selectedApproach); 
+}
+
+specialtyFilter.addEventListener("change", applyFilters);
+approachFilter.addEventListener("change", applyFilters);
+clearFiltersBtn.addEventListener("click", () => {
+    specialtyFilter.value = "";
+    approachFilter.value = "";
+    // Limpa os filtros e renderiza TUDO novamente
+    renderPsychologists();
+});
+
+
+// Lógica do Formulário de Contato
 document.getElementById("sendForm").addEventListener("click", () => {
     const name = document.getElementById("name").value || "Não informado";
     const email = document.getElementById("email").value || "Não informado";
     const userType = document.getElementById("userType").value || "não especificado";
 
-    let message = `Olá! Meu nome é ${name}, email: ${email}. `;
+    let message = `Olá, vim do site e gostaria de falar sobre um assunto. Meu nome é ${name}, email: ${email}. `;
 
     if (userType === "paciente") {
-        message += "Sou paciente e gostaria de mais informações sobre como encontrar um psicólogo.";
+        message += "Sou paciente e quero agendar minha primeira sessão de terapia.";
     } else if (userType === "psicologo") {
-        message += "Sou psicólogo(a) e tenho interesse em me cadastrar na plataforma.";
+        message += "Sou psicólogo(a) e estou interessado(a) em me cadastrar na plataforma.";
     } else {
         message += "Gostaria de mais informações sobre a plataforma.";
     }
@@ -258,7 +209,7 @@ document.getElementById("sendForm").addEventListener("click", () => {
 });
 
 // Enter key nos inputs
-["name", "email"].forEach((id) => {
+["name", "email", "userType"].forEach((id) => {
     const element = document.getElementById(id);
     if (element) {
         element.addEventListener("keydown", (e) => {
@@ -278,12 +229,11 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in");
+            entry.target.classList.add("is-visible");
         }
     });
 }, observerOptions);
 
-// Observa elementos que devem ter animação
-document.querySelectorAll(".step, .benefit-card, .hero").forEach((el) => {
+document.querySelectorAll(".animate-fade-in").forEach((el) => {
     observer.observe(el);
 });

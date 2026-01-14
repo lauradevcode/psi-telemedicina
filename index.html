@@ -1,468 +1,1073 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Terapia Online Acessível | Psicólogos pelo WhatsApp – Psi Telemedicina
+    </title>
+    <meta
+      name="description"
+      content="Inicie sua terapia online de forma rápida e acessível. Psicólogos qualificados, consultas seguras via WhatsApp e atendimento humanizado para ansiedade, depressão e bem-estar."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/carousel-styles.css" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>
-    Terapia Online Acessível | Psicólogos pelo WhatsApp – Psi Telemedicina
-  </title>
-  <meta name="description"
-    content="Inicie sua terapia online de forma rápida e acessível. Psicólogos qualificados, consultas seguras via WhatsApp e atendimento humanizado para ansiedade, depressão e bem-estar." />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/carousel-styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2212%22 fill=%22%231A8089%22></rect><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2250%22 font-weight=%22bold%22 fill=%22white%22 font-family=%22serif%22>%CE%A8</text></svg>"
+      type="image/svg+xml"
+    />
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "793441870400323");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=793441870400323&ev=PageView&noscript=1"
+    /></noscript>
+  </head>
 
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2212%22 fill=%22%2325d366%22></rect><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2250%22 font-weight=%22bold%22 fill=%22white%22 font-family=%22serif%22>%CE%A8</text></svg>"
-    type="image/svg+xml" />
-</head>
-
-<body>
-  <header class="container" role="banner">
-    <div class="logo">
-      <div class="logo-icon">Ψ</div>
-      <div class="logo-text">
-        <strong>Psi Telemedicina</strong>
-        <span class="small">Terapia Online Acessível</span>
+  <body data-open="false">
+    <header role="banner">
+      <div class="container header-content">
+        <div class="logo">
+          <div class="logo-icon">Ψ</div>
+          <div class="logo-text">
+            <strong>Psi Telemedicina</strong>
+          </div>
+        </div>
+        <nav aria-label="Principal" class="desktop-nav">
+          <ul>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#psicologos">Psicólogos</a></li>
+            <li><a href="#planos">Planos</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li>
+              <a class="btn-primary btn-pulse" href="#psicologos">
+                Encontrar Psicólogo
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
       </div>
-    </div>
-    <nav aria-label="Principal">
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu">
       <ul>
         <li><a href="#como-funciona">Como funciona</a></li>
         <li><a href="#psicologos">Psicólogos</a></li>
+        <li><a href="#planos">Planos</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a class="btn" href="dashboard.html">💼 Área do Psicólogo</a></li>
+        <li>
+          <a class="btn-primary" href="#psicologos"> Encontrar Psicólogo </a>
+        </li>
       </ul>
-    </nav>
-  </header>
+    </div>
 
-  <main>
-    <section class="container hero animate-fade-in" aria-labelledby="hero-title">
-      <div>
-        <h1 id="hero-title">
-          Sua saúde mental merece atenção. Comece hoje, sem sair de casa.
-        </h1>
-        <p>
-          Mais de <strong>100 psicólogos verificados</strong> esperando para
-          ajudar você a superar ansiedade, depressão e conquistar o bem-estar
-          que você merece. Tudo pelo WhatsApp, de forma simples e segura.
-        </p>
+    <main>
+      <section
+        class="container hero animate-fade-in"
+        aria-labelledby="hero-title"
+      >
+        <div class="hero-content">
+          <h1 id="hero-title">Cuide da sua saúde mental sem sair de casa.</h1>
+          <p>
+            Fale com psicólogos verificados e comece sua melhora hoje mesmo,
+            direto pelo WhatsApp.
+          </p>
 
-        <div class="actions">
-          <a class="btn btn-pulse" id="startWhats" href="#psicologos" role="button">🔍 Encontrar meu psicólogo</a>
-          <a class="btn-outline btn" href="#como-funciona">Como funciona</a>
-        </div>
+          <div class="actions">
+            <a
+              class="btn-primary btn-pulse"
+              id="startWhats"
+              href="#psicologos"
+              role="button"
+            >
+              Encontrar psicólogo agora
+            </a>
+            <a class="btn-secondary" href="#contato"
+              >Sou psicólogo e quero me cadastrar</a
+            >
+          </div>
 
-        <div class="stats-card-final">
-          <div class="stats-image-container">
-            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=300&fit=crop"
-              alt="Equipe de psicólogos" class="stats-team-photo" />
-            <div class="stats-overlay">
-              <div class="stats-badge-on-image">NOSSA COMUNIDADE</div>
+          <div class="confidence-block animate-fade-in">
+            <div class="confidence-title">
+              +100 psicólogos qualificados prontos para te atender.
+            </div>
+            <div class="confide addEventListener">
+              <span class="seal-item">✓ CRP verificado</span>
+              <span class="seal-item">⭐ Avaliações reais</span>
+              <span class="seal-item">💬 Especialistas diversos</span>
+              <span class="seal-item">⏰ Disponibilidade imediata</span>
             </div>
           </div>
-          <div class="stats-content-final">
-            <div class="stats-number-final">100+</div>
-            <div class="stats-description-final">
-              Profissionais qualificados prontos para sua jornada de
-              transformação
-            </div>
-            <div class="stats-tags-final">
-              <span class="stats-tag-final">✓ CRP ativo</span>
-              <span class="stats-tag-final">✓ Avaliados</span>
-              <span class="stats-tag-final">✓ Disponíveis</span>
-            </div>
-          </div>
         </div>
-      </div>
 
-      <aside>
-        <div class="benefits-card-final">
-          <div class="benefits-header-final">
-            <div class="benefits-icon-circle">💚</div>
+        <aside>
+          <div class="benefits-checklist animate-fade-in">
             <h3>Por que milhares confiam na Psi?</h3>
-          </div>
 
-          <div class="benefits-list-final">
-            <div class="benefit-item-final">
-              <div class="benefit-icon-box">📱</div>
-              <div>
-                <strong>100% pelo WhatsApp</strong>
-                <small>Sem apps complicados</small>
+            <div class="benefits-list">
+              <div class="benefit-item">
+                <div class="benefit-icon">📱</div>
+                <div class="benefit-text">
+                  <strong>100% pelo WhatsApp</strong>
+                  <small>Sem apps complicados ou salas virtuais</small>
+                </div>
               </div>
-            </div>
 
-            <div class="benefit-item-final">
-              <div class="benefit-icon-box">⚡</div>
-              <div>
-                <strong>Agende em minutos</strong>
-                <small>Sem espera de semanas</small>
+              <div class="benefit-item">
+                <div class="benefit-icon">⚡</div>
+                <div class="benefit-text">
+                  <strong>Agende em minutos</strong>
+                  <small>Fale com o profissional em tempo real</small>
+                </div>
               </div>
-            </div>
 
-            <div class="benefit-item-final">
-              <div class="benefit-icon-box">✓</div>
-              <div>
-                <strong>Profissionais verificados</strong>
-                <small>CRP ativo garantido</small>
+              <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div class="benefit-text">
+                  <strong>Profissionais verificados</strong>
+                  <small>Checagem ativa de CRP e referências</small>
+                </div>
               </div>
-            </div>
 
-            <div class="benefit-item-final">
-              <div class="benefit-icon-box">💰</div>
-              <div>
-                <strong>Sem intermediários</strong>
-                <small>Negocie direto com o psicólogo</small>
-              </div>
-            </div>
-
-            <div class="benefit-item-final">
-              <div class="benefit-icon-box">🔒</div>
-              <div>
-                <strong>Sigilo absoluto</strong>
-                <small>Normas do CFP respeitadas</small>
+              <div class="benefit-item">
+                <div class="benefit-icon">💰</div>
+                <div class="benefit-text">
+                  <strong>Preços acessíveis</strong>
+                  <small>Qualidade que cabe no seu bolso</small>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </aside>
-    </section>
+        </aside>
+      </section>
 
-    <section class="carousel-section">
-      <div class="container" style="position: relative;">
-        <h2 style="text-align: center; color: #1a1a2e; font-size: 32px; margin-bottom: 12px;">
-          Conheça nossos Psicólogos Destacados
-        </h2>
-        <p style="text-align: center; color: #64748b; font-size: 16px; max-width: 700px; margin: 0 auto 40px;">
-          Deslize para ver mais profissionais verificados e prontos para ajudar você.
-        </p>
-
-        <div class="carousel-container">
-          <div class="carousel-wrapper" id="carouselWrapper"></div>
-
-          <div class="carousel-controls">
-            <button class="carousel-btn-nav" id="carouselLeftBtn">←</button>
-            <button class="carousel-btn-nav" id="carouselRightBtn">→</button>
-          </div>
-        </div>
-
-        <div class="carousel-indicators" id="carouselIndicators"></div>
-      </div>
-    </section>
-
-    <section class="container">
-      <h2 style="
+      <section class="container" id="como-funciona">
+        <h2
+          style="
             text-align: center;
             color: #1a1a2e;
             font-size: 32px;
             margin-bottom: 12px;
             line-height: 1.2;
-          ">
-        Da dor à cura em 3 passos simples
-      </h2>
-      <p style="
+          "
+        >
+          Da dor à cura em 3 passos simples
+        </h2>
+        <p
+          style="
             text-align: center;
             color: #64748b;
             font-size: 18px;
             max-width: 800px;
             margin: 0 auto 40px;
-          ">
-        Você não precisa continuar sofrendo sozinho. Começar sua terapia é
-        mais fácil do que você imagina.
-      </p>
+          "
+        >
+          Você não precisa continuar sofrendo sozinho. Começar sua terapia é
+          mais fácil do que você imagina.
+        </p>
+        <div class="how">
+          <div class="step animate-fade-in">
+            <div class="step-icon">🔍</div>
+            <h4>Escolha seu psicólogo</h4>
+            <p class="small">
+              Compare perfis, especialidades e valores. Filtre até encontrar o
+              encaixe perfeito.
+            </p>
+          </div>
+          <div class="step animate-fade-in">
+            <div class="step-icon">💬</div>
+            <h4>Agende e pague</h4>
+            <p class="small">
+              Tudo direto no WhatsApp, sem burocracia. Negocie horário e valor
+              de forma transparente.
+            </p>
+          </div>
+          <div class="step animate-fade-in">
+            <div class="step-icon">🚀</div>
+            <h4>Inicie a transformação</h4>
+            <p class="small">
+              Conecte-se no horário marcado e comece sua jornada de
+              autoconhecimento e bem-estar, de onde estiver.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <div class="how" id="como-funciona">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h4>Escolha seu psicólogo</h4>
-          <p class="small">
-            Veja perfis completos com especialidades, abordagens e avaliações.
-            Encontre quem realmente combina com você.
+      <section
+        class="container"
+        id="planos"
+        style="margin: 80px auto; padding: 60px 20px"
+      >
+        <h2
+          style="
+            text-align: center;
+            color: #1a1a2e;
+            font-size: 36px;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            font-weight: 700;
+          "
+        >
+          Planos para Psicólogos
+        </h2>
+        <p
+          style="
+            text-align: center;
+            color: #64748b;
+            font-size: 19px;
+            max-width: 700px;
+            margin: 0 auto 48px;
+            line-height: 1.6;
+          "
+        >
+          Expanda sua prática, conquiste mais pacientes e construa sua carreira
+          com total autonomia
+        </p>
+
+        <div
+          class="plans-grid"
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+          "
+        >
+          <div
+            class="plan-card animate-fade-in"
+            style="
+              background: white;
+              border-radius: 16px;
+              padding: 40px 32px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07),
+                0 2px 4px rgba(0, 0, 0, 0.05);
+              border: 2px solid #e2e8f0;
+              transition: all 0.3s ease;
+              position: relative;
+              display: flex;
+              flex-direction: column;
+            "
+          >
+            <div class="plan-header" style="margin-bottom: 28px">
+              <h3
+                style="
+                  font-size: 24px;
+                  color: #1a1a2e;
+                  margin-bottom: 8px;
+                  font-weight: 600;
+                "
+              >
+                Plano Mensal
+              </h3>
+              <p
+                style="
+                  color: #64748b;
+                  font-size: 14px;
+                  margin-bottom: 20px;
+                  line-height: 1.5;
+                "
+              >
+                Ideal para começar e testar a plataforma
+              </p>
+              <div
+                class="plan-price"
+                style="display: flex; align-items: baseline; margin-bottom: 8px"
+              >
+                <span
+                  class="price-currency"
+                  style="
+                    font-size: 20px;
+                    color: #1a8089;
+                    font-weight: 600;
+                    margin-right: 4px;
+                  "
+                  >R$</span
+                >
+                <span
+                  class="price-value"
+                  style="
+                    font-size: 48px;
+                    color: #1a1a2e;
+                    font-weight: 700;
+                    line-height: 1;
+                  "
+                  >49</span
+                >
+                <span
+                  class="price-cents"
+                  style="font-size: 24px; color: #1a1a2e; font-weight: 600"
+                  >,90</span
+                >
+                <span
+                  class="price-period"
+                  style="font-size: 16px; color: #64748b; margin-left: 6px"
+                  >/mês</span
+                >
+              </div>
+              <p style="color: #64748b; font-size: 13px; margin-top: 4px">
+                Cancele quando quiser
+              </p>
+            </div>
+            <div class="plan-features" style="flex: 1; margin-bottom: 28px">
+              <div
+                class="feature-item"
+                style="
+                  display: flex;
+                  align-items: start;
+                  margin-bottom: 16px;
+                  font-size: 15px;
+                  color: #334155;
+                "
+              >
+                <span
+                  style="
+                    color: #1a8089;
+                    margin-right: 12px;
+                    font-size: 18px;
+                    flex-shrink: 0;
+                  "
+                  >✓</span
+                >
+                <div>
+                  <strong style="display: block; margin-bottom: 2px"
+                    >Perfil verificado</strong
+                  >
+                  <span style="font-size: 13px; color: #64748b"
+                    >Aparece na listagem principal</span
+                  >
+                </div>
+              </div>
+              <div
+                class="feature-item"
+                style="
+                  display: flex;
+                  align-items: start;
+                  margin-bottom: 16px;
+                  font-size: 15px;
+                  color: #334155;
+                "
+              >
+                <span
+                  style="
+                    color: #1a8089;
+                    margin-right: 12px;
+                    font-size: 18px;
+                    flex-shrink: 0;
+                  "
+                  >✓</span
+                >
+                <div>
+                  <strong style="display: block; margin-bottom: 2px"
+                    >Contato direto</strong
+                  >
+                  <span style="font-size: 13px; color: #64748b"
+                    >Pacientes falam direto com você</span
+                  >
+                </div>
+              </div>
+              <div
+                class="feature-item"
+                style="
+                  display: flex;
+                  align-items: start;
+                  margin-bottom: 16px;
+                  font-size: 15px;
+                  color: #334155;
+                "
+              >
+                <span
+                  style="
+                    color: #1a8089;
+                    margin-right: 12px;
+                    font-size: 18px;
+                    flex-shrink: 0;
+                  "
+                  >✓</span
+                >
+                <div>
+                  <strong style="display: block; margin-bottom: 2px"
+                    >Exposição online</strong
+                  >
+                  <span style="font-size: 13px; color: #64748b"
+                    >Visibilidade no site e buscas</span
+                  >
+                </div>
+              </div>
+              <div
+                class="feature-item"
+                style="
+                  display: flex;
+                  align-items: start;
+                  margin-bottom: 0;
+                  font-size: 15px;
+                  color: #334155;
+                "
+              >
+                <span
+                  style="
+                    color: #1a8089;
+                    margin-right: 12px;
+                    font-size: 18px;
+                    flex-shrink: 0;
+                  "
+                  >✓</span
+                >
+                <div>
+                  <strong style="display: block; margin-bottom: 2px"
+                    >Suporte dedicado</strong
+                  >
+                  <span style="font-size: 13px; color: #64748b"
+                    >Atendimento via WhatsApp</span
+                  >
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/5561998548265?text=Olá!%20Quero%20contratar%20o%20Plano%20Mensal%20de%20R$%2089,90"
+              target="_blank"
+              class="btn-primary"
+              style="
+                width: 100%;
+                text-align: center;
+                padding: 16px 24px;
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 10px;
+                text-decoration: none;
+                display: block;
+                transition: all 0.3s ease;
+              "
+            >
+              Começar agora
+            </a>
+          </div>
+
+          <div
+            class="plan-card premium-plan-card animate-fade-in"
+            style="
+              background: linear-gradient(135deg, #1a8089 0%, #0d5f66 100%);
+              border-radius: 16px;
+              padding: 40px 32px;
+              box-shadow: 0 12px 24px rgba(26, 128, 137, 0.3),
+                0 6px 12px rgba(26, 128, 137, 0.2);
+              border: 2px solid #1a8089;
+              transition: all 0.3s ease;
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              transform: scale(1.05);
+            "
+          >
+            <div
+              class="popular-badge"
+              style="
+                position: absolute;
+                top: -14px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+                color: #1a1a2e;
+                padding: 8px 24px;
+                border-radius: 20px;
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+              "
+            >
+              ⭐ MAIS ESCOLHIDO
+            </div>
+            <div class="plan-header" style="margin-bottom: 28px">
+              <h3
+                style="
+                  font-size: 24px;
+                  color: white;
+                  margin-bottom: 8px;
+                  font-weight: 600;
+                "
+              >
+                Plano Anual
+              </h3>
+              <p
+                style="
+                  color: rgba(255, 255, 255, 0.85);
+                  font-size: 14px;
+                  margin-bottom: 20px;
+                  line-height: 1.5;
+                "
+              >
+                Melhor custo-benefício para profissionais sérios
+              </p>
+              <div
+                class="plan-price"
+                style="display: flex; align-items: baseline; margin-bottom: 8px"
+              >
+                <span
+                  class="price-currency"
+                  style="
+                    font-size: 20px;
+                    color: #fbbf24;
+                    font-weight: 600;
+                    margin-right: 4px;
+                  "
+                  >R$</span
+                >
+                <span
+                  class="price-value"
+                  style="
+                    font-size: 48px;
+                    color: white;
+                    font-weight: 700;
+                    line-height: 1;
+                  "
+                  >197</span
+                >
+                <span
+                  class="price-cents"
+                  style="font-size: 24px; color: white; font-weight: 600"
+                  >,90</span
+                >
+                <span
+                  class="price-period"
+                  style="
+                    font-size: 16px;
+                    color: rgba(255, 255, 255, 0.85);
+                    margin-left: 6px;
+                  "
+                  >/ano</span
+                >
+              </div>
+              <div
+                class="plan-savings"
+                style="
+                  background: rgba(251, 191, 36, 0.15);
+                  color: #fbbf24;
+                  padding: 8px 16px;
+                  border-radius: 8px;
+                  font-size: 14px;
+                  font-weight: 600;
+                  display: inline-block;
+                  margin-top: 12px;
+                "
+              >
+                💰 Economize R$ 680 por ano
+              </div>
+            </div>
+            <div class="plan-features" style="flex: 1; margin-bottom: 28px">
+              <div
+                class="feature-item"
+                style="
+                  display: flex;
+                  align-items: start;
+                  margin-bottom: 16px;
+                  font-size: 15px;
+                  color: white;
+                "
+              >
+                <span
+                  style="
+                    color: #fbbf24;
+                    margin-right: 12px;
+                    font-size: 18px;
+                    flex-shrink: 0;
+                  "
+                  >✓</span
+                >
+                <div>
+                  <strong style="display: block; margin-bottom: 2px"
+                    >Tudo do plano mensal</strong
+                  >
+                  <span style="font-size: 13px; color: rgba(255, 255, 255, 0.8)"
+                    >Todos os benefícios inclusos</span
+                  >
+                </div>
+              </div>
+              <div
+                class="feature-item"
+                style="
+                  display: flex;
+                  align-items: start;
+                  margin-bottom: 16px;
+                  font-size: 15px;
+                  color: white;
+                "
+              >
+                <span
+                  style="
+                    color: #fbbf24;
+                    margin-right: 12px;
+                    font-size: 18px;
+                    flex-shrink: 0;
+                  "
+                  >⭐</span
+                >
+                <div>
+                  <strong style="display: block; margin-bottom: 2px"
+                    >Selo PREMIUM</strong
+                  >
+                  <span style="font-size: 13px; color: rgba(255, 255, 255, 0.8)"
+                    >Destaque visual no seu perfil</span
+                  >
+                </div>
+              </div>
+              <div
+                class="feature-item"
+                style="
+                  display: flex;
+                  align-items: start;
+                  margin-bottom: 16px;
+                  font-size: 15px;
+                  color: white;
+                "
+              >
+                <span
+                  style="
+                    color: #fbbf24;
+                    margin-right: 12px;
+                    font-size: 18px;
+                    flex-shrink: 0;
+                  "
+                  >⭐</span
+                >
+                <div>
+                  <strong style="display: block; margin-bottom: 2px"
+                    >Posição prioritária</strong
+                  >
+                  <span style="font-size: 13px; color: rgba(255, 255, 255, 0.8)"
+                    >Apareça no topo da lista sempre</span
+                  >
+                </div>
+              </div>
+              <div
+                class="feature-item"
+                style="
+                  display: flex;
+                  align-items: start;
+                  margin-bottom: 16px;
+                  font-size: 15px;
+                  color: white;
+                "
+              >
+                <span
+                  style="
+                    color: #fbbf24;
+                    margin-right: 12px;
+                    font-size: 18px;
+                    flex-shrink: 0;
+                  "
+                  >⭐</span
+                >
+                <div>
+                  <strong style="display: block; margin-bottom: 2px"
+                    >Suporte VIP</strong
+                  >
+                  <span style="font-size: 13px; color: rgba(255, 255, 255, 0.8)"
+                    >Atendimento prioritário e rápido</span
+                  >
+                </div>
+              </div>
+              <div
+                class="feature-item"
+                style="
+                  display: flex;
+                  align-items: start;
+                  margin-bottom: 0;
+                  font-size: 15px;
+                  color: white;
+                "
+              >
+                <span
+                  style="
+                    color: #fbbf24;
+                    margin-right: 12px;
+                    font-size: 18px;
+                    flex-shrink: 0;
+                  "
+                  >⭐</span
+                >
+                <div>
+                  <strong style="display: block; margin-bottom: 2px"
+                    >Dashboard Analytics</strong
+                  >
+                  <span style="font-size: 13px; color: rgba(255, 255, 255, 0.8)"
+                    >Veja suas estatísticas e performance</span
+                  >
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/5561998548265?text=Olá!%20Quero%20contratar%20o%20Plano%20Anual%20de%20R$%20397,90"
+              target="_blank"
+              class="btn-primary btn-pulse"
+              style="
+                width: 100%;
+                text-align: center;
+                padding: 16px 24px;
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 10px;
+                text-decoration: none;
+                display: block;
+                transition: all 0.3s ease;
+                
+                color: #1a8089;
+              "
+            >
+              Garantir desconto 🚀
+            </a>
+          </div>
+        </div>
+
+        <div
+          style="
+            text-align: center;
+            margin-top: 48px;
+            padding: 24px;
+            background: #f8fafc;
+            border-radius: 12px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          <p
+            style="color: #475569; font-size: 15px; line-height: 1.6; margin: 0"
+          >
+            <strong style="color: #1a1a2e"
+              >💡 Dúvidas sobre qual plano escolher?</strong
+            ><br />
+            Nossa equipe está pronta para te ajudar a encontrar a melhor opção
+            para sua carreira.
           </p>
         </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <h4>Converse pelo WhatsApp</h4>
-          <p class="small">
-            Tire dúvidas, conheça o profissional e agende sua primeira sessão.
-            Sem burocracias ou formulários complicados.
-          </p>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <h4>Comece sua transformação</h4>
-          <p class="small">
-            Sessões online por vídeo, no conforto da sua casa, no horário que
-            funciona para sua rotina.
-          </p>
-        </div>
-      </div>
+      </section>
 
-      <div style="text-align: center; margin-top: 40px">
-        <a href="#psicologos" class="btn btn-large">Quero começar agora →</a>
-      </div>
-    </section>
-
-    <section class="container cta-section">
-      <div class="cta-box cta-patient">
-        <div class="cta-content">
-          <h3>🌟 Você merece se sentir bem</h3>
-          <p>
-            Ansiedade, depressão, crises... Não precisa enfrentar sozinho.
-            Mais de 10.000 pessoas já deram o primeiro passo com a Psi.
-          </p>
-          <a href="#psicologos" class="btn btn-white">Ver psicólogos disponíveis →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="container" id="psicologos">
-      <h3 style="
+      <section class="container" id="psicologos">
+        <h2
+          style="
             text-align: center;
             color: #1a1a2e;
             font-size: 32px;
             margin-bottom: 12px;
-          ">
-        Encontre o psicólogo ideal para você
-      </h3>
-      <p style="
+            line-height: 1.2;
+          "
+        >
+          Encontre seu psicólogo ideal
+        </h2>
+        <p
+          style="
             text-align: center;
             color: #64748b;
-            font-size: 16px;
-            max-width: 700px;
-            margin: 0 auto 20px;
-          ">
-        Profissionais especializados em ansiedade, depressão, relacionamentos,
-        autoestima e muito mais.
-      </p>
-
-      <div class="psychologists-grid" id="psychologistsGrid"></div>
-      <div id="noPsychologists" class="no-results" style="display: none">
-        <p>Nenhum profissional encontrado com esses critérios.</p>
-      </div>
-
-      <div style="text-align: center; margin-top: 40px">
-        <p style="color: #64748b; margin-bottom: 16px">
-          Não encontrou o profissional ideal? Temos muito mais opções!
-        </p>
-        <a href="#contato" class="btn-outline btn">Falar com nossa equipe</a>
-      </div>
-    </section>
-
-    <section class="container cta-section">
-      <div class="cta-box cta-psychologist">
-        <div class="cta-icon">💼</div>
-        <div class="cta-content">
-          <h3>Você é psicólogo? Amplie sua prática!</h3>
-          <p>
-            <strong>Receba pacientes qualificados</strong> direto no seu
-            WhatsApp. Sem mensalidades, sem comissões abusivas. Você define
-            seus valores e horários.
-          </p>
-          <ul class="cta-benefits">
-            <li>
-              ✓ <strong>Visibilidade</strong>: Apareça para milhares de
-              pacientes ativos
-            </li>
-            <li>
-              ✓ <strong>Verificação profissional</strong>: Destaque-se com o
-              selo de verificado
-            </li>
-            <li>
-              ✓ <strong>Sem intermediários</strong>: Atenda direto pelo seu
-              WhatsApp
-            </li>
-            <li>
-              ✓ <strong>Planos acessíveis</strong>: A partir de R$ 59,90/mês
-            </li>
-          </ul>
-          <a href="https://api.whatsapp.com/send?phone=5561998548265" class="btn btn-white btn-large">Quero cadastrar
-            meu perfil →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="container">
-      <h3 style="
-            text-align: center;
-            margin-bottom: 16px;
-            color: #1a1a2e;
-            font-size: 32px;
-          ">
-        Por que a Psi é diferente?
-      </h3>
-      <p style="
-            text-align: center;
-            color: #64748b;
-            font-size: 16px;
-            max-width: 700px;
+            font-size: 18px;
+            max-width: 800px;
             margin: 0 auto 40px;
-          ">
-        Terapia não precisa ser complicada ou cara. Conectamos você com quem
-        pode realmente ajudar.
-      </p>
-
-      <div class="user-benefits">
-        <div class="benefit-card">
-          <div class="benefit-icon">🔒</div>
-          <h4>Segurança e sigilo garantidos</h4>
-          <p class="small">
-            Todos os atendimentos seguem rigorosamente as normas do Conselho
-            Federal de Psicologia. Seu sigilo é nossa prioridade.
-          </p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">⚡</div>
-          <h4>Atendimento imediato</h4>
-          <p class="small">
-            Esqueça listas de espera. Conecte-se com psicólogos disponíveis
-            agora e agende sua consulta em minutos, não em semanas.
-          </p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">💰</div>
-          <h4>Preços justos e transparentes</h4>
-          <p class="small">
-            Sem taxas escondidas. Você negocia valores diretamente com o
-            profissional e paga apenas pelas sessões realizadas.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="container faq" id="faq">
-      <h3 style="text-align: center; margin-bottom: 32px; font-size: 32px">
-        Dúvidas? A gente te ajuda
-      </h3>
-
-      <details>
-        <summary>Como funciona a teleconsulta por WhatsApp?</summary>
-        <div style="margin-top: 12px" class="small">
-          Você escolhe o psicólogo ideal, inicia uma conversa pelo WhatsApp
-          dele, agenda sua primeira sessão e realiza o atendimento por
-          videochamada. É simples, seguro e totalmente profissional.
-        </div>
-      </details>
-
-      <details>
-        <summary>Os psicólogos são realmente verificados?</summary>
-        <div style="margin-top: 12px" class="small">
-          Sim! Todos passam por verificação rigorosa do CRP ativo, análise de
-          documentos profissionais e avaliação contínua baseada no feedback
-          dos pacientes. Seu cuidado é levado a sério.
-        </div>
-      </details>
-
-      <details>
-        <summary>Como funciona o pagamento?</summary>
-        <div style="margin-top: 12px" class="small">
-          Você negocia valores e formas de pagamento diretamente com o
-          psicólogo pelo WhatsApp. Cada profissional define suas opções (PIX,
-          transferência, cartão). Sem intermediários, sem taxas extras.
-        </div>
-      </details>
-
-      <details>
-        <summary>Posso trocar de psicólogo se não me identificar?</summary>
-        <div style="margin-top: 12px" class="small">
-          Claro! A conexão com o terapeuta é fundamental. Você pode escolher
-          outro profissional a qualquer momento, sem compromisso ou
-          burocracia.
-        </div>
-      </details>
-
-      <details>
-        <summary>Como faço para cadastrar meu perfil como psicólogo?</summary>
-        <div style="margin-top: 12px" class="small">
-          Entre em contato pelo formulário abaixo, envie seus documentos (CRP
-          ativo, diploma) e informações profissionais. Verificamos em até 48h
-          e você já pode começar a receber pacientes. Simples assim!
-        </div>
-      </details>
-    </section>
-
-    <section class="container cta-section">
-      <div class="cta-box cta-final">
-        <h3>💚 Dê o primeiro passo para uma vida mais leve</h3>
-        <p>
-          Sua saúde mental não pode esperar. Milhares de pessoas já
-          transformaram suas vidas com ajuda profissional. Você também pode!
-        </p>
-        <div style="
-              display: flex;
-              gap: 16px;
-              justify-content: center;
-              flex-wrap: wrap;
-              margin-top: 24px;
-            ">
-          <a href="#psicologos" class="btn btn-large">Encontrar meu psicólogo</a>
-          <a href="https://api.whatsapp.com/send?phone=5561998548265" class="btn-outline btn">Sou psicólogo</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="container" id="contato" style="padding-bottom: 60px">
-      <div class="card" style="text-align: center; padding: 40px">
-        <h3 style="font-size: 28px; margin-bottom: 12px">
-          Ainda tem dúvidas? Fale com a gente!
-        </h3>
-        <p class="small" style="margin: 0 0 32px; font-size: 16px">
-          Nossa equipe está pronta para ajudar você a encontrar o profissional
-          ideal ou cadastrar seu perfil.
+          "
+        >
+          Veja nossos profissionais em destaque e prontos para ajudar você.
         </p>
 
-        <div class="form-group">
-          <input id="name" placeholder="Seu nome completo" class="form-input" />
-          <input id="email" placeholder="Seu melhor e-mail" class="form-input" />
-          <select id="userType" class="form-input">
-            <option value="">Eu sou...</option>
-            <option value="paciente">💙 Paciente buscando terapia</option>
-            <option value="psicologo">
-              💼 Psicólogo interessado em cadastro
-            </option>
-          </select>
-          <button class="btn" id="sendForm" style="font-size: 16px">
-            Enviar mensagem →
-          </button>
-        </div>
-      </div>
-    </section>
+        <div class="filters-container animate-fade-in">
+          <div class="filters-title">Filtre por especialidade e abordagem:</div>
+          <div class="filters-grid">
+            <select id="specialtyFilter" class="filter-select">
+              <option value="">Escolha a especialidade</option>
+            </select>
 
-    <footer class="container" role="contentinfo">
-      <div>
-        <div class="logo" style="margin-bottom: 12px">
-          <div class="logo-icon" style="width: 48px; height: 48px; font-size: 18px">
-            Ψ
+            <select id="approachFilter" class="filter-select">
+              <option value="">Escolha a abordagem terapêutica</option>
+            </select>
+
+            <button id="clearFiltersBtn" class="clear-filters-btn">
+              Limpar Filtros
+            </button>
           </div>
         </div>
-        <div class="small" style="margin-bottom: 8px">
-          © <span id="year"></span> Psi Telemedicina
-        </div>
-        <div class="small" style="color: #25a7a7; font-weight: 600">
-          Conectando mentes, transformando vidas
-        </div>
-      </div>
-      <div class="contact-card">
-        <div class="small" style="margin-bottom: 12px; font-weight: 600">
-          Atendimento rápido
-        </div>
-        <a class="btn" href="https://www.instagram.com/psitelemedicina/" target="_blank" style="margin-bottom: 8px">📱
-          WhatsApp</a>
-        <a class="btn-outline btn" href="https://www.instagram.com/psitelemedicina/" target="_blank">Instagram</a>
-      </div>
-    </footer>
-  </main>
 
-  <div id="psyModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <div id="modalBodyContent">
+        <div
+          id="noResultsMessage"
+          class="no-results hidden"
+          style="
+            text-align: center;
+            padding: 40px;
+            border: 1px dashed #e2e8f0;
+            border-radius: 12px;
+            margin-top: 30px;
+            color: #475569;
+          "
+        >
+          Nenhum psicólogo encontrado com os filtros selecionados. Tente outras
+          combinações!
+        </div>
+
+        <div class="psychologists-grid" id="psychologistsGrid"></div>
+      </section>
+
+      <section class="container" id="faq">
+        <h2
+          style="
+            text-align: center;
+            color: #1a1a2e;
+            font-size: 32px;
+            margin-bottom: 12px;
+            line-height: 1.2;
+          "
+        >
+          Perguntas Frequentes
+        </h2>
+        <p
+          style="
+            text-align: center;
+            color: #64748b;
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+          "
+        >
+          Tire suas dúvidas rapidamente sobre a plataforma e o atendimento
+          online.
+        </p>
+
+        <div class="faq-grid">
+          <details class="faq-item animate-fade-in">
+            <summary>A terapia online funciona de verdade?</summary>
+            <div class="faq-content">
+              Sim! Inúmeros estudos e o Conselho Federal de Psicologia comprovam
+              a eficácia e segurança da terapia online. É tão benéfica quanto a
+              presencial para a maioria dos casos.
+            </div>
+          </details>
+
+          <details class="faq-item animate-fade-in">
+            <summary>Os psicólogos são verificados?</summary>
+            <div class="faq-content">
+              Absolutamente. Checamos ativamente o registro do Conselho Regional
+              de Psicologia (CRP) de cada profissional. Se o CRP não estiver
+              ativo e regularizado, o psicólogo não é listado.
+            </div>
+          </details>
+
+          <details class="faq-item animate-fade-in">
+            <summary>Como é feito o pagamento?</summary>
+            <div class="faq-content">
+              O pagamento é negociado diretamente com o psicólogo de sua escolha
+              (via PIX, transferência ou outras formas). A Psi Telemedicina não
+              é intermediária do pagamento.
+            </div>
+          </details>
+
+          <details class="faq-item animate-fade-in">
+            <summary>Qual a duração média de uma sessão?</summary>
+            <div class="faq-content">
+              Em geral, as sessões de terapia duram entre 45 a 60 minutos,
+              dependendo do método e acordo feito com o profissional.
+            </div>
+          </details>
+
+          <details class="faq-item animate-fade-in">
+            <summary>Os dados das sessões são sigilosos?</summary>
+            <div class="faq-content">
+              Sim. O atendimento segue o Código de Ética do Psicólogo,
+              garantindo o sigilo profissional. As conversas via WhatsApp são
+              criptografadas de ponta a ponta.
+            </div>
+          </details>
+
+          <details class="faq-item animate-fade-in">
+            <summary>Qual o preço da sessão?</summary>
+            <div class="faq-content">
+              Os preços variam de acordo com o profissional e sua especialidade,
+              mas são geralmente mais acessíveis que o mercado tradicional. Você
+              negocia o valor diretamente com o psicólogo.
+            </div>
+          </details>
+
+          <details class="faq-item animate-fade-in">
+            <summary>Quero me cadastrar como psicólogo?</summary>
+            <div class="faq-content">
+              Preencha o formulário abaixo, envie seus documentos (CRP ativo,
+              diploma) e informações profissionais. Verificamos em até 48h para
+              que você comece a receber pacientes.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="container contact-section" id="contato">
+        <div class="contact-box animate-fade-in">
+          <h4>Ainda tem dúvidas? Fale conosco!</h4>
+          <p class="small">
+            Fale com nossa equipe e receba ajuda imediata, seja você paciente ou
+            psicólogo.
+          </p>
+
+          <div class="contact-form">
+            <input
+              type="text"
+              id="name"
+              class="form-input"
+              placeholder="Seu nome completo"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              class="form-input"
+              placeholder="Seu melhor e-mail"
+              required
+            />
+            <select id="userType" class="form-input">
+              <option value="paciente">
+                O que você precisa? (Sou paciente e quero agendar)
+              </option>
+              <option value="psicologo">
+                💼 O que você precisa? (Sou psicólogo e quero me cadastrar)
+              </option>
+            </select>
+            <button
+              class="btn-primary"
+              id="sendForm"
+              style="font-size: 16px; width: 100%"
+            >
+              Enviar pelo WhatsApp
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="container" role="contentinfo">
+        <div>
+          <div class="logo" style="margin-bottom: 12px">
+            <div
+              class="logo-icon"
+              style="width: 48px; height: 48px; font-size: 18px"
+            >
+              Ψ
+            </div>
+          </div>
+          <div class="small" style="margin-bottom: 8px">
+            © <span id="year"></span> Psi Telemedicina
+          </div>
+          <div class="small" style="color: #1a8089; font-weight: 600">
+            Conectando mentes, transformando vidas
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <strong>Links Úteis</strong>
+          <ul>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#psicologos">Psicólogos</a></li>
+            <li><a href="#planos">Planos</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+            <li><a href="#contato">Para Psicólogos</a></li>
+          </ul>
+        </div>
+
+        <div class="contact-card">
+          <div
+            class="small"
+            style="
+              margin-bottom: 12px;
+              font-weight: 600;
+              color: #1a1a2e;
+              font-size: 16px;
+            "
+          >
+            Atendimento Rápido
+          </div>
+          <a
+            class="btn-primary"
+            href="https://wa.me/5561998548265"
+            target="_blank"
+            style="font-size: 14px; margin-bottom: 10px"
+            >📱 WhatsApp
+          </a>
+          <a
+            class="btn-secondary"
+            href="https://www.instagram.com/psitelemedicina/"
+            target="_blank"
+            style="font-size: 14px"
+          >
+            Instagram
+          </a>
+        </div>
+      </footer>
+    </main>
+
+    <div id="psyModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div id="modalContent"></div>
       </div>
     </div>
-  </div>
-  <script src="js/script.js"></script>
-  <script src="js/carousel-script.js"></script>
-  </script>
-</body>
 
+    <script>
+      // Script para controlar o Menu Hamburguer
+      const body = document.body;
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const navLinks = document.querySelectorAll(".mobile-menu a");
+
+      function toggleMenu() {
+        const isOpen = body.getAttribute("data-open") === "true";
+        body.setAttribute("data-open", !isOpen);
+        menuToggle.setAttribute("aria-expanded", !isOpen);
+      }
+
+      menuToggle.addEventListener("click", toggleMenu);
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          // Fecha o menu ao clicar em um link
+          if (body.getAttribute("data-open") === "true") {
+            toggleMenu();
+          }
+        });
+      });
+
+      // Inicializa o ano no footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
