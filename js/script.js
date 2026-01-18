@@ -7,7 +7,8 @@ const waNumber = "5561998548265";
 // Base de dados de psicólogos com sistema PREMIUM
 const psychologists = [
     // PREMIUM - Aparecem primeiro
-    {
+
+        {
         name: "Paula Gomes",
         photo: "../img/psicologos/paulagomes.jpeg",
         crp: "CRP 04/52968",
@@ -28,6 +29,15 @@ const psychologists = [
 
 
     // Psicólogos regulares FREE
+        {
+        name: "Sandra Aparecida de Paula ",
+        photo: "../img/psicologos/sandraamorim.jpg",
+        crp: "CRP 06/218585",
+        approach: "Terapia Cognitiva-Comportamental (TCC)",
+        specialties: ["Público- adolescentes , adultos ( feminino e masculino) Avaliação Neuropsicologica "],
+        whatsapp: "5511979820978",
+        premium: true
+    },
         {
         name: "Karina Guimarães Medronho",
         photo: "../img/psicologos/karina.jpeg",
