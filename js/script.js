@@ -8,59 +8,134 @@ const waNumber = "5561998548265";
 const psychologists = [
     // PREMIUM - Aparecem primeiro
     {
+        name: "Paula Gomes",
+        photo: "../img/psicologos/paulagomes.jpeg",
+        crp: "CRP 04/52968",
+        approach: "Terapia Cognitiva-Comportamental (TCC)",
+        specialties: ["Atendimento Psicológico à adolescentes com depressão, ansiedade, estudantes acadêmicos, mulheres, violência doméstica, assédio moral, empoderamento feminino."],
+        whatsapp: "5535998075360",
+        premium: true
+    },
+    {
+        name: "Joseane dos Santos",
+        photo: "../img/psicologos/joseaneoliveira.jpg",
+        crp: "CRP 05/75542",
+        approach: "Psicanálise",
+        specialties: ["Adolescentes, adultos e idosos (Mulheres)"],
+        whatsapp: "5521983328482",
+        premium: true
+    },
+
+
+    // Psicólogos regulares FREE
+        {
+        name: "Karina Guimarães Medronho",
+        photo: "../img/psicologos/karina.jpeg",
+        crp: "CRP 05/71318",
+        approach: "Psicanálise",
+        specialties: ["Adulto e idoso"],
+        whatsapp: "5521981319804",
+        premium: false
+    },
+    {
+        name: "Carolline Mikos",
+        photo: "../img/psicologos/carollinemikos.jpg",
+        crp: "CRP 08/08775",
+        approach: "TCC",
+        specialties: ["Avaliação e reabilitação neuropsicológica  (crianças,  adultos e idosos) transtornos ansiosos, alimentares, sexuais, do humor e psicoses"],
+        whatsapp: "55419917299825",
+        premium: false
+    },
+    {
+        name: "Andrea Dias",
+        photo: "../img/psicologos/andreadias.jpeg",
+        crp: "CRP 24364",
+        approach: "TCC",
+        specialties: ["Atendimento psicanalítico neuroafirmativo para crianças, adolescentes e adultos neurodivergentes (TEA, TDAH, AH/SD, TOD e outros), bem como famílias e pessoas típicas, com foco em acolhimento, escuta qualificada e desenvolvimento emocional. Ansiedade, depressão, acompanhamento neuroparental, bariátrico/obesidade, profissional e outros"],
+        whatsapp: "5511993891559",
+        premium: false
+    },
+    {
+        name: "Noemia Noronha Domingos",
+        photo: "../img/psicologos/noemia-noronha.jpg",
+        crp: "CRP 04/60211",
+        approach: "Sistêmica",
+        specialties: ["Adultos, adolescentes"],
+        whatsapp: "553597010965",
+        premium: false
+    },
+    {
         name: "Lucas Ribeiro Costa",
         photo: "../img/psicologos/lucas-ribeiro.jpg",
         crp: "CRP 06/182628",
         approach: "Terapia de Aceitação e Compromisso - ACT",
         specialties: ["Ansiedade", "Autoconhecimento", "Depressão"],
         whatsapp: "5511984789568",
-        premium: true 
+        premium: false
     },
     {
-        name: "Noemia Noronha Domingos",
-        photo: "../img/psicologos/noemia-noronha.jpg",
+        name: "Lediane Fonseca",
+        photo: "../img/psicologos/lediane.jpg",
         crp: "CRP 04/77404",
-        approach: "Terapia Cognitiva-Comportamental (TCC)",
-        specialties: ["Ansiedade", "Depressão", "Autoconhecimento", "Estresse"],
-        whatsapp: "553597010965",
-        premium: true 
+        approach: "Sistêmica",
+        specialties: ["Adolescentes e adultos."],
+        whatsapp: "5538999589059",
+        premium: false
     },
     {
-        name: "Jaqueline Martins",
-        photo: "../img/psicologos/jaqueline-martins.jpg",
-        crp: "CRP 07/30847",
-        approach: "Psicanálise",
-        specialties: ["Adultos", "Adolescentes", "Escuta Psicanalítica", "Relacionamentos"],
-        whatsapp: "555199947197",
-        premium: true 
+        name: "Paula Micali Fucci",
+        photo: "../img/psicologos/paulamicali.jpg",
+        crp: "CRP 06/181488",
+        approach: "Psicanálise Clínica. Neuropsicologia e Avaliação Psicologica",
+        specialties: ["Adolescentes e adultos"],
+        whatsapp: "5516992434120",
+        premium: false
     },
-        {
-        name: "Laryssa Nunes Rodrigues",
-        photo: "../img/psicologos/laryssa-nune.jpg",
-        crp: "CRP 03/15478",
-        approach: "Terapia Cognitiva-Comportamental",
-        specialties: ["Ansiedade", "Autossabotagem", "Medo"],
-        whatsapp: "85986470826",
-        premium: true 
+    {
+        name: "Susan Soto Pires",
+        photo: "../img/psicologos/susan.jpg",
+        crp: "CRP 06/215565",
+        approach: "Psicoterapia",
+        specialties: ["Comportamental "],
+        whatsapp: "5514997205941",
+        premium: false
     },
-    // Psicólogos regulares - Nota: Usando o waNumber principal para demonstração
+    {
+        name: "Thiago Oliveira",
+        photo: "../img/psicologos/thiago.png",
+        crp: "CRP 01/654321",
+        approach: "Humanista",
+        specialties: ["Conflitos Pessoais", "Autoestima"],
+        whatsapp: "5521989937876", // Atualizar com o número real se necessário
+        premium: false
+    },
     {
         name: "Mayara Borges",
         photo: "../img/psicologos/mayara.jpg",
         crp: "CRP 06/203605",
         approach: "Terapia Cognitiva-Comportamental (TCC)",
-        specialties: ["Ansiedade Depressão, Conflitos Pessoais, Conflitos Familiares, Relacionamento, Autocuidado, Autoestima, questões sobre a adolescência, e mulheres em situação de violência."],
-        whatsapp: "11949425267",
+        specialties: ["Ansiedade", "Depressão", "Conflitos Familiares"],
+        whatsapp: "5511949425267",
+        premium: false
     },
-        {
+    {
         name: "Ana Carolina Santos",
         photo: "../img/psicologos/ana-carolina.jpeg",
         crp: "CRP 01/29141",
         approach: "Análise do Comportamento",
         specialties: ["Depressão", "Ansiedade", "Terapia de Casal"],
-        whatsapp: "11949425267",
-    }
-
+        whatsapp: "5511949425267",
+        premium: false
+    },
+    {
+        name: "Laryssa Nunes Rodrigues",
+        photo: "../img/psicologos/laryssa-nune.jpg",
+        crp: "CRP 11/20823",
+        approach: "Terapia Cognitiva-Comportamental",
+        specialties: ["Ansiedade", "Autossabotagem", "Medo"],
+        whatsapp: "5585986470826",
+        premium: false
+    },
 ];
 
 // Extrair especialidades e abordagens únicas para filtros
@@ -74,7 +149,7 @@ function createPsyCard(psy) {
     const cardClass = psy.premium ? 'psy-card premium-card' : 'psy-card';
 
     // Cria a mensagem para o WhatsApp com o nome do profissional
-    const encodedMessage = encodeURIComponent(`Olá, ${psy.name}! Gostaria de agendar uma sessão de terapia.`);
+    const encodedMessage = encodeURIComponent(`Olá, ${psy.name}! Vir do Psitelemedicina. Gostaria de agendar uma sessão de terapia.`);
 
     return `<div class="${cardClass}" data-approach="${psy.approach}" data-specialties="${psy.specialties.join(', ')}">
         <div class="psy-header">
@@ -162,7 +237,7 @@ function populateFilters() {
 // Inicialização: CHAMA A FUNÇÃO SEM FILTROS para exibir tudo ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
     populateFilters();
-    renderPsychologists(); 
+    renderPsychologists();
 });
 
 
@@ -175,7 +250,7 @@ function applyFilters() {
     const selectedSpecialty = specialtyFilter.value;
     const selectedApproach = approachFilter.value;
     // O filtro só é aplicado quando esta função é chamada (ao interagir com os selects)
-    renderPsychologists(selectedSpecialty, selectedApproach); 
+    renderPsychologists(selectedSpecialty, selectedApproach);
 }
 
 specialtyFilter.addEventListener("change", applyFilters);
@@ -226,6 +301,7 @@ const observerOptions = {
     rootMargin: "0px 0px -50px 0px",
 };
 
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -237,3 +313,22 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".animate-fade-in").forEach((el) => {
     observer.observe(el);
 });
+
+function openRegisterModal() {
+    document.getElementById('registerModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Trava o scroll do fundo
+}
+
+function closeRegisterModal() {
+    document.getElementById('registerModal').style.display = 'none';
+    document.body.style.overflow = 'auto'; // Libera o scroll
+}
+
+// Fechar ao clicar fora do card branco
+window.onclick = function (event) {
+    const modal = document.getElementById('registerModal');
+    if (event.target == modal) {
+        closeRegisterModal();
+    }
+}
+

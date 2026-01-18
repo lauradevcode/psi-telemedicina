@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
@@ -40,7 +40,7 @@
         window,
         document,
         "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
+        "https://connect.facebook.net/en_US/fbevents.js",
       );
       fbq("init", "793441870400323");
       fbq("track", "PageView");
@@ -121,9 +121,8 @@
             >
               Encontrar psicólogo agora
             </a>
-            <a class="btn-secondary" href="#contato"
-              >Sou psicólogo e quero me cadastrar</a
-            >
+            <a class="btn-secondary" href="https://api.whatsapp.com/send?phone=5561998548265" target="_blank">Olá , Sou psicólogo(a) e quero me cadastrar!</a>
+
           </div>
 
           <div class="confidence-block animate-fade-in">
@@ -180,7 +179,7 @@
         </aside>
       </section>
 
-      <section class="container" id="como-funciona">
+      <section class="container" id="psicologos">
         <h2
           style="
             text-align: center;
@@ -190,7 +189,7 @@
             line-height: 1.2;
           "
         >
-          Da dor à cura em 3 passos simples
+          Encontre seu psicólogo ideal
         </h2>
         <p
           style="
@@ -201,42 +200,35 @@
             margin: 0 auto 40px;
           "
         >
-          Você não precisa continuar sofrendo sozinho. Começar sua terapia é
-          mais fácil do que você imagina.
+          Veja nossos profissionais em destaque e prontos para ajudar você.
         </p>
-        <div class="how">
-          <div class="step animate-fade-in">
-            <div class="step-icon">🔍</div>
-            <h4>Escolha seu psicólogo</h4>
-            <p class="small">
-              Compare perfis, especialidades e valores. Filtre até encontrar o
-              encaixe perfeito.
-            </p>
-          </div>
-          <div class="step animate-fade-in">
-            <div class="step-icon">💬</div>
-            <h4>Agende e pague</h4>
-            <p class="small">
-              Tudo direto no WhatsApp, sem burocracia. Negocie horário e valor
-              de forma transparente.
-            </p>
-          </div>
-          <div class="step animate-fade-in">
-            <div class="step-icon">🚀</div>
-            <h4>Inicie a transformação</h4>
-            <p class="small">
-              Conecte-se no horário marcado e comece sua jornada de
-              autoconhecimento e bem-estar, de onde estiver.
-            </p>
+
+        <div class="filters-container animate-fade-in">
+          <div class="filters-title">Filtre por especialidade e abordagem:</div>
+          <div class="filters-grid">
+            <select id="specialtyFilter" class="filter-select">
+              <option value="">Escolha a especialidade</option>
+            </select>
+
+            <select id="approachFilter" class="filter-select">
+              <option value="">Escolha a abordagem terapêutica</option>
+            </select>
+
+            <button id="clearFiltersBtn" class="clear-filters-btn">
+              Limpar Filtros
+            </button>
           </div>
         </div>
+
+        <!-- <div id="noResultsMessage" class="no-results hidden" style="text-align: center;padding: 40px;border: 1px dashed #e2e8f0;border-radius: 12px;margin-top: 30px;color: #475569;">
+        Nenhum psicólogo encontrado com os filtros selecionados. Tente outras
+        combinações!
+      </div> -->
+
+        <div class="psychologists-grid" id="psychologistsGrid"></div>
       </section>
 
-      <section
-        class="container"
-        id="planos"
-        style="margin: 80px auto; padding: 60px 20px"
-      >
+      <section class="container" id="planos">
         <h2
           style="
             text-align: center;
@@ -279,7 +271,8 @@
               background: white;
               border-radius: 16px;
               padding: 40px 32px;
-              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07),
+              box-shadow:
+                0 4px 6px rgba(0, 0, 0, 0.07),
                 0 2px 4px rgba(0, 0, 0, 0.05);
               border: 2px solid #e2e8f0;
               transition: all 0.3s ease;
@@ -331,17 +324,7 @@
                     font-weight: 700;
                     line-height: 1;
                   "
-                  >49</span
-                >
-                <span
-                  class="price-cents"
-                  style="font-size: 24px; color: #1a1a2e; font-weight: 600"
-                  >,90</span
-                >
-                <span
-                  class="price-period"
-                  style="font-size: 16px; color: #64748b; margin-left: 6px"
-                  >/mês</span
+                  >0</span
                 >
               </div>
               <p style="color: #64748b; font-size: 13px; margin-top: 4px">
@@ -422,7 +405,7 @@
                     font-size: 18px;
                     flex-shrink: 0;
                   "
-                  >✓</span
+                  >❌</span
                 >
                 <div>
                   <strong style="display: block; margin-bottom: 2px"
@@ -450,7 +433,7 @@
                     font-size: 18px;
                     flex-shrink: 0;
                   "
-                  >✓</span
+                  >❌</span
                 >
                 <div>
                   <strong style="display: block; margin-bottom: 2px"
@@ -463,7 +446,7 @@
               </div>
             </div>
             <a
-              href="https://wa.me/5561998548265?text=Olá!%20Quero%20contratar%20o%20Plano%20Mensal%20de%20R$%2089,90"
+              href="https://wa.me/5561998548265?text=Olá!%20Quero%20contratar%20o%20Plano%20Mensal%20de%20R$%2049,90"
               target="_blank"
               class="btn-primary"
               style="
@@ -488,7 +471,8 @@
               background: linear-gradient(135deg, #1a8089 0%, #0d5f66 100%);
               border-radius: 16px;
               padding: 40px 32px;
-              box-shadow: 0 12px 24px rgba(26, 128, 137, 0.3),
+              box-shadow:
+                0 12px 24px rgba(26, 128, 137, 0.3),
                 0 6px 12px rgba(26, 128, 137, 0.2);
               border: 2px solid #1a8089;
               transition: all 0.3s ease;
@@ -526,7 +510,7 @@
                   font-weight: 600;
                 "
               >
-                Plano Anual
+                Plano Mensal
               </h3>
               <p
                 style="
@@ -560,7 +544,7 @@
                     font-weight: 700;
                     line-height: 1;
                   "
-                  >197</span
+                  >47</span
                 >
                 <span
                   class="price-cents"
@@ -590,7 +574,7 @@
                   margin-top: 12px;
                 "
               >
-                💰 Economize R$ 680 por ano
+                💰 Economize R$ 480 por ano
               </div>
             </div>
             <div class="plan-features" style="flex: 1; margin-bottom: 28px">
@@ -727,16 +711,16 @@
                 >
                 <div>
                   <strong style="display: block; margin-bottom: 2px"
-                    >Dashboard Analytics</strong
+                    >Painel Dashboard</strong
                   >
                   <span style="font-size: 13px; color: rgba(255, 255, 255, 0.8)"
-                    >Veja suas estatísticas e performance</span
+                    >Gerencia pacientes e acompanhe a jornada terapeutica</span
                   >
                 </div>
               </div>
             </div>
             <a
-              href="https://wa.me/5561998548265?text=Olá!%20Quero%20contratar%20o%20Plano%20Anual%20de%20R$%20397,90"
+              href="https://wa.me/5561998548265?text=Olá!%20Quero%20contratar%20o%20Plano%20Anual%20de%20R$%20197,90"
               target="_blank"
               class="btn-primary btn-pulse"
               style="
@@ -749,7 +733,7 @@
                 text-decoration: none;
                 display: block;
                 transition: all 0.3s ease;
-                
+
                 color: #1a8089;
               "
             >
@@ -780,66 +764,6 @@
             para sua carreira.
           </p>
         </div>
-      </section>
-
-      <section class="container" id="psicologos">
-        <h2
-          style="
-            text-align: center;
-            color: #1a1a2e;
-            font-size: 32px;
-            margin-bottom: 12px;
-            line-height: 1.2;
-          "
-        >
-          Encontre seu psicólogo ideal
-        </h2>
-        <p
-          style="
-            text-align: center;
-            color: #64748b;
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto 40px;
-          "
-        >
-          Veja nossos profissionais em destaque e prontos para ajudar você.
-        </p>
-
-        <div class="filters-container animate-fade-in">
-          <div class="filters-title">Filtre por especialidade e abordagem:</div>
-          <div class="filters-grid">
-            <select id="specialtyFilter" class="filter-select">
-              <option value="">Escolha a especialidade</option>
-            </select>
-
-            <select id="approachFilter" class="filter-select">
-              <option value="">Escolha a abordagem terapêutica</option>
-            </select>
-
-            <button id="clearFiltersBtn" class="clear-filters-btn">
-              Limpar Filtros
-            </button>
-          </div>
-        </div>
-
-        <div
-          id="noResultsMessage"
-          class="no-results hidden"
-          style="
-            text-align: center;
-            padding: 40px;
-            border: 1px dashed #e2e8f0;
-            border-radius: 12px;
-            margin-top: 30px;
-            color: #475569;
-          "
-        >
-          Nenhum psicólogo encontrado com os filtros selecionados. Tente outras
-          combinações!
-        </div>
-
-        <div class="psychologists-grid" id="psychologistsGrid"></div>
       </section>
 
       <section class="container" id="faq">
@@ -932,48 +856,6 @@
         </div>
       </section>
 
-      <section class="container contact-section" id="contato">
-        <div class="contact-box animate-fade-in">
-          <h4>Ainda tem dúvidas? Fale conosco!</h4>
-          <p class="small">
-            Fale com nossa equipe e receba ajuda imediata, seja você paciente ou
-            psicólogo.
-          </p>
-
-          <div class="contact-form">
-            <input
-              type="text"
-              id="name"
-              class="form-input"
-              placeholder="Seu nome completo"
-              required
-            />
-            <input
-              type="email"
-              id="email"
-              class="form-input"
-              placeholder="Seu melhor e-mail"
-              required
-            />
-            <select id="userType" class="form-input">
-              <option value="paciente">
-                O que você precisa? (Sou paciente e quero agendar)
-              </option>
-              <option value="psicologo">
-                💼 O que você precisa? (Sou psicólogo e quero me cadastrar)
-              </option>
-            </select>
-            <button
-              class="btn-primary"
-              id="sendForm"
-              style="font-size: 16px; width: 100%"
-            >
-              Enviar pelo WhatsApp
-            </button>
-          </div>
-        </div>
-      </section>
-
       <footer class="container" role="contentinfo">
         <div>
           <div class="logo" style="margin-bottom: 12px">
@@ -990,17 +872,6 @@
           <div class="small" style="color: #1a8089; font-weight: 600">
             Conectando mentes, transformando vidas
           </div>
-        </div>
-
-        <div class="footer-links">
-          <strong>Links Úteis</strong>
-          <ul>
-            <li><a href="#como-funciona">Como funciona</a></li>
-            <li><a href="#psicologos">Psicólogos</a></li>
-            <li><a href="#planos">Planos</a></li>
-            <li><a href="#faq">Perguntas Frequentes</a></li>
-            <li><a href="#contato">Para Psicólogos</a></li>
-          </ul>
         </div>
 
         <div class="contact-card">
@@ -1040,6 +911,94 @@
         <div id="modalContent"></div>
       </div>
     </div>
+    
+    <!-- <div id="registerModal" class="modal-overlay">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>Cadastro de Profissional</h3>
+          <button class="close-modal" onclick="closeRegisterModal()">
+            &times;
+          </button>
+        </div>
+        <form id="formCadastroPsicologo" class="register-form">
+          <div class="form-group">
+            <label for="reg-nome">Nome Completo</label>
+            <input
+              type="text"
+              id="reg-nome"
+              name="nome"
+              placeholder="Ex: Maria Silva"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reg-crp">CRP (Registro Profissional)</label>
+            <input
+              type="tel"
+              id="reg-crp"
+              placeholder="00/00000"
+              required
+              maxlength="8"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reg-foto">Foto de Perfil</label>
+            <input
+              type="file"
+              id="reg-foto"
+              name="foto"
+              accept="image/*"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reg-abordagem">Abordagem Terapêutica</label>
+            <input
+              type="text"
+              id="reg-abordagem"
+              name="abordagem"
+              placeholder="Ex: TCC, Psicanálise..."
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reg-publico">Público Atendido</label>
+            <select id="reg-publico" name="publico" required>
+              <option value="">Selecione...</option>
+              <option value="Adultos">Adultos</option>
+              <option value="Crianças e Adolescentes">
+                Crianças e Adolescentes
+              </option>
+              <option value="Casais">Casais</option>
+              <option value="Todos">Todos</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-whatsapp">WhatsApp para Atendimento</label>
+            <input
+              type="tel"
+              id="reg-whatsapp"
+              placeholder="(00) 00000-0000"
+              required
+              maxlength="15"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn-primary"
+            style="width: 100%; margin-top: 10px"
+          >
+            Enviar Cadastro para Análise
+          </button>
+        </form>
+      </div>
+    </div> -->
 
     <script>
       // Script para controlar o Menu Hamburguer

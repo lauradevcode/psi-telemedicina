@@ -11,7 +11,7 @@ body {
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
         "Helvetica Neue", Arial;
     color: #1a1a2e;
-    /* background: #f8fafc; */
+    overflow-x: hidden; /* Evita scroll horizontal por elementos que vazam */
 }
 
 a {
@@ -39,7 +39,7 @@ header {
     background: #fff;
     border-bottom: 1px solid #e2e8f0;
     margin-bottom: 0;
-    position: sticky; /* Adicionado para fixar o menu no topo */
+    position: sticky;
     top: 0;
     z-index: 99;
 }
@@ -58,7 +58,6 @@ header {
     align-items: center;
 }
 
-/* LOGO - COR MANTIDA */
 .logo-icon {
     width: 50px;
     height: 50px;
@@ -257,41 +256,7 @@ nav a:not(.btn-primary):hover {
     font-size: 14px;
 }
 
-/* Como Funciona */
-.how {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.step {
-    padding: 30px 20px;
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
-}
-
-.step-icon {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-
-.step h4 {
-    font-size: 20px;
-    color: #1a1a2e;
-    margin-bottom: 10px;
-}
-
-.step .small {
-    color: #64748b;
-    font-size: 15px;
-    line-height: 1.5;
-}
-
-/* Lista de Psicólogos e Filtros */
+/* Filtros - CORREÇÃO DO VAZAMENTO */
 .filters-container {
     background: #f8fafc;
     padding: 25px;
@@ -313,6 +278,8 @@ nav a:not(.btn-primary):hover {
 }
 
 .filter-select {
+    width: 100%;
+    max-width: 100%; /* Impede que o select force a largura do container */
     padding: 12px;
     border: 1px solid #cbd5e1;
     border-radius: 8px;
@@ -323,6 +290,9 @@ nav a:not(.btn-primary):hover {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2364748b'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 10px center;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona '...' se o texto for maior que a caixa */
+    white-space: nowrap;
 }
 
 .clear-filters-btn {
@@ -336,10 +306,7 @@ nav a:not(.btn-primary):hover {
     transition: background 0.3s;
 }
 
-.clear-filters-btn:hover {
-    background: #cbd5e1;
-}
-
+/* Cards de Psicólogos */
 .psychologists-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -347,7 +314,6 @@ nav a:not(.btn-primary):hover {
     margin-top: 40px;
 }
 
-/* Novo Estilo para os Cards de Psicólogos Gerados pelo JS */
 .psy-card {
     background: #fff;
     border-radius: 12px;
@@ -362,13 +328,6 @@ nav a:not(.btn-primary):hover {
 .psy-card:hover {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
-}
-
-/* Estilo para o card PREMIUM */
-.premium-card {
-    border: 2px solid #1a8089; /* Borda mais destacada */
-    background: #f0fdfa; /* Levemente diferente do branco */
-    box-shadow: 0 6px 10px rgba(26, 128, 137, 0.15);
 }
 
 .psy-header {
@@ -391,20 +350,12 @@ nav a:not(.btn-primary):hover {
 .psy-info {
     display: flex;
     flex-direction: column;
-    text-align: left;
 }
 
 .psy-name {
     font-size: 18px;
     font-weight: 700;
     color: #1a1a2e;
-    margin-bottom: 2px;
-}
-
-.psy-crp {
-    font-size: 14px;
-    color: #64748b;
-    margin-bottom: 5px;
 }
 
 .verified-badge {
@@ -415,39 +366,19 @@ nav a:not(.btn-primary):hover {
     background: #e0f2f1;
     padding: 3px 8px;
     border-radius: 4px;
-    margin-right: 5px;
-}
-
-.premium-badge {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    color: #1a1a2e;
-    background: #fcd34d;
-    padding: 3px 8px;
-    border-radius: 4px;
-    margin-top: 5px;
 }
 
 .psy-body {
     padding: 20px;
-    flex-grow: 1; /* Garante que o corpo do card cresça */
-    text-align: left;
+    flex-grow: 1;
 }
 
 .psy-approach {
     font-size: 14px;
     color: #475569;
-    font-weight: 500;
-    margin-bottom: 10px;
     border-left: 3px solid #cbd5e1;
     padding-left: 10px;
-}
-
-.psy-specialties {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    margin-bottom: 15px;
 }
 
 .specialty-tag {
@@ -457,38 +388,22 @@ nav a:not(.btn-primary):hover {
     font-size: 12px;
     padding: 4px 10px;
     border-radius: 6px;
-    font-weight: 500;
-}
-
-.psy-footer {
-    padding: 20px;
-    border-top: 1px solid #e2e8f0;
-    text-align: center;
+    margin: 2px;
 }
 
 .psy-whatsapp-btn-full {
-    background: #25d366; /* Cor do WhatsApp */
+    background: #25d366;
     color: white !important;
-    padding: 12px 20px;
+    padding: 12px;
     border-radius: 8px;
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: background 0.3s;
-    text-decoration: none;
-    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 20px;
+    transition: 0.3s;
 }
 
-.psy-whatsapp-btn-full:hover {
-    background: #128c7e;
-}
-
-/* Removemos o .psychologist-card antigo, pois ele é obsoleto com o JS atual */
-
-
-/* FAQ Section */
+/* FAQ */
 .faq-grid {
     max-width: 900px;
     margin: 0 auto;
@@ -498,94 +413,27 @@ nav a:not(.btn-primary):hover {
     border: 1px solid #e2e8f0;
     border-radius: 12px;
     margin-bottom: 15px;
-    transition: box-shadow 0.3s;
-}
-
-.faq-item:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .faq-item summary {
-    font-size: 17px;
-    font-weight: 600;
-    color: #1a1a2e;
     padding: 20px;
+    font-weight: 600;
     cursor: pointer;
-    list-style: none; /* Remove a seta padrão em alguns browsers */
+    list-style: none;
     position: relative;
-    user-select: none;
 }
 
-.faq-item summary::-webkit-details-marker {
-    display: none; /* Remove a seta padrão no Chrome */
-}
-
-.faq-item summary:after {
+.faq-item summary::after {
     content: "+";
-    font-size: 24px;
-    color: #1a8089;
     position: absolute;
     right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.3s;
-}
-
-.faq-item[open] summary:after {
-    content: "-";
+    color: #1a8089;
+    font-size: 20px;
 }
 
 .faq-content {
-    padding: 0 20px 20px 20px;
-    font-size: 15px;
+    padding: 0 20px 20px;
     color: #475569;
-    line-height: 1.6;
-}
-
-/* Contact Section */
-.contact-section {
-    padding-bottom: 80px;
-}
-
-.contact-box {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #f8fafc;
-    padding: 40px;
-    border-radius: 16px;
-    text-align: center;
-    border: 1px solid #e2e8f0;
-}
-
-.contact-box h4 {
-    font-size: 24px;
-    color: #1a1a2e;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.contact-box p {
-    color: #64748b;
-    margin-bottom: 30px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-input {
-    padding: 14px;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    font-size: 16px;
-    width: 100%;
-    color: #334155;
-}
-
-.form-input::placeholder {
-    color: #94a3b8;
 }
 
 /* Footer */
@@ -598,51 +446,12 @@ footer {
     border-top: 1px solid #e2e8f0;
 }
 
-.footer-info {
-    text-align: left;
-}
-
-.footer-links {
-    text-align: left;
-}
-
-.footer-links strong {
-    display: block;
-    font-size: 16px;
-    color: #1a1a2e;
-    margin-bottom: 15px;
-}
-
-.footer-links ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.footer-links a {
-    font-size: 14px;
-    color: #64748b;
-    transition: color 0.2s;
-}
-
-.footer-links a:hover {
-    color: #1a8089;
-}
-
-.contact-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-/* Mobile Menu */
+/* Menu Mobile */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
 }
 
 .menu-toggle .bar {
@@ -651,7 +460,6 @@ footer {
     height: 3px;
     background: #1a1a2e;
     margin: 5px 0;
-    transition: 0.4s;
 }
 
 .mobile-menu {
@@ -659,114 +467,33 @@ footer {
     top: 70px;
     left: 0;
     width: 100%;
-    height: 100vh;
     background: #fff;
     z-index: 999;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-    overflow-y: auto;
+    transition: 0.3s;
 }
 
-.mobile-menu ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    gap: 20px;
-    padding: 40px 0;
-    align-items: center;
-}
-
-.mobile-menu a {
-    font-size: 18px;
-    color: #1a1a2e;
-    font-weight: 500;
-}
-
-/* Estado Aberto do Menu Mobile */
 body[data-open="true"] .mobile-menu {
     opacity: 1;
     visibility: visible;
 }
 
-/* Animações */
-.animate-fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.8s ease-out forwards;
-}
+/* --- RESPONSIVIDADE E MELHORIAS MOBILE --- */
 
-/* Adicionando pequenos atrasos */
-.animate-fade-in:nth-child(2) {
-    animation-delay: 0.2s;
-}
-.animate-fade-in:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    position: relative;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.close-btn {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-    color: #1a1a2e;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Responsividade */
 @media (max-width: 992px) {
     .hero {
         grid-template-columns: 1fr;
-        padding: 40px 24px;
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        max-width: 100%;
+        font-size: 36px;
     }
 
     .hero aside {
         order: -1;
-    }
-
-    .how {
-        grid-template-columns: 1fr;
-    }
-
-    .benefits-checklist {
-        margin-top: 30px;
     }
 
     .desktop-nav {
@@ -776,115 +503,149 @@ body[data-open="true"] .mobile-menu {
     .menu-toggle {
         display: block;
     }
-    
-    /* Melhora a visualização do card premium no tablet */
-    .premium-plan-card {
-        transform: scale(1.05); 
-    }
 }
 
 @media (max-width: 768px) {
-    /* Ajuste para mobile na listagem de psicólogos */
     .filters-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Empilha filtros no mobile */
     }
-    
+
     footer {
         grid-template-columns: 1fr;
-        align-items: center;
         text-align: center;
     }
-    
-    .footer-links {
-        text-align: center;
-    }
-    
-    .footer-links ul {
+
+    .footer-links ul, .contact-card {
         align-items: center;
     }
 
-    .contact-card {
-        margin-top: 25px;
-        align-items: center; /* Centraliza botões no mobile */
-    }
-}
-
-/* CORREÇÃO PRINCIPAL: Garante que os planos se empilhem em telas pequenas (o problema de 'bugado') */
-@media (max-width: 650px) {
     .plans-grid {
-        /* Garante que o grid de planos ocupe 1 coluna, corrigindo quebra de layout */
-        grid-template-columns: 1fr !important; 
-        gap: 20px !important;
+        grid-template-columns: 1fr !important; /* Corrige bug dos planos no mobile */
+        padding: 0 10px;
     }
 
     .premium-plan-card {
-        /* Remove o zoom do plano premium no mobile, evitando quebra da largura */
-        transform: scale(1) !important; 
-    }
-    
-    .filters-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        transform: scale(1) !important; /* Remove zoom que causa quebra lateral */
+        margin-top: 20px;
     }
 }
 
 @media (max-width: 600px) {
-    header {
-        flex-direction: row; /* Mantido como linha */
-        align-items: center;
-        gap: 15px;
-        padding: 15px 24px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-        max-width: 100%;
+    .container {
+        padding: 15px;
     }
 
     .hero .actions {
         flex-direction: column;
-        gap: 10px;
     }
 
     .btn-primary, .btn-secondary {
         width: 100%;
+        text-align: center;
     }
-    
-    /* Melhor UX na listagem de psicólogos no mobile */
+
     .psychologists-grid {
-        grid-template-columns: 1fr; /* Força 1 coluna no mobile */
-        gap: 20px;
+        grid-template-columns: 1fr;
     }
-    
+
     .psy-header {
         flex-direction: column;
         text-align: center;
-        padding-bottom: 10px;
     }
-    
-    .psy-info {
-        align-items: center;
-        text-align: center;
-    }
-    
+
     .psy-photo {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
-    
+
     .psy-approach {
         text-align: center;
         border-left: none;
-        padding-left: 0;
         border-bottom: 1px solid #e2e8f0;
-        padding-bottom: 15px;
-        margin-bottom: 15px;
+        padding-bottom: 10px;
     }
-    
+
     .psy-specialties {
         justify-content: center;
     }
-    
-    .psy-footer {
-        padding-top: 10px;
+}
+
+/* Animações */
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+/* Modal de Cadastro */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none; /* Escondido por padrão */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-card {
+    background: #fff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.register-form .form-group {
+    margin-bottom: 15px;
+}
+
+.register-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1a1a2e;
+}
+
+.register-form input, 
+.register-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.register-form input:focus {
+    outline: none;
+    border-color: #1a8089;
+    box-shadow: 0 0 0 3px rgba(26, 128, 137, 0.1);
 }
