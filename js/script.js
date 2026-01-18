@@ -31,12 +31,12 @@ const psychologists = [
     // Psicólogos regulares FREE
         {
         name: "Sandra Aparecida de Paula ",
-        photo: "../img/psicologos/sandraamorim.jpg",
+        photo: "../img/psicologos/FOTO PROFISSIONAL  - Sandra Amorim.jpg",
         crp: "CRP 06/218585",
         approach: "Terapia Cognitiva-Comportamental (TCC)",
         specialties: ["Público- adolescentes , adultos ( feminino e masculino) Avaliação Neuropsicologica "],
         whatsapp: "5511979820978",
-        premium: true
+        premium: false
     },
         {
         name: "Karina Guimarães Medronho",
