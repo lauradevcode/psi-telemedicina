@@ -4,10 +4,8 @@ document.getElementById("year").innerText = new Date().getFullYear();
 // Número de WhatsApp para contato
 const waNumber = "5561998548265";
 
-// Base de dados de psicólogos com sistema PREMIUM
-const psychologists = [
-    // PREMIUM - Aparecem primeiro
-
+// Base de dados de psicólogos
+const psychologistsRaw = [
     {
         name: "Paula Gomes",
         photo: "../img/psicologos/paulagomes.jpeg",
@@ -26,11 +24,8 @@ const psychologists = [
         whatsapp: "5521983328482",
         premium: true
     },
-
-
-    // Psicólogos regulares FREE
-        {
-        name: "Nelci Starosky Loeve ",
+    {
+        name: "Nelci Starosky Loeve",
         photo: "../img/psicologos/nelcistarosky.jpg",
         crp: "CRP 06/43695",
         approach: "Analítica",
@@ -48,7 +43,7 @@ const psychologists = [
         premium: false
     },
     {
-        name: "Sandra Aparecida de Paula ",
+        name: "Sandra Aparecida de Paula",
         photo: "../img/psicologos/FOTO PROFISSIONAL  - Sandra Amorim.jpg",
         crp: "CRP 06/218585",
         approach: "Terapia Cognitiva-Comportamental (TCC)",
@@ -57,7 +52,7 @@ const psychologists = [
         premium: false
     },
     {
-        name: "Larissa Freire Maia ",
+        name: "Larissa Freire Maia",
         photo: "../img/psicologos/larissamaia.jpeg",
         crp: "CRP 11/22937",
         approach: "Terapia Cognitiva-Comportamental (TCC)",
@@ -143,7 +138,7 @@ const psychologists = [
         crp: "CRP 01/654321",
         approach: "Humanista",
         specialties: ["Conflitos Pessoais", "Autoestima"],
-        whatsapp: "5521989937876", // Atualizar com o número real se necessário
+        whatsapp: "5521989937876",
         premium: false
     },
     {
@@ -175,20 +170,22 @@ const psychologists = [
     },
 ];
 
-// Extrair especialidades e abordagens únicas para filtros
-// Nota: Os nomes das especialidades na base de dados (e nos selects) agora não têm acentos ou maiúsculas para facilitar a correspondência, mas o texto exibido no tag é o original.
+// Gerador de IDs únicos para os links
+const psychologists = psychologistsRaw.map(psy => ({
+    ...psy,
+    id: psy.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')
+}));
+
 const allSpecialties = [...new Set(psychologists.flatMap(p => p.specialties))].sort();
 const allApproaches = [...new Set(psychologists.map(p => p.approach))].sort();
 
-// Função para criar card de psicólogo
+// FUNÇÃO ATUALIZADA COM OS BOTÕES LADO A LADO
 function createPsyCard(psy) {
     const premiumBadge = psy.premium ? '<span class="premium-badge">⭐ PREMIUM</span>' : '';
     const cardClass = psy.premium ? 'psy-card premium-card' : 'psy-card';
+    const encodedMessage = encodeURIComponent(`Olá, ${psy.name}! Vi seu perfil no Psi Telemedicina. Gostaria de agendar uma sessão.`);
 
-    // Cria a mensagem para o WhatsApp com o nome do profissional
-    const encodedMessage = encodeURIComponent(`Olá, ${psy.name}! Vir do Psitelemedicina. Gostaria de agendar uma sessão de terapia.`);
-
-    return `<div class="${cardClass}" data-approach="${psy.approach}" data-specialties="${psy.specialties.join(', ')}">
+    return `<div class="${cardClass}">
         <div class="psy-header">
             <img src="${psy.photo}" alt="${psy.name}" class="psy-photo">
             <div class="psy-info">
@@ -208,56 +205,96 @@ function createPsyCard(psy) {
             </div>
         </div>
         <div class="psy-footer">
-            <a href="https://wa.me/${psy.whatsapp}?text=${encodedMessage}" target="_blank" class="psy-whatsapp-btn-full">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 18px; height: 18px; filter: brightness(0) invert(1); display: inline;">
-                Chamar no WhatsApp
-            </a>
+            <div class="psy-actions">
+                <button onclick="openPsyModal('${psy.id}')" class="btn-profile-secondary">Ver Perfil</button>
+                <a href="https://wa.me/${psy.whatsapp}?text=${encodedMessage}" target="_blank" class="btn-whatsapp-primary">
+                    WhatsApp
+                </a>
+            </div>
         </div>
     </div>`;
 }
 
-// Função para renderizar os psicólogos
+function renderModalContent(psy) {
+    const modalContent = document.getElementById('modalContent');
+    const profileUrl = window.location.origin + window.location.pathname + '#' + psy.id;
+    const encodedMessage = encodeURIComponent(`Olá, ${psy.name}! Vi seu perfil no Psi Telemedicina. Gostaria de agendar uma sessão.`);
+
+    modalContent.innerHTML = `
+        <div style="text-align: center;">
+            <img src="${psy.photo}" alt="${psy.name}" class="psy-photo" style="margin: 0 auto 15px; width: 120px; height: 120px; border: 4px solid #1a8089;">
+            <div class="verified-badge" style="display: inline-block; margin-bottom: 10px;">✓ CRP Verificado: ${psy.crp}</div>
+            <h2 style="font-size: 24px; color: #1a1a2e; margin: 10px 0;">${psy.name}</h2>
+            <div style="color: #475569; font-style: italic; margin-bottom: 20px;">${psy.approach}</div>
+            
+            <div style="margin: 20px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
+                ${psy.specialties.map(sp => `<span class="specialty-tag" style="margin:0">${sp}</span>`).join('')}
+            </div>
+
+            <button onclick="copyToClipboard('${profileUrl}')" style="background: #f1f5f9; border: 1px solid #e2e8f0; padding: 10px; border-radius: 8px; cursor: pointer; font-size: 13px; margin-bottom: 20px; width: 100%;">
+                🔗 Copiar link deste perfil para compartilhar
+            </button>
+
+            <a href="https://wa.me/${psy.whatsapp}?text=${encodedMessage}" target="_blank" class="psy-whatsapp-btn-full" style="margin: 0;">
+               Agendar Consulta via WhatsApp
+            </a>
+        </div>
+    `;
+}
+
+function openPsyModal(psyId) {
+    const psy = psychologists.find(p => p.id === psyId);
+    if (psy) {
+        renderModalContent(psy);
+        document.getElementById('psyModal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        window.location.hash = psyId;
+    }
+}
+
+function closePsyModal() {
+    document.getElementById('psyModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+}
+
+function checkUrlHash() {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+        setTimeout(() => openPsyModal(hash), 100);
+    }
+}
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Link do perfil copiado!");
+    });
+}
+
 function renderPsychologists(filterSpecialty = "", filterApproach = "") {
     const grid = document.getElementById("psychologistsGrid");
-    const noResultsMessage = document.getElementById("noResultsMessage");
     grid.innerHTML = "";
 
-    // Filtra psicólogos. Se o filtro for "", ele é ignorado.
     const filtered = psychologists.filter(psy => {
-        // Normaliza a especialidade para a comparação, mas só se tiver sido selecionado um filtro
         const matchesSpecialty = !filterSpecialty || psy.specialties.some(spec => spec === filterSpecialty);
         const matchesApproach = !filterApproach || psy.approach === filterApproach;
         return matchesSpecialty && matchesApproach;
     });
 
-    // Ordena: Premium primeiro, depois por nome
     filtered.sort((a, b) => {
         if (a.premium && !b.premium) return -1;
         if (!a.premium && b.premium) return 1;
         return a.name.localeCompare(b.name);
     });
 
-    if (filtered.length === 0) {
-        // Mostra a mensagem de "sem resultados" 
-        if (noResultsMessage) {
-            noResultsMessage.classList.remove("hidden");
-        }
-    } else {
-        // Esconde a mensagem e renderiza os cards
-        if (noResultsMessage) {
-            noResultsMessage.classList.add("hidden");
-        }
-        filtered.forEach(psy => {
-            grid.innerHTML += createPsyCard(psy);
-        });
-    }
+    filtered.forEach(psy => {
+        grid.innerHTML += createPsyCard(psy);
+    });
 }
 
-// Preencher os filtros (Selects)
 function populateFilters() {
     const specialtyFilter = document.getElementById("specialtyFilter");
     allSpecialties.forEach(spec => {
-        // Usa a especialidade completa como valor e texto
         specialtyFilter.innerHTML += `<option value="${spec}">${spec}</option>`;
     });
 
@@ -265,79 +302,31 @@ function populateFilters() {
     allApproaches.forEach(app => {
         approachFilter.innerHTML += `<option value="${app}">${app}</option>`;
     });
-
-    // Atualiza os placeholders de acordo com a nova cópia
-    specialtyFilter.querySelector('option[value=""]').textContent = "Escolha a especialidade";
-    approachFilter.querySelector('option[value=""]').textContent = "Escolha a abordagem terapêutica";
 }
 
-// Inicialização: CHAMA A FUNÇÃO SEM FILTROS para exibir tudo ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
     populateFilters();
     renderPsychologists();
+    checkUrlHash();
 });
 
-
-// Lógica de Filtragem
-const specialtyFilter = document.getElementById("specialtyFilter");
-const approachFilter = document.getElementById("approachFilter");
-const clearFiltersBtn = document.getElementById("clearFiltersBtn");
-
-function applyFilters() {
-    const selectedSpecialty = specialtyFilter.value;
-    const selectedApproach = approachFilter.value;
-    // O filtro só é aplicado quando esta função é chamada (ao interagir com os selects)
-    renderPsychologists(selectedSpecialty, selectedApproach);
+document.querySelector('.close-btn').addEventListener('click', closePsyModal);
+window.onclick = function(event) {
+    const modal = document.getElementById('psyModal');
+    if (event.target == modal) closePsyModal();
 }
 
-specialtyFilter.addEventListener("change", applyFilters);
-approachFilter.addEventListener("change", applyFilters);
-clearFiltersBtn.addEventListener("click", () => {
-    specialtyFilter.value = "";
-    approachFilter.value = "";
-    // Limpa os filtros e renderiza TUDO novamente
+document.getElementById("specialtyFilter").addEventListener("change", (e) => {
+    renderPsychologists(e.target.value, document.getElementById("approachFilter").value);
+});
+document.getElementById("approachFilter").addEventListener("change", (e) => {
+    renderPsychologists(document.getElementById("specialtyFilter").value, e.target.value);
+});
+document.getElementById("clearFiltersBtn").addEventListener("click", () => {
+    document.getElementById("specialtyFilter").value = "";
+    document.getElementById("approachFilter").value = "";
     renderPsychologists();
 });
-
-
-// Lógica do Formulário de Contato
-document.getElementById("sendForm").addEventListener("click", () => {
-    const name = document.getElementById("name").value || "Não informado";
-    const email = document.getElementById("email").value || "Não informado";
-    const userType = document.getElementById("userType").value || "não especificado";
-
-    let message = `Olá, vim do site e gostaria de falar sobre um assunto. Meu nome é ${name}, email: ${email}. `;
-
-    if (userType === "paciente") {
-        message += "Sou paciente e quero agendar minha primeira sessão de terapia.";
-    } else if (userType === "psicologo") {
-        message += "Sou psicólogo(a) e estou interessado(a) em me cadastrar na plataforma.";
-    } else {
-        message += "Gostaria de mais informações sobre a plataforma.";
-    }
-
-    const text = encodeURIComponent(message);
-    window.open(`https://wa.me/${waNumber}?text=${text}`, "_blank");
-});
-
-// Enter key nos inputs
-["name", "email", "userType"].forEach((id) => {
-    const element = document.getElementById(id);
-    if (element) {
-        element.addEventListener("keydown", (e) => {
-            if (e.key === "Enter") {
-                document.getElementById("sendForm").click();
-            }
-        });
-    }
-});
-
-// Animações no scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-};
-
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -345,27 +334,8 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add("is-visible");
         }
     });
-}, observerOptions);
+}, { threshold: 0.1 });
 
 document.querySelectorAll(".animate-fade-in").forEach((el) => {
     observer.observe(el);
 });
-
-function openRegisterModal() {
-    document.getElementById('registerModal').style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Trava o scroll do fundo
-}
-
-function closeRegisterModal() {
-    document.getElementById('registerModal').style.display = 'none';
-    document.body.style.overflow = 'auto'; // Libera o scroll
-}
-
-// Fechar ao clicar fora do card branco
-window.onclick = function (event) {
-    const modal = document.getElementById('registerModal');
-    if (event.target == modal) {
-        closeRegisterModal();
-    }
-}
-
