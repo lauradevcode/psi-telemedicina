@@ -8,7 +8,7 @@ const waNumber = "5561998548265";
 const psychologists = [
     // PREMIUM - Aparecem primeiro
 
-        {
+    {
         name: "Paula Gomes",
         photo: "../img/psicologos/paulagomes.jpeg",
         crp: "CRP 04/52968",
@@ -30,15 +30,42 @@ const psychologists = [
 
     // Psicólogos regulares FREE
         {
+        name: "Nelci Starosky Loeve ",
+        photo: "../img/psicologos/nelcistarosky.jpg",
+        crp: "CRP 06/43695",
+        approach: "Analítica",
+        specialties: ["Adolescentes e adultos "],
+        whatsapp: "5541985210582",
+        premium: false
+    },
+    {
+        name: "Gleice Rojas",
+        photo: "../img/psicologos/gleicerojas.jpg",
+        crp: "CRP 06/43695",
+        approach: "Terapia Cognitiva-Comportamental (TCC)",
+        specialties: ["adultos "],
+        whatsapp: "5517997256530",
+        premium: false
+    },
+    {
         name: "Sandra Aparecida de Paula ",
         photo: "../img/psicologos/FOTO PROFISSIONAL  - Sandra Amorim.jpg",
         crp: "CRP 06/218585",
         approach: "Terapia Cognitiva-Comportamental (TCC)",
-        specialties: ["Público- adolescentes , adultos ( feminino e masculino) Avaliação Neuropsicologica "],
+        specialties: ["adolescentes , adultos ( feminino e masculino) Avaliação Neuropsicologica "],
         whatsapp: "5511979820978",
         premium: false
     },
-        {
+    {
+        name: "Larissa Freire Maia ",
+        photo: "../img/psicologos/larissamaia.jpeg",
+        crp: "CRP 11/22937",
+        approach: "Terapia Cognitiva-Comportamental (TCC)",
+        specialties: ["Crianças, Adolescentes, Adultos e Idosos"],
+        whatsapp: "5588992052429",
+        premium: false
+    },
+    {
         name: "Karina Guimarães Medronho",
         photo: "../img/psicologos/karina.jpeg",
         crp: "CRP 05/71318",
