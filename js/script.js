@@ -113,7 +113,7 @@ const psychologists = [
     {
         name: "Lediane Fonseca",
         photo: "../img/psicologos/lediane.jpg",
-        crp: "CRP 04/77404",
+        crp: "CRP 04/60211",
         approach: "Sistêmica",
         specialties: ["Adolescentes e adultos."],
         whatsapp: "5538999589059",
