@@ -1,262 +1,724 @@
-/* Reset */
+/* Reset básico */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+html,
 body {
-  font-family: "Inter", sans-serif;
-  color: #1a1a2e;
-  background-color: #f8fafc;
-  line-height: 1.6;
+    height: 100%;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+        "Helvetica Neue", Arial;
+    color: #1a1a2e;
+    overflow-x: hidden; /* Evita scroll horizontal por elementos que vazam */
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
 }
 
 /* Header */
 header {
-  background: #fff;
-  border-bottom: 1px solid #e2e8f0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 0;
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
+
 .header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
 }
+
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
 }
+
 .logo-icon {
-  background: #1a8089;
-  color: white;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  font-weight: bold;
-}
-.desktop-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 24px;
+    background: #1a8089;
+    box-shadow: 0 4px 8px rgba(26, 128, 137, 0.2);
 }
 
-/* Grid */
+.logo-text {
+    font-size: 18px;
+    color: #1a1a2e;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+nav a:not(.btn-primary) {
+    padding: 8px 0;
+    transition: color 0.2s;
+}
+
+nav a:not(.btn-primary):hover {
+    color: #1a8089;
+}
+
+/* Botões */
+.btn-primary {
+    background: #1a8089;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background: #106c74;
+}
+
+.btn-pulse {
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px rgba(26, 128, 137, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 15px rgba(26, 128, 137, 0);
+    }
+}
+
+.btn-secondary {
+    background: #f1f5f9;
+    color: #1a1a2e !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+    border: 1px solid #e2e8f0;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+}
+
+/* Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 40px;
+    align-items: center;
+    padding: 60px 24px;
+    background: #f8fafc;
+    border-radius: 16px;
+    margin-bottom: 40px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    max-width: 90%;
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: #475569;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.hero .actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.confidence-block {
+    padding: 20px;
+    background: #e0f2f1;
+    border-radius: 12px;
+    border-left: 5px solid #1a8089;
+}
+
+.confidence-title {
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.confidence-seals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.seal-item {
+    font-size: 14px;
+    color: #0f766e;
+    font-weight: 500;
+}
+
+/* Lista de Benefícios (Sidebar) */
+.benefits-checklist {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.benefits-checklist h3 {
+    font-size: 20px;
+    color: #1a1a2e;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.benefit-icon {
+    font-size: 24px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.benefit-text strong {
+    display: block;
+    color: #1a1a2e;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.benefit-text small {
+    display: block;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Filtros - CORREÇÃO DO VAZAMENTO */
+.filters-container {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #e2e8f0;
+}
+
+.filters-title {
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.filter-select {
+    width: 100%;
+    max-width: 100%; /* Impede que o select force a largura do container */
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #334155;
+    background: #fff;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2364748b'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona '...' se o texto for maior que a caixa */
+    white-space: nowrap;
+}
+
+.clear-filters-btn {
+    background: #e2e8f0;
+    color: #1a1a2e;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Cards de Psicólogos */
 .psychologists-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
-/* Card Style */
 .psy-card {
-  background: #fff;
-  border-radius: 16px;
-  border: 1px solid #e2e8f0;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease;
-  overflow: hidden;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
 }
+
 .psy-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 
 .psy-header {
-  padding: 20px;
-  display: flex;
-  gap: 15px;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
 }
+
 .psy-photo {
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #f1f5f9;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 3px solid #1a8089;
 }
+
+.psy-info {
+    display: flex;
+    flex-direction: column;
+}
+
 .psy-name {
-  font-weight: 700;
-  font-size: 18px;
-  color: #1e293b;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a2e;
 }
-.psy-crp {
-  font-size: 13px;
-  color: #64748b;
-  font-weight: 500;
+
+.verified-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #1a8089;
+    background: #e0f2f1;
+    padding: 3px 8px;
+    border-radius: 4px;
 }
 
 .psy-body {
-  padding: 0 20px 20px;
-  flex-grow: 1;
+    padding: 20px;
+    flex-grow: 1;
 }
+
 .psy-approach {
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: #334155;
+    font-size: 14px;
+    color: #475569;
+    border-left: 3px solid #cbd5e1;
+    padding-left: 10px;
+    margin-bottom: 15px;
 }
+
 .specialty-tag {
-  background: #f1f5f9;
-  color: #475569;
-  font-size: 11px;
-  padding: 4px 10px;
-  border-radius: 6px;
-  margin-right: 5px;
-  display: inline-block;
-  margin-top: 5px;
+    display: inline-block;
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin: 2px;
 }
 
-/* --- AÇÕES DO CARD (BOTOES ALINHADOS) --- */
-/* Container dos Botões no Card */
-.psy-footer {
-    padding: 15px 20px 20px;
-    background: #fafafa;
-    border-top: 1px solid #f1f5f9;
-}
-
-.psy-actions {
-    display: flex; /* Alinha lado a lado */
-    gap: 10px;    /* Espaço entre eles */
-    width: 100%;
-}
-
-/* Botão Ver Perfil (Estilo Outline Moderno) */
-.btn-profile-secondary {
-    flex: 1; /* Ocupa 40% do espaço */
-    background: #ffffff;
-    color: #1a8089;
-    border: 2px solid #1a8089;
-    padding: 12px 5px;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-profile-secondary:hover {
-    background: #1a8089;
-    color: #ffffff;
-}
-
-/* Botão WhatsApp (Estilo Sólido) */
-.btn-whatsapp-primary {
-    flex: 1.6; /* Ocupa 60% do espaço (Mais destaque) */
+.psy-whatsapp-btn-full {
     background: #25d366;
-    color: #ffffff !important;
-    padding: 12px 5px;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 13px;
+    color: white !important;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
     text-align: center;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
+    display: block;
+    margin: 20px;
+    transition: 0.3s;
 }
 
-.btn-whatsapp-primary:hover {
-    background: #128c7e;
+/* FAQ */
+.faq-grid {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/* Estilos do Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(4px);
+.faq-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 15px;
 }
 
-.modal-content {
-    background: #fff;
-    margin: 5vh auto;
-    padding: 30px;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 500px;
+.faq-item summary {
+    padding: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
     position: relative;
 }
 
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    color: #1a8089;
+    font-size: 20px;
+}
+
+.faq-content {
+    padding: 0 20px 20px;
+    color: #475569;
+}
+
+/* Footer */
+footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Menu Mobile */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #1a1a2e;
+    margin: 5px 0;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+body[data-open="true"] .mobile-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- RESPONSIVIDADE E MELHORIAS MOBILE --- */
+
+@media (max-width: 992px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        max-width: 100%;
+        font-size: 36px;
+    }
+
+    .hero aside {
+        order: -1;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .filters-grid {
+        grid-template-columns: 1fr; /* Empilha filtros no mobile */
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-links ul, .contact-card {
+        align-items: center;
+    }
+
+    .plans-grid {
+        grid-template-columns: 1fr !important; /* Corrige bug dos planos no mobile */
+        padding: 0 10px;
+    }
+
+    .premium-plan-card {
+        transform: scale(1) !important; /* Remove zoom que causa quebra lateral */
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .hero .actions {
+        flex-direction: column;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .psychologists-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .psy-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .psy-photo {
+        margin-bottom: 10px;
+    }
+
+    .psy-approach {
+        text-align: center;
+        border-left: none;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 10px;
+    }
+
+    .psy-specialties {
+        justify-content: center;
+    }
+}
+
+/* Animações */
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal de Cadastro */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none; /* Escondido por padrão */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-card {
+    background: #fff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.register-form .form-group {
+    margin-bottom: 15px;
+}
+
+.register-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1a1a2e;
+}
+
+.register-form input, 
+.register-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.register-form input:focus {
+    outline: none;
+    border-color: #1a8089;
+    box-shadow: 0 0 0 3px rgba(26, 128, 137, 0.1);
+}
+
+/* ... (MANTENHA TODO O SEU CSS ANTERIOR AQUI) ... */
+/* Adicione isso ao FINAL do arquivo style.css */
+
+/* Organização dos Botões no Card */
+.psy-footer {
+    padding: 15px 20px 20px;
+    background: #fff; /* Garante fundo branco se precisar */
+}
+
+.psy-footer-actions {
+    display: flex;
+    flex-direction: column; /* Um em cima do outro mobile first, ou mude para row */
+    gap: 10px;
+}
+
+/* Em telas maiores, podemos colocar lado a lado se preferir */
+@media (min-width: 400px) {
+    .psy-footer-actions {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+
+/* Estilos do Modal (Obrigatório) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); 
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%; 
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: modalSlideIn 0.3s;
+}
+
+@keyframes modalSlideIn {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
 .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
     position: absolute;
     right: 20px;
     top: 10px;
-    font-size: 30px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
-    color: #94a3b8;
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Filtros */
-.filters-container {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #e2e8f0;
-  margin-bottom: 30px;
-}
-.filters-grid {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-.filter-select {
-  flex: 1;
-  min-width: 200px;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e1;
-}
-.clear-filters-btn {
-  padding: 12px 20px;
-  background: #f1f5f9;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .psy-actions {
-    flex-direction: row;
-  }
-  .btn-profile-secondary,
-  .btn-whatsapp-primary {
-    font-size: 12px;
-    padding: 10px 5px;
-  }
 }

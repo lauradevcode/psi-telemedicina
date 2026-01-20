@@ -4,7 +4,7 @@ document.getElementById("year").innerText = new Date().getFullYear();
 // Número de WhatsApp para contato
 const waNumber = "5561998548265";
 
-// Base de dados de psicólogos
+// Base de dados de psicólogos 
 const psychologistsRaw = [
     {
         name: "Paula Gomes",
@@ -25,39 +25,12 @@ const psychologistsRaw = [
         premium: true
     },
     {
-        name: "Nelci Starosky Loeve",
-        photo: "../img/psicologos/nelcistarosky.jpg",
-        crp: "CRP 06/43695",
-        approach: "Analítica",
-        specialties: ["Adolescentes e adultos "],
-        whatsapp: "5541985210582",
-        premium: false
-    },
-    {
-        name: "Gleice Rojas",
-        photo: "../img/psicologos/gleicerojas.jpg",
-        crp: "CRP 06/43695",
-        approach: "Terapia Cognitiva-Comportamental (TCC)",
-        specialties: ["adultos "],
-        whatsapp: "5517997256530",
-        premium: false
-    },
-    {
-        name: "Sandra Aparecida de Paula",
-        photo: "../img/psicologos/FOTO PROFISSIONAL  - Sandra Amorim.jpg",
+        name: "Sandra Aparecida de Paula ",
+        photo: "../img/psicologos/sandraamorim.jpg",
         crp: "CRP 06/218585",
         approach: "Terapia Cognitiva-Comportamental (TCC)",
-        specialties: ["adolescentes , adultos ( feminino e masculino) Avaliação Neuropsicologica "],
+        specialties: ["Público- adolescentes , adultos ( feminino e masculino) Avaliação Neuropsicologica "],
         whatsapp: "5511979820978",
-        premium: false
-    },
-    {
-        name: "Larissa Freire Maia",
-        photo: "../img/psicologos/larissamaia.jpeg",
-        crp: "CRP 11/22937",
-        approach: "Terapia Cognitiva-Comportamental (TCC)",
-        specialties: ["Crianças, Adolescentes, Adultos e Idosos"],
-        whatsapp: "5588992052429",
         premium: false
     },
     {
@@ -108,7 +81,7 @@ const psychologistsRaw = [
     {
         name: "Lediane Fonseca",
         photo: "../img/psicologos/lediane.jpg",
-        crp: "CRP 04/60211",
+        crp: "CRP 04/77404",
         approach: "Sistêmica",
         specialties: ["Adolescentes e adultos."],
         whatsapp: "5538999589059",
@@ -138,7 +111,7 @@ const psychologistsRaw = [
         crp: "CRP 01/654321",
         approach: "Humanista",
         specialties: ["Conflitos Pessoais", "Autoestima"],
-        whatsapp: "5521989937876",
+        whatsapp: "5521989937876", 
         premium: false
     },
     {
@@ -170,7 +143,7 @@ const psychologistsRaw = [
     },
 ];
 
-// Gerador de IDs únicos para os links
+// 1. Gerar IDs únicos para os links (IMPORTANTE PARA O MODAL)
 const psychologists = psychologistsRaw.map(psy => ({
     ...psy,
     id: psy.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')
@@ -179,11 +152,11 @@ const psychologists = psychologistsRaw.map(psy => ({
 const allSpecialties = [...new Set(psychologists.flatMap(p => p.specialties))].sort();
 const allApproaches = [...new Set(psychologists.map(p => p.approach))].sort();
 
-// FUNÇÃO ATUALIZADA COM OS BOTÕES LADO A LADO
+// 2. Função para criar card de psicólogo - COM BOTOES ORGANIZADOS
 function createPsyCard(psy) {
     const premiumBadge = psy.premium ? '<span class="premium-badge">⭐ PREMIUM</span>' : '';
     const cardClass = psy.premium ? 'psy-card premium-card' : 'psy-card';
-    const encodedMessage = encodeURIComponent(`Olá, ${psy.name}! Vi seu perfil no Psi Telemedicina. Gostaria de agendar uma sessão.`);
+    const encodedMessage = encodeURIComponent(`Olá, ${psy.name}! Vim do Psitelemedicina. Gostaria de agendar uma sessão de terapia.`);
 
     return `<div class="${cardClass}">
         <div class="psy-header">
@@ -204,39 +177,45 @@ function createPsyCard(psy) {
                 ${psy.specialties.length > 3 ? `<span class="specialty-tag">+${psy.specialties.length - 3}</span>` : ''}
             </div>
         </div>
+        
         <div class="psy-footer">
-            <div class="psy-actions">
-                <button onclick="openPsyModal('${psy.id}')" class="btn-profile-secondary">Ver Perfil</button>
-                <a href="https://wa.me/${psy.whatsapp}?text=${encodedMessage}" target="_blank" class="btn-whatsapp-primary">
-                    WhatsApp
+            <div class="psy-footer-actions">
+                <button onclick="openPsyModal('${psy.id}')" class="btn-secondary" style="width: 100%; cursor: pointer;">Ver Perfil Completo</button>
+                <a href="https://wa.me/${psy.whatsapp}?text=${encodedMessage}" target="_blank" class="psy-whatsapp-btn-full" style="width: 100%; margin: 0; text-align: center;">
+                    Chamar no WhatsApp
                 </a>
             </div>
         </div>
     </div>`;
 }
 
+// 3. Renderizar o Modal com Link Compartilhável
 function renderModalContent(psy) {
     const modalContent = document.getElementById('modalContent');
+    // Cria a URL completa para compartilhar
     const profileUrl = window.location.origin + window.location.pathname + '#' + psy.id;
-    const encodedMessage = encodeURIComponent(`Olá, ${psy.name}! Vi seu perfil no Psi Telemedicina. Gostaria de agendar uma sessão.`);
+    const encodedMessage = encodeURIComponent(`Olá, ${psy.name}! Vim do perfil no Psitelemedicina.`);
 
     modalContent.innerHTML = `
         <div style="text-align: center;">
-            <img src="${psy.photo}" alt="${psy.name}" class="psy-photo" style="margin: 0 auto 15px; width: 120px; height: 120px; border: 4px solid #1a8089;">
-            <div class="verified-badge" style="display: inline-block; margin-bottom: 10px;">✓ CRP Verificado: ${psy.crp}</div>
-            <h2 style="font-size: 24px; color: #1a1a2e; margin: 10px 0;">${psy.name}</h2>
-            <div style="color: #475569; font-style: italic; margin-bottom: 20px;">${psy.approach}</div>
+            <img src="${psy.photo}" alt="${psy.name}" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid #1a8089; margin-bottom: 15px;">
+            <h2>${psy.name}</h2>
+            <p style="color: #64748b; margin-bottom: 20px;">${psy.crp}</p>
             
-            <div style="margin: 20px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
-                ${psy.specialties.map(sp => `<span class="specialty-tag" style="margin:0">${sp}</span>`).join('')}
+            <div style="text-align: left; background: #f8fafc; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                <p><strong>Abordagem:</strong> ${psy.approach}</p>
+                <p style="margin-top: 10px;"><strong>Especialidades:</strong></p>
+                <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px;">
+                    ${psy.specialties.map(s => `<span class="specialty-tag" style="background: white; border: 1px solid #e2e8f0;">${s}</span>`).join('')}
+                </div>
             </div>
 
-            <button onclick="copyToClipboard('${profileUrl}')" style="background: #f1f5f9; border: 1px solid #e2e8f0; padding: 10px; border-radius: 8px; cursor: pointer; font-size: 13px; margin-bottom: 20px; width: 100%;">
-                🔗 Copiar link deste perfil para compartilhar
+            <button onclick="copyToClipboard('${profileUrl}')" class="btn-secondary" style="width: 100%; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                🔗 Copiar Link do Perfil
             </button>
 
-            <a href="https://wa.me/${psy.whatsapp}?text=${encodedMessage}" target="_blank" class="psy-whatsapp-btn-full" style="margin: 0;">
-               Agendar Consulta via WhatsApp
+            <a href="https://wa.me/${psy.whatsapp}?text=${encodedMessage}" target="_blank" class="psy-whatsapp-btn-full" style="display: block; text-align: center; margin: 0;">
+                Agendar via WhatsApp
             </a>
         </div>
     `;
@@ -247,22 +226,13 @@ function openPsyModal(psyId) {
     if (psy) {
         renderModalContent(psy);
         document.getElementById('psyModal').style.display = 'block';
-        document.body.style.overflow = 'hidden';
-        window.location.hash = psyId;
+        window.location.hash = psyId; // Adiciona o hash na URL
     }
 }
 
 function closePsyModal() {
     document.getElementById('psyModal').style.display = 'none';
-    document.body.style.overflow = 'auto';
-    history.pushState("", document.title, window.location.pathname + window.location.search);
-}
-
-function checkUrlHash() {
-    const hash = window.location.hash.substring(1);
-    if (hash) {
-        setTimeout(() => openPsyModal(hash), 100);
-    }
+    history.pushState("", document.title, window.location.pathname + window.location.search); // Remove hash limpo
 }
 
 function copyToClipboard(text) {
@@ -271,6 +241,15 @@ function copyToClipboard(text) {
     });
 }
 
+// Checar se abriu a pagina ja com um link (ex: site.com/#paula-gomes)
+function checkUrlHash() {
+    const hash = window.location.hash.substring(1);
+    if(hash) {
+        setTimeout(() => openPsyModal(hash), 500);
+    }
+}
+
+// Renderização dos cards e filtros
 function renderPsychologists(filterSpecialty = "", filterApproach = "") {
     const grid = document.getElementById("psychologistsGrid");
     grid.innerHTML = "";
@@ -307,35 +286,38 @@ function populateFilters() {
 document.addEventListener("DOMContentLoaded", () => {
     populateFilters();
     renderPsychologists();
-    checkUrlHash();
+    checkUrlHash(); // Verifica se tem link compartilhado
 });
 
-document.querySelector('.close-btn').addEventListener('click', closePsyModal);
-window.onclick = function(event) {
-    const modal = document.getElementById('psyModal');
-    if (event.target == modal) closePsyModal();
+// Eventos de Filtro
+const specialtyFilter = document.getElementById("specialtyFilter");
+const approachFilter = document.getElementById("approachFilter");
+const clearFiltersBtn = document.getElementById("clearFiltersBtn");
+
+function applyFilters() {
+    renderPsychologists(specialtyFilter.value, approachFilter.value);
 }
 
-document.getElementById("specialtyFilter").addEventListener("change", (e) => {
-    renderPsychologists(e.target.value, document.getElementById("approachFilter").value);
-});
-document.getElementById("approachFilter").addEventListener("change", (e) => {
-    renderPsychologists(document.getElementById("specialtyFilter").value, e.target.value);
-});
-document.getElementById("clearFiltersBtn").addEventListener("click", () => {
-    document.getElementById("specialtyFilter").value = "";
-    document.getElementById("approachFilter").value = "";
+specialtyFilter.addEventListener("change", applyFilters);
+approachFilter.addEventListener("change", applyFilters);
+clearFiltersBtn.addEventListener("click", () => {
+    specialtyFilter.value = "";
+    approachFilter.value = "";
     renderPsychologists();
 });
 
+// Fechar modal
+document.querySelector('.close-btn').addEventListener('click', closePsyModal);
+window.onclick = function(event) {
+    if (event.target == document.getElementById('psyModal')) {
+        closePsyModal();
+    }
+}
+
+// Animações
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-        }
+        if (entry.isIntersecting) entry.target.classList.add("is-visible");
     });
 }, { threshold: 0.1 });
-
-document.querySelectorAll(".animate-fade-in").forEach((el) => {
-    observer.observe(el);
-});
+document.querySelectorAll(".animate-fade-in").forEach((el) => observer.observe(el));
