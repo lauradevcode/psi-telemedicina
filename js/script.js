@@ -198,7 +198,7 @@ function renderModalContent(psy) {
 
     modalContent.innerHTML = `
         <div style="text-align: center;">
-            <img src="${psy.photo}" alt="${psy.name}" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid #1a8089; margin-bottom: 15px;">
+            <img src="${psy.photo}" alt="${psy.name}" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid #1a8089; margin-bottom: 15px;margin: 0 auto;">
             <h2>${psy.name}</h2>
             <p style="color: #64748b; margin-bottom: 20px;">${psy.crp}</p>
             
