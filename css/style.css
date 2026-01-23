@@ -120,7 +120,7 @@ nav a:not(.btn-primary):hover {
 
 @keyframes pulse-animation {
     0% {
-        box-shadow: 0 0 0 0px rgba(26, 128, 137, 0.4);
+        box-shadow: 0 0 0 0px #1a808966;
     }
     100% {
         box-shadow: 0 0 0 15px rgba(26, 128, 137, 0);
@@ -128,8 +128,8 @@ nav a:not(.btn-primary):hover {
 }
 
 .btn-secondary {
-    background: #f1f5f9;
-    color: #1a1a2e !important;
+    background: #1a8089;
+    color: #ffffff !important;
     padding: 10px 20px;
     border-radius: 8px;
     font-weight: 600;
@@ -152,7 +152,7 @@ nav a:not(.btn-primary):hover {
     padding: 60px 24px;
     background: #f8fafc;
     border-radius: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .hero-content h1 {
@@ -339,8 +339,8 @@ nav a:not(.btn-primary):hover {
 }
 
 .psy-photo {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
@@ -374,7 +374,7 @@ nav a:not(.btn-primary):hover {
 }
 
 .psy-approach {
-    font-size: 14px;
+    font-size: 16px;
     color: #475569;
     border-left: 3px solid #cbd5e1;
     padding-left: 10px;
@@ -735,15 +735,15 @@ body[data-open="true"] .mobile-menu {
 
 .psy-footer-actions {
     display: flex;
-    flex-direction: column; /* Um em cima do outro mobile first, ou mude para row */
-    gap: 10px;
+    flex-direction:column; /* Um em cima do outro mobile first, ou mude para row */
+    gap: 20px;
 }
 
 /* Em telas maiores, podemos colocar lado a lado se preferir */
 @media (min-width: 400px) {
     .psy-footer-actions {
-        flex-direction: row;
-        gap: 10px;
+        flex-direction: column;
+        gap: 20px;
     }
 }
 

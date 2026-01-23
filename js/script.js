@@ -180,9 +180,9 @@ function createPsyCard(psy) {
         
         <div class="psy-footer">
             <div class="psy-footer-actions">
-                <button onclick="openPsyModal('${psy.id}')" class="btn-secondary" style="width: 100%; cursor: pointer;">Ver Perfil Completo</button>
-                <a href="https://wa.me/${psy.whatsapp}?text=${encodedMessage}" target="_blank" class="psy-whatsapp-btn-full" style="width: 100%; margin: 0; text-align: center;">
-                    Chamar no WhatsApp
+                <button onclick="openPsyModal('${psy.id}')" class="btn-secondary" style="width: 100%; cursor: pointer;font-size: 16px;">Ver Perfil</button>
+                <a href="https://wa.me/${psy.whatsapp}?text=${encodedMessage}" target="_blank" class="psy-whatsapp-btn-full" style="width: 100%; font-size: 16px;margin: 0; text-align: center;">
+                    Conversar no WhatsApp
                 </a>
             </div>
         </div>
