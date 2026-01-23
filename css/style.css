@@ -100,7 +100,7 @@ nav a:not(.btn-primary):hover {
 .btn-primary {
     background: #1a8089;
     color: #fff !important;
-    padding: 10px 20px;
+    padding: 20px 30px;
     border-radius: 8px;
     font-weight: 600;
     display: inline-block;
@@ -130,7 +130,7 @@ nav a:not(.btn-primary):hover {
 .btn-secondary {
     background: #1a8089;
     color: #ffffff !important;
-    padding: 10px 20px;
+    padding: 20px 30px;
     border-radius: 8px;
     font-weight: 600;
     display: inline-block;
