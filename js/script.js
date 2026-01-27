@@ -163,7 +163,7 @@ const allApproaches = [...new Set(psychologists.map(p => p.approach))].sort();
 
 // 2. Função para criar card de psicólogo - COM BOTOES ORGANIZADOS
 function createPsyCard(psy) {
-    const premiumBadge = psy.premium ? '<span class="premium-badge">⭐ PREMIUM</span>' : '';
+    const premiumBadge = psy.premium ? '<span class="premium-badge">⭐⭐⭐</span>' : '';
     const cardClass = psy.premium ? 'psy-card premium-card' : 'psy-card';
     const encodedMessage = encodeURIComponent(`Olá, ${psy.name}! Vim do Psitelemedicina. Gostaria de agendar uma sessão de terapia.`);
 
