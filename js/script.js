@@ -6,6 +6,15 @@ const waNumber = "5561998548265";
 
 // Base de dados de psicólogos 
 const psychologistsRaw = [
+        {
+        name: "Renata Borges do nascimento",
+        photo: "../img/psicologos/renataborges.jpg",
+        crp: "CRP 06/22663",
+        approach: "Neuropsicopedagogia e Psicanálise Clínica, Arteterapia",
+        specialties: ["Adolescentes a partir de 16 anos, adultos e idosos"],
+        whatsapp: "5511919827381",
+        premium: true
+    },
     {
         name: "Paula Gomes",
         photo: "../img/psicologos/paulagomes.jpeg",
