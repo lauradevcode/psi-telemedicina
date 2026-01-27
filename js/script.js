@@ -9,7 +9,7 @@ const psychologistsRaw = [
         {
         name: "Renata Borges do nascimento",
         photo: "../img/psicologos/renataborges.jpg",
-        crp: "CRP 06/22663",
+        crp: "CRP 06/222663",
         approach: "Neuropsicopedagogia e Psicanálise Clínica, Arteterapia",
         specialties: ["Adolescentes a partir de 16 anos, adultos e idosos"],
         whatsapp: "5511919827381",
