@@ -6,7 +6,7 @@ const waNumber = "5561998548265";
 
 // Base de dados de psicólogos 
 const psychologistsRaw = [
-        {
+    {
         name: "Renata Borges do nascimento",
         photo: "../img/psicologos/renataborges.jpg",
         crp: "CRP 06/222663",
@@ -40,6 +40,24 @@ const psychologistsRaw = [
         approach: "Terapia Cognitiva-Comportamental (TCC)",
         specialties: ["Público- adolescentes , adultos ( feminino e masculino) Avaliação Neuropsicologica "],
         whatsapp: "5511979820978",
+        premium: false
+    },
+    {
+        name: "Edna Gonçalves Pereira",
+        photo: "../img/psicologos/Edna Gonçalves.jpg",
+        crp: "CRP 06/209376",
+        approach: "Terapia Cognitiva-Comportamental (TCC)",
+        specialties: ["adultos e idosos"],
+        whatsapp: "5511948009436",
+        premium: false
+    },
+    {
+        name: "Ana Patricia Ceccon Burille",
+        photo: "../img/psicologos/AnaPatriciaC.jpeg",
+        crp: "CRP 08/33683",
+        approach: "Terapia de Aceitação e Compromisso",
+        specialties: ["Jovens adultos e adultos (mulheres e LGBTQIAPN+)"],
+        whatsapp: "5546999248289",
         premium: false
     },
     {
@@ -120,7 +138,7 @@ const psychologistsRaw = [
         crp: "CRP 01/654321",
         approach: "Humanista",
         specialties: ["Conflitos Pessoais", "Autoestima"],
-        whatsapp: "5521989937876", 
+        whatsapp: "5521989937876",
         premium: false
     },
     {
@@ -253,7 +271,7 @@ function copyToClipboard(text) {
 // Checar se abriu a pagina ja com um link (ex: site.com/#paula-gomes)
 function checkUrlHash() {
     const hash = window.location.hash.substring(1);
-    if(hash) {
+    if (hash) {
         setTimeout(() => openPsyModal(hash), 500);
     }
 }
@@ -317,7 +335,7 @@ clearFiltersBtn.addEventListener("click", () => {
 
 // Fechar modal
 document.querySelector('.close-btn').addEventListener('click', closePsyModal);
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == document.getElementById('psyModal')) {
         closePsyModal();
     }
