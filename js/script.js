@@ -6,6 +6,15 @@ const waNumber = "5561998548265";
 
 // Base de dados de psicólogos 
 const psychologistsRaw = [
+        {
+        name: "Ana Krauss",
+        photo: "../img/psicologos/AnnaKrauss.jpeg",
+        crp: "CRP 08/46399",
+        approach: "TCC/Psicanalise - Neurodivergente (TEA, TDAH, etc), Bipolaridade, Borderline, depressão, ansiedade",
+        specialties: ["Jovem e adultos"],
+        whatsapp: "5531996424135",
+        premium: true
+    },
     {
         name: "Renata Borges do nascimento",
         photo: "../img/psicologos/renataborges.jpg",
