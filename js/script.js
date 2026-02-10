@@ -6,6 +6,15 @@ const waNumber = "5561998548265";
 
 // Base de dados de psicólogos 
 const psychologistsRaw = [
+            {
+        name: "Fernanda Resende Fernandes",
+        photo: "../img/psicologos/fernanda-resende.jpeg",
+        crp: "CRP 04/45681  ",
+        approach: "Terapia Cognitivo-Comportamental (TCC) e Terapia Comportamental Dialética (DBT)",
+        specialties: ["Adolescentes e adultos"],
+        whatsapp: "553288232468",
+        premium: true
+    },
         {
         name: "Ana Krauss",
         photo: "../img/psicologos/AnnaKrauss.jpeg",
