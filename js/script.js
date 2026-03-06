@@ -140,7 +140,7 @@ const psychologistsRaw = [
         approach: "Sistêmica",
         specialties: ["Adolescentes e adultos."],
         whatsapp: "5538999589059",
-        premium: false
+        premium: true
     },
     {
         name: "Paula Micali Fucci",
@@ -176,7 +176,7 @@ const psychologistsRaw = [
         approach: "Terapia Cognitiva-Comportamental (TCC)",
         specialties: ["Ansiedade", "Depressão", "Conflitos Familiares"],
         whatsapp: "5511949425267",
-        premium: false
+        premium: true
     },
     {
         name: "Ana Carolina Santos",
