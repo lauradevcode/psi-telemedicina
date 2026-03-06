@@ -330,6 +330,30 @@ nav a:not(.btn-primary):hover {
     transform: translateY(-2px);
 }
 
+/* Premium Card Styles */
+.psy-card.premium-card {
+    border: 2px solid #FFD700;
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.25);
+    background: linear-gradient(135deg, #fffef7 0%, #ffffff 100%);
+    position: relative;
+}
+
+.psy-card.premium-card:hover {
+    box-shadow: 0 12px 28px rgba(255, 215, 0, 0.35);
+    transform: translateY(-4px);
+}
+
+.premium-badge {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #1a1a2e;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-left: 8px;
+    display: inline-block;
+}
+
 .psy-header {
     display: flex;
     align-items: center;

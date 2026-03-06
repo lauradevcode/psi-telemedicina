@@ -6,7 +6,17 @@ const waNumber = "5561998548265";
 
 // Base de dados de psicólogos 
 const psychologistsRaw = [
-            {
+
+    {
+        name: "Samara Santana da Silva ",
+        photo: "../img/psicologos/samara.jpeg",
+        crp: "CRP 03/25248",
+        approach: "terapia breve com enfoque no existencialismo ",
+        specialties: ["adultos 16+"],
+        whatsapp: "557491963955",
+        premium: true
+    },
+    {
         name: "Fernanda Resende Fernandes",
         photo: "../img/psicologos/fernanda-resende.jpeg",
         crp: "CRP 04/45681  ",
@@ -15,7 +25,7 @@ const psychologistsRaw = [
         whatsapp: "553288232468",
         premium: true
     },
-        {
+    {
         name: "Ana Krauss",
         photo: "../img/psicologos/AnnaKrauss.jpeg",
         crp: "CRP 08/46399",
