@@ -16,6 +16,15 @@ const psychologistsRaw = [
         whatsapp: "557491963955",
         premium: true
     },
+        {
+        name: "Edna Gonçalves Pereira Dias ",
+        photo: "../img/psicologos/edna.jpeg",
+        crp: "CRP 06/209376",
+        approach: "TCC ",
+        specialties: ["Adultos e idosos"],
+        whatsapp: "5511948009436",
+        premium: true
+    },
     {
         name: "Fernanda Resende Fernandes",
         photo: "../img/psicologos/fernanda-resende.jpeg",
